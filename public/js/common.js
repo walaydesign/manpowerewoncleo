@@ -350,7 +350,7 @@ $(".detail-resume_collaspe_head").click(function(){
 
 // 回上頁
 $(".btn-back").click(function(){
-    history.back();
+    history.go(-1);
 })
 
 $(".job_item").click(function(){
