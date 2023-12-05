@@ -18,18 +18,26 @@
             <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
             <nav class="header_nav d-flex align-items-center">
                 <div class="header_link">
-                    <ul class="header_find d-lg-flex align-items-center">
+                    <ul class="header_find d-flex align-items-center">
                         <li><a href="./hunt-job.html">找工作</a></li>
+                    </ul>
+                    <ul class="header_memberNav d-lg-none">
+                        <li><a href="./seeker-overview.html">總覽</a></li>
+                        <li><a href="./seeker-inform.html">個人資料</a></li>
+                        <li><a href="./seeker-resume.html">履歷管理</a></li>
+                        <li><a href="./seeker-apply.html">應徵紀錄</a></li>
+                        <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+                        <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+                        <li><a href="./seeker-save.html">我的收藏</a></li>
+                        <li><a href="./seeker-password.html">更改密碼</a></li>
+                        <li><a>登出</a></li>
                     </ul>
                 </div>
                 <ul class="header_member d-flex align-items-center">
                     <li>
-                        <a class="btn-bg-yellow header_member_btn btn-popup" data-popup="#seeker-login">
-                            <svg class="btn-bg-yellow_icon header_member_btn_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.00009 8.56846C11.0369 8.56846 12.694 6.91134 12.694 4.87453C12.694 2.83828 11.0369 1.18115 9.00009 1.18115C6.96328 1.18115 5.30615 2.83828 5.30615 4.87509C5.30615 6.9119 6.96328 8.56846 9.00009 8.56846ZM9.00009 2.19365C10.4789 2.19365 11.6815 3.39628 11.6815 4.87509C11.6815 6.3539 10.4789 7.55653 9.00009 7.55653C7.52128 7.55653 6.31865 6.35334 6.31865 4.87509C6.31865 3.39684 7.52128 2.19365 9.00009 2.19365Z" fill="white"/>
-                                <path d="M13.9692 11.1036C12.6462 10.0973 10.881 9.54321 8.99723 9.54321C7.11398 9.54321 5.34998 10.0967 4.02923 11.1025C3.20742 11.728 2.71692 12.7461 2.71692 13.8267V15.2875C2.71692 16.1318 3.40429 16.8186 4.24861 16.8186H13.752C14.5964 16.8186 15.2837 16.1335 15.2837 15.2908V13.8283C15.2832 12.7483 14.7921 11.7302 13.9692 11.1036ZM14.2701 15.2908C14.2701 15.5749 14.0378 15.8067 13.7515 15.8067H4.24861C3.96229 15.8067 3.72998 15.5738 3.72998 15.288V13.8272C3.72998 13.0611 4.07086 12.3439 4.64236 11.9085C5.78761 11.0367 7.33448 10.5563 8.99723 10.5563C10.6605 10.5563 12.2085 11.0372 13.356 11.9102C13.9287 12.3456 14.2701 13.0633 14.2701 13.8289V15.2908Z" fill="white"/>
-                            </svg>
-                            <span class="btn-bg-yellow_text header_member_btn_text">求職會員</span>
+                        <a href="./seeker-overview.html" class="btn-bg-yellow header_member_btn login">
+                            <div class="header_member_btn_pic"><img src="./public/img/woman1.png" alt=""></div>
+                            <span class="btn-bg-yellow_text header_member_btn_text">求職者名稱</span>
                         </a>
                     </li>
                     <li>
@@ -67,38 +75,6 @@
         </div>
     </header>
 
-    <div class="popup" id="seeker-login">
-        <div class="popup_bg"></div>
-        <div class="popup_main popup_member seeker">
-            <div class="popup_inner">
-                <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-yellow.svg" alt="">
-                    <p class="popup_member_title_text">求職者登入</p>
-                </div>
-                <div class="popup_member_content">
-                    <form action="">
-                        <div class="form-item">
-                            <label for="">帳號</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <div class="form-item">
-                            <label for="">密碼</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <button class="btn-bgFill-yellow">登入</button>
-                        <div class="popup_member_link d-flex align-items-center justify-content-center">
-                            <a href="./seeker-signup.html">註冊會員</a>
-                            <a class="btn-popup" data-popup="#seeker-foregt">忘記密碼</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="popup_close">
-                    <img src="./public/img/x.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="popup" id="company-login">
         <div class="popup_bg"></div>
         <div class="popup_main popup_member company">
@@ -131,30 +107,6 @@
         </div>
     </div>
 
-    <div class="popup" id="seeker-foregt">
-        <div class="popup_bg"></div>
-        <div class="popup_main popup_member seeker">
-            <div class="popup_inner">
-                <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-yellow.svg" alt="">
-                    <p class="popup_member_title_text">忘記密碼</p>
-                </div>
-                <div class="popup_member_content">
-                    <form action="">
-                        <div class="form-item column">
-                            <label for="">請輸入信箱或手機</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <button class="btn-bgFill-yellow">送出</button>
-                    </form>
-                </div>
-                <div class="popup_close">
-                    <img src="./public/img/x.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <div class="popup" id="company-foregt">
         <div class="popup_bg"></div>
         <div class="popup_main popup_member company">
@@ -180,12 +132,9 @@
     </div>
 
     <main class="main">
-        <div class="home-head">
-            <div class="banner">
-                <img class="banner_main" src="./public/img/banner.png" alt="">
-                <img class="banner_style" src="./public/img/banner-style.svg" alt="">
-            </div>
-            <div class="searchjob">
+
+        <div class="hunt-job_banner">
+            <div class="searchjob mx-auto">
                 <div class="searchjob_filter d-flex align-items-center">
                     <div class="searchjob_filter_item btn-popup" id="searchjob_filter-place" data-popup="#filter-place">
                         <span>地點</span>
@@ -210,328 +159,490 @@
                         <button><img src="./public/img/search.svg" alt=""></button>
                     </div>
                 </div>
-                <div class="searchjob_tag">
-                    <h3>熱門搜尋</h3>
-                    <ul>
-                        <li><a href="">標籤1</a></li>
-                        <li><a href="">標籤2</a></li>
-                        <li><a href="">標籤3</a></li>
-                        <li><a href="">標籤4</a></li>
-                        <li><a href="">標籤5</a></li>
-                        <li><a href="">標籤6</a></li>
-                        <li><a href="">標籤7</a></li>
-                        <li><a href="">標籤8</a></li>
-                        <li><a href="">標籤9</a></li>
-                        <li><a href="">標籤10</a></li>
+                <div class="searchjob_advanced d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <h4 class="searchjob_advanced_filterName">篩選</h4>
+                        <ul class="searchjob_advanced_content d-lg-flex align-items-center">
+                            <li class="searchjob_advanced_head d-lg-none d-flex align-items-center justify-content-between">
+                                <p class="searchjob_advanced_clean">清除</p>
+                                <img class="searchjob_advanced_content_close" src="./public/img/x.svg" alt="">
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>更新日期<span class="searchjob_advanced_selected"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <ul class="searchjob_advanced_list common">
+                                    <li>不拘</li>
+                                    <li>本日最新</li>
+                                    <li>三日內</li>
+                                    <li>一週內</li>
+                                    <li>二週內</li>
+                                    <li>一個月內</li>
+                                </ul>
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>職務性質<span class="searchjob_advanced_selected"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <ul class="searchjob_advanced_list common">
+                                    <li>不拘</li>
+                                    <li>全職</li>
+                                    <li>兼職</li>
+                                    <li>打工</li>
+                                </ul>
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>薪資待遇<span class="searchjob_advanced_selected"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <div class="searchjob_advanced_list salary">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-6 col-12">
+                                            <select name="" id="" class="select w-100 mb-3">
+                                                <option value="any">不拘</option>
+                                                <option value="">月薪</option>
+                                                <option value="">時薪</option>
+                                                <option value="">日薪</option>
+                                                <option value="">週薪</option>
+                                                <option value="">年薪</option>
+                                                <option value="">部分月薪</option>
+                                                <option value="">論件計酬</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-12 col-sm-6 col-12">
+                                            <div class="searchjob_advanced_salaryRange d-flex align-items-center mb-3">
+                                                <input type="number" class="input salaryFrom">
+                                                <span>~</span>
+                                                <input type="number" class="input salaryTo">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="check-item">
+                                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                    <span>含面議</span>
+                                                </div>
+                                                <button class="btn-bg-blue-noIcon searchjob_advanced_salaryBtn">確定</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>上班班別<span class="searchjob_advanced_selected"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <ul class="searchjob_advanced_list common">
+                                    <li>日班</li>
+                                    <li>晚班</li>
+                                    <li>大夜班</li>
+                                    <li>假日班</li>
+                                </ul>
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>工作經驗<span class="searchjob_advanced_selected"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <ul class="searchjob_advanced_list common">
+                                    <li>無經驗可</li>
+                                    <li>1年以下</li>
+                                    <li>1-3年</li>
+                                    <li>3-5年</li>
+                                    <li>5-10年</li>
+                                    <li>10年以上</li>
+                                </ul>
+                            </li>
+                            <li class="searchjob_advanced_item">
+                                <div class="searchjob_advanced_title">
+                                    <p>職缺特色<span class="searchjob_advanced_featureNum"></span></p>
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41083 7.41058C4.73626 7.08514 5.2639 7.08514 5.58934 7.41058L10.0001 11.8213L14.4108 7.41058C14.7363 7.08514 15.2639 7.08514 15.5893 7.41058C15.9148 7.73602 15.9148 8.26366 15.5893 8.58909L10.5893 13.5891C10.2639 13.9145 9.73626 13.9145 9.41083 13.5891L4.41083 8.58909C4.08539 8.26366 4.08539 7.73602 4.41083 7.41058Z" fill="#22A9E7"/>
+                                    </svg>
+                                </div>
+                                <div class="searchjob_advanced_list feature">
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>交通津貼</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>伙食津貼</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>週休二日</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>無需輪班</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>高年終獎金</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>年薪70萬以上</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>年薪14個月以上</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>獎金分紅機制</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>定期加薪</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>國外駐點工作</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>外派機會多</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>彈性上下班</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>準時上下班</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="check-item">
+                                                <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                                <span>免經驗可</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn-bg-blue-noIcon searchjob_advanced_featureBtn mx-auto">確定</button>
+                                </div>
+                            </li>
+                            <li class="d-lg-none">
+                                <button class="btn-bg-blue-noIcon searchjob_advanced_btn mx-auto">確定</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="searchjob_advanced_clean d-lg-block d-none">清除</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommend-job hunt-job_content">
+            <div class="container">
+                <div class="arrange d-flex align-items-center justify-content-end">
+                    <h4>排序</h4>
+                    <select name="" id="">
+                        <option value="">預設</option>
+                        <option value="">經歷</option>
+                        <option value="">學歷</option>
+                        <option value="">刊登時間</option>
+                    </select>
+                </div>
+                <div class="recommend-job_content">
+                    <div class="job_item" data-link="./job-detail.html">
+                        <div class="job_item_link">
+                            <div class="job_item_detail">
+                                <div class="job-head d-flex align-items-center">
+                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
+                                    <div class="job-head_text">
+                                        <h3>電銷人員</h3>
+                                        <ul class="d-flex flex-wrap align-items-center">
+                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
+                                            <li>餐飲業</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="job_item_intro">
+                                    1. 執行生產組裝、檢驗、包裝出貨等工作。 2. 負責生產與確保產品品質。 3. 熟悉生產作業程序。 4. 需輪班，備輪班津貼 5. 早班07:00-15:30，中班15:00-23:30，兩周輪班一次。 (輪班津貼另計) 無經驗可、負責任心，歡迎加入公司行列！！
+                                </p>
+                                <p class="job_item_date d-md-block d-none">2023/6/30</p>
+                            </div>
+                            <ul class="job_item_inform">
+                                <li>
+                                    <img src="./public/img/placeholder.svg" alt="">
+                                    <span>高雄市新興區</span>
+                                </li>
+                                <li class="highlight">
+                                    <img src="./public/img/money-bag.svg" alt="">
+                                    <span>月薪26,400~30,000元</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/portfolio.svg" alt="">
+                                    <span>2年工作經驗</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/graduation.svg" alt="">
+                                    <span>專科以上</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/group-gray.svg" alt="">
+                                    <span>1-5人應徵</span>
+                                </li>
+                            </ul>
+                            <div class="job_item_btn">
+                                <button class="job_item_btn_save">
+                                    <div class="job_item_btn_icon">
+                                        <img class="normal" src="./public/img/save.svg" alt="">
+                                        <img class="hover" src="./public/img/save-active.svg" alt="">
+                                    </div>
+                                    <span>儲存</span>
+                                </button>
+                                <button class="job_item_btn_apply">
+                                    <div class="job_item_btn_icon">
+                                        <img src="./public/img/send.svg" alt="">
+                                    </div>
+                                    <span>應徵</span>
+                                </button>
+                            </div>
+                            <p class="job_item_date d-md-none">2023/6/30</p>
+                        </div>
+                    </div>
+                    <div class="job_item" data-link="./job-detail.html">
+                        <div class="job_item_link">
+                            <div class="job_item_detail">
+                                <div class="job-head d-flex align-items-center">
+                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
+                                    <div class="job-head_text">
+                                        <h3>電銷人員</h3>
+                                        <ul class="d-flex flex-wrap align-items-center">
+                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
+                                            <li>餐飲業</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="job_item_intro">
+                                    1. 執行生產組裝、檢驗、包裝出貨等工作。 2. 負責生產與確保產品品質。 3. 熟悉生產作業程序。 4. 需輪班，備輪班津貼 5. 早班07:00-15:30，中班15:00-23:30，兩周輪班一次。 (輪班津貼另計) 無經驗可、負責任心，歡迎加入公司行列！！
+                                </p>
+                                <p class="job_item_date d-md-block d-none">2023/6/30</p>
+                            </div>
+                            <ul class="job_item_inform">
+                                <li>
+                                    <img src="./public/img/placeholder.svg" alt="">
+                                    <span>高雄市新興區</span>
+                                </li>
+                                <li class="highlight">
+                                    <img src="./public/img/money-bag.svg" alt="">
+                                    <span>月薪26,400~30,000元</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/portfolio.svg" alt="">
+                                    <span>2年工作經驗</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/graduation.svg" alt="">
+                                    <span>專科以上</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/group-gray.svg" alt="">
+                                    <span>1-5人應徵</span>
+                                </li>
+                            </ul>
+                            <div class="job_item_btn">
+                                <button class="job_item_btn_save">
+                                    <div class="job_item_btn_icon">
+                                        <img class="normal" src="./public/img/save.svg" alt="">
+                                        <img class="hover" src="./public/img/save-active.svg" alt="">
+                                    </div>
+                                    <span>儲存</span>
+                                </button>
+                                <button class="job_item_btn_apply">
+                                    <div class="job_item_btn_icon">
+                                        <img src="./public/img/send.svg" alt="">
+                                    </div>
+                                    <span>應徵</span>
+                                </button>
+                            </div>
+                            <p class="job_item_date d-md-none">2023/6/30</p>
+                        </div>
+                    </div>
+                    <div class="job_item" data-link="./job-detail.html">
+                        <div class="job_item_link">
+                            <div class="job_item_detail">
+                                <div class="job-head d-flex align-items-center">
+                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
+                                    <div class="job-head_text">
+                                        <h3>電銷人員</h3>
+                                        <ul class="d-flex flex-wrap align-items-center">
+                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
+                                            <li>餐飲業</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="job_item_intro">
+                                    1. 執行生產組裝、檢驗、包裝出貨等工作。 2. 負責生產與確保產品品質。 3. 熟悉生產作業程序。 4. 需輪班，備輪班津貼 5. 早班07:00-15:30，中班15:00-23:30，兩周輪班一次。 (輪班津貼另計) 無經驗可、負責任心，歡迎加入公司行列！！
+                                </p>
+                                <p class="job_item_date d-md-block d-none">2023/6/30</p>
+                            </div>
+                            <ul class="job_item_inform">
+                                <li>
+                                    <img src="./public/img/placeholder.svg" alt="">
+                                    <span>高雄市新興區</span>
+                                </li>
+                                <li class="highlight">
+                                    <img src="./public/img/money-bag.svg" alt="">
+                                    <span>月薪26,400~30,000元</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/portfolio.svg" alt="">
+                                    <span>2年工作經驗</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/graduation.svg" alt="">
+                                    <span>專科以上</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/group-gray.svg" alt="">
+                                    <span>1-5人應徵</span>
+                                </li>
+                            </ul>
+                            <div class="job_item_btn">
+                                <button class="job_item_btn_save">
+                                    <div class="job_item_btn_icon">
+                                        <img class="normal" src="./public/img/save.svg" alt="">
+                                        <img class="hover" src="./public/img/save-active.svg" alt="">
+                                    </div>
+                                    <span>儲存</span>
+                                </button>
+                                <button class="job_item_btn_apply">
+                                    <div class="job_item_btn_icon">
+                                        <img src="./public/img/send.svg" alt="">
+                                    </div>
+                                    <span>應徵</span>
+                                </button>
+                            </div>
+                            <p class="job_item_date d-md-none">2023/6/30</p>
+                        </div>
+                    </div>
+                    <div class="job_item" data-link="./job-detail.html">
+                        <div class="job_item_link">
+                            <div class="job_item_detail">
+                                <div class="job-head d-flex align-items-center">
+                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
+                                    <div class="job-head_text">
+                                        <h3>電銷人員</h3>
+                                        <ul class="d-flex flex-wrap align-items-center">
+                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
+                                            <li>餐飲業</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="job_item_intro">
+                                    1. 執行生產組裝、檢驗、包裝出貨等工作。 2. 負責生產與確保產品品質。 3. 熟悉生產作業程序。 4. 需輪班，備輪班津貼 5. 早班07:00-15:30，中班15:00-23:30，兩周輪班一次。 (輪班津貼另計) 無經驗可、負責任心，歡迎加入公司行列！！
+                                </p>
+                                <p class="job_item_date d-md-block d-none">2023/6/30</p>
+                            </div>
+                            <ul class="job_item_inform">
+                                <li>
+                                    <img src="./public/img/placeholder.svg" alt="">
+                                    <span>高雄市新興區</span>
+                                </li>
+                                <li class="highlight">
+                                    <img src="./public/img/money-bag.svg" alt="">
+                                    <span>月薪26,400~30,000元</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/portfolio.svg" alt="">
+                                    <span>2年工作經驗</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/graduation.svg" alt="">
+                                    <span>專科以上</span>
+                                </li>
+                                <li>
+                                    <img src="./public/img/group-gray.svg" alt="">
+                                    <span>1-5人應徵</span>
+                                </li>
+                            </ul>
+                            <div class="job_item_btn">
+                                <button class="job_item_btn_save">
+                                    <div class="job_item_btn_icon">
+                                        <img class="normal" src="./public/img/save.svg" alt="">
+                                        <img class="hover" src="./public/img/save-active.svg" alt="">
+                                    </div>
+                                    <span>儲存</span>
+                                </button>
+                                <button class="job_item_btn_apply">
+                                    <div class="job_item_btn_icon">
+                                        <img src="./public/img/send.svg" alt="">
+                                    </div>
+                                    <span>應徵</span>
+                                </button>
+                            </div>
+                            <p class="job_item_date d-md-none">2023/6/30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination d-flex align-items-center justify-content-center">
+                    <a href="" class="pagination_arrow">
+                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z" fill="#D1D1D1"/>
+                        </svg>
+                    </a>
+                    <ul class="d-flex align-items-center">
+                        <li><a href="" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="hot-job">
-            <img class="hot-job_bg" src="./public/img/block-style-yellow.svg" alt="">
-            <div class="container">
-                <h2 class="home-title">熱門職缺</h2>
-                <div class="hot-job_content">
-                    <div class="swiper-container hot-job_swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="hot-job_item" data-link="./job-detail.html">
-                                <div class="job-head d-flex align-items-center">
-                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
-                                    <div class="job-head_text">
-                                        <h3>電銷人員</h3>
-                                        <ul class="d-flex flex-wrap align-items-center">
-                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
-                                            <li>餐飲業</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                                    <li>
-                                        <img src="./public/img/placeholder.svg" alt="">
-                                        <span>高雄市新興區</span>
-                                    </li>
-                                    <li class="highlight">
-                                        <img src="./public/img/money-bag.svg" alt="">
-                                        <span>月薪26,400~30,000元</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/portfolio.svg" alt="">
-                                        <span>2年工作經驗</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/graduation.svg" alt="">
-                                        <span>專科以上</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/group-gray.svg" alt="">
-                                        <span>1-5人應徵</span>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap align-items-center justify-content-sm-between justify-content-center">
-                                    <p class="hot-job_date">2023/6/30</p>
-                                    <div class="d-flex align-items-center justify-content-sm-start justify-content-center hot-job_btn">
-                                        <button class="btn-border-blue-noIcon btn-saven btn-popup" data-popup="#seeker-login">儲存</button>
-                                        <button class="btn-bg-blue-noIcon btn-popup ms-3" data-popup="#seeker-login">應徵</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="hot-job_item" data-link="./job-detail.html">
-                                <div class="job-head d-flex align-items-center">
-                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
-                                    <div class="job-head_text">
-                                        <h3>電銷人員</h3>
-                                        <ul class="d-flex flex-wrap align-items-center">
-                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
-                                            <li>餐飲業</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                                    <li>
-                                        <img src="./public/img/placeholder.svg" alt="">
-                                        <span>高雄市新興區</span>
-                                    </li>
-                                    <li class="highlight">
-                                        <img src="./public/img/money-bag.svg" alt="">
-                                        <span>月薪26,400~30,000元</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/portfolio.svg" alt="">
-                                        <span>2年工作經驗</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/graduation.svg" alt="">
-                                        <span>專科以上</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/group-gray.svg" alt="">
-                                        <span>1-5人應徵</span>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap align-items-center justify-content-sm-between justify-content-center">
-                                    <p class="hot-job_date">2023/6/30</p>
-                                    <div class="d-flex align-items-center justify-content-sm-start justify-content-center hot-job_btn">
-                                        <button class="btn-border-blue-noIcon btn-saven btn-popup" data-popup="#seeker-login">儲存</button>
-                                        <button class="btn-bg-blue-noIcon btn-popup ms-3" data-popup="#seeker-login">應徵</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="hot-job_item" data-link="./job-detail.html">
-                                <div class="job-head d-flex align-items-center">
-                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
-                                    <div class="job-head_text">
-                                        <h3>電銷人員</h3>
-                                        <ul class="d-flex flex-wrap align-items-center">
-                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
-                                            <li>餐飲業</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                                    <li>
-                                        <img src="./public/img/placeholder.svg" alt="">
-                                        <span>高雄市新興區</span>
-                                    </li>
-                                    <li class="highlight">
-                                        <img src="./public/img/money-bag.svg" alt="">
-                                        <span>月薪26,400~30,000元</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/portfolio.svg" alt="">
-                                        <span>2年工作經驗</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/graduation.svg" alt="">
-                                        <span>專科以上</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/group-gray.svg" alt="">
-                                        <span>1-5人應徵</span>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap align-items-center justify-content-sm-between justify-content-center">
-                                    <p class="hot-job_date">2023/6/30</p>
-                                    <div class="d-flex align-items-center justify-content-sm-start justify-content-center hot-job_btn">
-                                        <button class="btn-border-blue-noIcon btn-saven btn-popup" data-popup="#seeker-login">儲存</button>
-                                        <button class="btn-bg-blue-noIcon btn-popup ms-3" data-popup="#seeker-login">應徵</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="hot-job_item" data-link="./job-detail.html">
-                                <div class="job-head d-flex align-items-center">
-                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
-                                    <div class="job-head_text">
-                                        <h3>電銷人員</h3>
-                                        <ul class="d-flex flex-wrap align-items-center">
-                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
-                                            <li>餐飲業</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                                    <li>
-                                        <img src="./public/img/placeholder.svg" alt="">
-                                        <span>高雄市新興區</span>
-                                    </li>
-                                    <li class="highlight">
-                                        <img src="./public/img/money-bag.svg" alt="">
-                                        <span>月薪26,400~30,000元</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/portfolio.svg" alt="">
-                                        <span>2年工作經驗</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/graduation.svg" alt="">
-                                        <span>專科以上</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/group-gray.svg" alt="">
-                                        <span>1-5人應徵</span>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap align-items-center justify-content-sm-between justify-content-center">
-                                    <p class="hot-job_date">2023/6/30</p>
-                                    <div class="d-flex align-items-center justify-content-sm-start justify-content-center hot-job_btn">
-                                        <button class="btn-border-blue-noIcon btn-saven btn-popup" data-popup="#seeker-login">儲存</button>
-                                        <button class="btn-bg-blue-noIcon btn-popup ms-3" data-popup="#seeker-login">應徵</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="hot-job_item" data-link="./job-detail.html">
-                                <div class="job-head d-flex align-items-center">
-                                    <div class="job-head_pic"><img src="./public/img/brand-1.png" alt=""></div>
-                                    <div class="job-head_text">
-                                        <h3>電銷人員</h3>
-                                        <ul class="d-flex flex-wrap align-items-center">
-                                            <li><a href="./company-detail.html">龜丸製麵</a></li>
-                                            <li>餐飲業</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                                    <li>
-                                        <img src="./public/img/placeholder.svg" alt="">
-                                        <span>高雄市新興區</span>
-                                    </li>
-                                    <li class="highlight">
-                                        <img src="./public/img/money-bag.svg" alt="">
-                                        <span>月薪26,400~30,000元</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/portfolio.svg" alt="">
-                                        <span>2年工作經驗</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/graduation.svg" alt="">
-                                        <span>專科以上</span>
-                                    </li>
-                                    <li>
-                                        <img src="./public/img/group-gray.svg" alt="">
-                                        <span>1-5人應徵</span>
-                                    </li>
-                                </ul>
-                                <div class="d-flex flex-wrap align-items-center justify-content-sm-between justify-content-center">
-                                    <p class="hot-job_date">2023/6/30</p>
-                                    <div class="d-flex align-items-center justify-content-sm-start justify-content-center hot-job_btn">
-                                        <button class="btn-border-blue-noIcon btn-saven btn-popup" data-popup="#seeker-login">儲存</button>
-                                        <button class="btn-bg-blue-noIcon btn-popup ms-3" data-popup="#seeker-login">應徵</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                        </div>     
-                    </div>
-                    <div class="hot-job_swiper_prev">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z" fill="#D1D1D1"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z" fill="#D1D1D1"/>
-                        </svg>
-                    </div>
-                    <div class="hot-job_swiper_next">
+                    <a href="" class="pagination_arrow">
                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z" fill="#B4CECE"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z" fill="#B4CECE"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="hot-company">
-            <!-- <img class="hot-company_bg" src="./public/img/block-style-blue.svg" alt=""> -->
-            <div class="container">
-                <h2 class="home-title">熱門企業</h2>
-                <div class="hot-company_content">
-                    <div class="swiper-container hot-company_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="./company-detail.html" class="hot-company_item">
-                                    <div class="hot-company_pic"><img src="./public/img/brand-2.png" alt=""></div>
-                                    <h3 class="hot-company_name">碳佐麻里烤肉</h3>
-                                    <p class="hot-company_salary">月薪最高 $45K</p>
-                                </a>
-                            </div>
-                        </div>     
-                    </div>
-                    <div class="hot-company_swiper_prev">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z" fill="#D1D1D1"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z" fill="#D1D1D1"/>
-                        </svg>
-                    </div>
-                    <div class="hot-company_swiper_next">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z" fill="#B4CECE"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z" fill="#B4CECE"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </main>
 
     <footer class="footer">
@@ -545,7 +656,670 @@
     </footer>
 
     <div class="sideBtn bg-yellow">
+        <button class="sideBtn_chat"><img src="./public/img/chat.svg" alt=""></button>
         <button class="sideBtn_top"><img src="./public/img/arrow-up.svg" alt=""></button>
+    </div>
+
+    <div class="chat bg-yellow">
+        <div class="chat_head d-flex align-items-center justify-content-between">
+            <div class="chat_head_title align-items-center">
+                <h5>聊聊</h5>
+                <div class="chat_num"><span>3</span></div>
+            </div>
+            <div class="chat_head_title-m align-items-center">
+                <div class="chat_back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#22A9E7"/>
+                    </svg>
+                </div>
+                <h6>路易莎職人咖啡股份有限公司</h6>
+            </div>
+            <div class="chat_head_close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6789 5.32122C19.0538 5.69612 19.0538 6.30396 18.6789 6.67886L6.67886 18.6789C6.30396 19.0538 5.69612 19.0538 5.32122 18.6789C4.94631 18.304 4.94631 17.6961 5.32122 17.3212L17.3212 5.32122C17.6961 4.94631 18.304 4.94631 18.6789 5.32122Z" fill="#BABABA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.32122 5.32122C5.69612 4.94631 6.30396 4.94631 6.67886 5.32122L18.6789 17.3212C19.0538 17.6961 19.0538 18.304 18.6789 18.6789C18.304 19.0538 17.6961 19.0538 17.3212 18.6789L5.32122 6.67886C4.94631 6.30396 4.94631 5.69612 5.32122 5.32122Z" fill="#BABABA"/>
+                </svg>
+            </div>
+        </div>
+        <div class="chat_main d-flex">
+            <div class="chat_main_left">
+                <div class="chat_main_search">
+                    <div class="chat_main_search_inner">
+                        <input type="text">
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z" fill="#22A9E7"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z" fill="#22A9E7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <ul class="chat_main_list">
+                    <li class="chat_main_list_item notread" data-chat="#chat-1">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                    <div class="chat_num"><span>3</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-2">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-3">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-4">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-5">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-6">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-7">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat_main_list_item" data-chat="#chat-8">
+                        <div class="chat_main_list_item_inner">
+                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_text">
+                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <div class="d-flex align-items-center">
+                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat_main_right">
+                <div class="chat_main_right_inner init">
+                    <div class="d-flex">
+                        <img src="./public/img/chat-colorful.svg" alt="">
+                        <p>歡迎使用聊聊</p>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner active" id="chat-1">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-2">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-3">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-4">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-5">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-6">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-7">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat_main_right_inner" id="chat-8">
+                    <div class="chat_main_title">
+                        <div class="job-title d-flex align-items-center p-3 m-0">
+                            <div class="chat_main_title_text">
+                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
+                            </div>
+                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_568_15499)">
+                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_568_15499">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="btn-bg-blue_text">應徵</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat_main_content">
+                        <p class="chat_main_content_date">2023/06/17(六)</p>
+                        <div class="chat_main_content_opposite chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                        <div class="chat_main_content_own chat_main_content_item">
+                            <div class="chat_main_content_frame">
+                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                            </div>
+                            <div class="chat_main_content_remark">
+                                <p>已讀</p>
+                                <p>17:29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat_main_input">
+                        <input type="text" placeholder="請輸入文字">
+                        <button>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_568_15499)">
+                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
+                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_568_15499">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="popup" id="filter-place">
@@ -3178,109 +3952,168 @@
         </div>
     </div>
 
-    
+    <div class="popup" id="apply-job">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_applyJob">
+            <h3 class="popup_title">應徵</h3>
+            <div class="popup_inner">
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+                <div class="job-title">
+                    <p class="job-title_company">路易莎職人咖啡股份有限公司</p>
+                    <h4 class="job-title_name">儲備幹部、正兼職人員</h4>
+                </div>
+                <div class="popup_applyJob_item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <label for="">選擇履歷</label>
+                        <a href="./preview-resume.html" target="_blank">預覽</a>
+                    </div>
+                    <select name="" id="" class="select w-100">
+                        <option value="">履歷名稱1</option>
+                        <option value="">履歷名稱2</option>
+                        <option value="">履歷名稱3</option>
+                        <option value="">履歷名稱4</option>
+                    </select>
+                </div>
+                <div class="popup_applyJob_item">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <label for="">推薦信</label>
+                        <a href="./seeker-recommend.html" target="_blank">設定範本</a>
+                    </div>
+                    <select name="" id="" class="select w-100 mb-2">
+                        <option value="">推薦信名稱1</option>
+                        <option value="">推薦信名稱2</option>
+                        <option value="">推薦信名稱3</option>
+                        <option value="">推薦信名稱4</option>
+                    </select>
+                    <textarea class="textarea w-100" name="" id="" cols="30" rows="10"></textarea>
+                    <p class="recommend-num"><span class="used">79</span>/200</p>
+                </div>
+                <div class="popup_applyJob_save">
+                    <input type="text" class="input" placeholder="儲存範本">
+                    <button class="btn-border-blue-noIcon">儲存</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button class="btn-border-blue-noIcon mx-2">取消</button>
+                    <button class="btn-bg-blue-noIcon mx-2">送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="make-resume">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_makeResume">
+            <h3 class="popup_title">應徵</h3>
+            <div class="popup_inner">
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+                <div class="popup_makeResume_content">
+                    <img src="./public/img/CV.svg" alt="">
+                    <p>您還沒製作履歷</p>
+                    <a href="" class="btn-bg-blue-noIcon">前往製作</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     
     
     <script src="./public/js/jquery/jquery.min.js"></script>
-    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/common.js"></script>
 
     <script>
-        var swiperHotJob = new Swiper(".hot-job_swiper", {
-           slidesPerView: 1.3,
-           slidesPerGroup: 1,
-           grid: {
-               rows: 1,
-           },
-           navigation: {
-               nextEl: ".hot-job_swiper_next",
-               prevEl: ".hot-job_swiper_prev",
-           },
-           breakpoints: {
-               576: {
-                   slidesPerView: 1.5,
-                   slidesPerGroup: 1,
-                   grid: {
-                       rows: 1,
-                   },
-               },
-               992: {
-                   slidesPerView: 2,
-                   slidesPerGroup: 2,
-                   grid: {
-                       rows: 2,
-                   },
-               }
-           }
-        });
-
-        $(".hot-job_item").click(function(){
-           var btnArea = $("button");
-           var linkArea = $("a");
-           if (!btnArea.is(event.target) && btnArea.has(event.target).length === 0) {
-               if (!btnArea.is(event.target) && btnArea.has(event.target).length === 0) {
-                   let link = $(this).data("link");
-                   window.location.assign(link);
-               }
-           }
+        $(".searchjob_advanced_title").click(function(){
+            if($(window).width() >= 992) {
+                $(this).parents(".searchjob_advanced_item").find(".searchjob_advanced_list").toggleClass("active");
+                $(this).parents(".searchjob_advanced_item").siblings(".searchjob_advanced_item").find(".searchjob_advanced_list").removeClass("active");
+            }
         })
 
-        // $(".hot-job_item .btn-save").click(function(){
-        //    if($(this).hasClass("active")) {
-        //        $(this).removeClass("active");
-        //        $(this).text("儲存");
-        //    }else {
-        //        $(this).addClass("active");
-        //        $(this).text("取消儲存");
-        //    }
-        // });
-
-        var swiperHotCompany = new Swiper(".hot-company_swiper", {
-           slidesPerView: 1.5,
-           slidesPerGroup: 1,
-           spaceBetween: 20,
-           navigation: {
-               nextEl: ".hot-company_swiper_next",
-               prevEl: ".hot-company_swiper_prev",
-           },
-           breakpoints: {
-               450: {
-                   slidesPerView: 2.5,
-                   slidesPerGroup: 2,
-                   spaceBetween: 20,
-               },
-               576: {
-                   slidesPerView: 3.5,
-                   slidesPerGroup: 3,
-                   spaceBetween: 20,
-               },
-               992: {
-                   slidesPerView: 4,
-                   slidesPerGroup: 4,
-                   spaceBetween: 20,
-               },
-               1200: {
-                   slidesPerView: 5,
-                   slidesPerGroup: 5,
-                   spaceBetween: 30,
-               }
-           }
+        $(".searchjob_advanced_list.common li").click(function(){
+            if($(window).width() >= 992) {
+                if($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this).parents(".searchjob_advanced_item").find(".searchjob_advanced_selected").text("");
+                }else {
+                    let text = $(this).text();
+                    $(this).parents(".searchjob_advanced_item").find(".searchjob_advanced_selected").text(text);
+                    $(this).addClass("active").siblings("li").removeClass("active");
+                }
+                $(this).parents(".searchjob_advanced_item").find(".searchjob_advanced_list").removeClass("active");
+            }else {
+                $(this).toggleClass("active");
+                $(this).siblings("li").removeClass("active");
+            }
         })
 
-        
+        $(".searchjob_advanced_salaryBtn").click(function(){
+            let select = $(this).parents(".searchjob_advanced_list").find(".select").val();
+            let selectText = $(this).parents(".searchjob_advanced_list").find(".select option:selected").text();
+            console.log(select);
+            let from = $(this).parents(".searchjob_advanced_list").find(".salaryFrom").val();
+            let To = $(this).parents(".searchjob_advanced_list").find(".salaryTo").val();
+            let text;
+            if(select=="any") {
+                text = selectText;
+            }else {
+                text = selectText + from + "~" + To;
+            }
+           
+            $(this).parents(".searchjob_advanced_item").find(".searchjob_advanced_selected").text(text);
+            $(this).parents(".searchjob_advanced_list").removeClass("active");
+        })
 
-        $(".job_item_btn_save").click(function(){
-           if($(this).hasClass("active")) {
-               $(this).removeClass("active");
-               $(this).find("span").text("儲存");
-           }else {
-               $(this).addClass("active");
-               $(this).find("span").text("取消儲存");
-           }
-        });
+        $(".searchjob_advanced_featureBtn").click(function(){
+            let selectedNum = 0;
+            $(this).parents(".searchjob_advanced_list").find(".checkbox").each(function(){
+                if($(this).hasClass("active")) {
+                    selectedNum++;
+                }
+            })
 
-   </script>
+            if(selectedNum > 0) {
+                $(".searchjob_advanced_featureNum").show().css("display","inline-flex").text(selectedNum);
+            }else {
+                $(".searchjob_advanced_featureNum").hide();
+            }
+
+            $(this).parents(".searchjob_advanced_list").removeClass("active");
+        })
+
+        $(".searchjob_advanced_clean").click(function(){
+            $(".searchjob_advanced_list.common li").each(function(){
+                $(this).removeClass("active");
+            })
+            $(".searchjob_advanced_selected").each(function(){
+                $(this).text("");
+            })
+            $(".searchjob_advanced_list.salary").find(".select option[value=any]").attr('selected', 'selected');
+            $(".salaryFrom, .salaryTo").val();
+            $(".searchjob_advanced_list.feature").find(".checkbox").each(function(){
+                $(this).removeClass("active");
+            })
+            $(".searchjob_advanced_featureNum").text("0").hide();
+        })
+
+        $(".searchjob_advanced_filterName").click(function(){
+            if($(window).width() < 992) {
+                $(".searchjob_advanced_content").addClass("active");
+            }
+        })
+
+        $(".searchjob_advanced_content_close, .searchjob_advanced_btn").click(function(){
+            if($(window).width() < 992) {
+                $(".searchjob_advanced_content").removeClass("active");
+            }
+        })
+
+    </script>
+
 </body>
 </html>
