@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body class="bg-blue">
+    
+    <div class="back">
+        <header class="back_header">
+            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
+            <div class="detail-content_nav back_header_nav">
+                <div class="detail-content_nav_inner back_header_nav_inner">
+                    <ul class="detail-content_nav_list">
+                        <li class="active"><a href="./back-seeker.html">求職者管理</a></li>
+                        <li><a href="./back-company.html">企業管理</a></li>
+                        <li><a href="./back-job.html">求職管理</a></li>
+                        <li><a href="./back-recruit.html">徵才管理</a></li>
+                        <li><a href="./back-other-about.html">其他管理</a></li>
+                        <li><a>登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_menu d-lg-none">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+        </header>
+        <div class="back_content">
+            <div class="back_title">
+                <h1>求職者姓名</h1>
+                <div class="btn-border-blue btn-back m-0">
+                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
+                    <span class="btn-border-blue_text">上一頁</span>
+                </div>
+            </div>
+            <ul class="overview_tab tab-wrap">
+                <a href="./back-seeker-edit-info.html" class="tab_item">個人資料</a>
+                <a href="./back-seeker-edit-resume.html" class="tab_item active">履歷管理</a>
+                <a href="./back-seeker-edit-apply.html" class="tab_item">應徵紀錄</a>
+                <a href="./back-seeker-edit-invited.html" class="tab_item">受邀紀錄</a>
+                <a href="./back-seeker-edit-reccomend.html" class="tab_item">推薦信設定</a>
+                <a href="./back-seeker-edit-savedJob.html" class="tab_item">收藏職缺</a>
+                <a href="./back-seeker-edit-savedCompany.html" class="tab_item">收藏企業</a>
+            </ul>
+            <div class="back-seeker_resume">
+                <div class="seeker-resume_my">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h2 class="title-bgBlue m-0">我的履歷</h2>
+                        <p class="seeker-resume_num">3/6</p>
+                    </div>
+                    <div class="seeker-resume_my_list">
+                        <div class="seeker-resume_my_item">
+                            <div class="d-flex align-items-center seeker-resume_my_text">
+                                <div class="tag">預設</div>
+                                <h3 class="seeker-resume_my_title">履歷名稱</h3>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                                <a href="./back-seeker-edit-resume-edit.html" class="btn-border-onlyIcon"><img src="../public/img/pencil-blue.svg" alt=""></a>
+                                <a href="../seeker-detail.html" class="btn-border-onlyIcon"><img src="../public/img/view.svg" alt=""></a>
+                                <a class="btn-border-onlyIcon"><img src="../public/img/download.svg" alt=""></a>
+                                <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="seeker-resume_my_item">
+                            <div class="d-flex align-items-center seeker-resume_my_text">
+                                <h3 class="seeker-resume_my_title">履歷名稱</h3>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                                <button class="btn-border-blue-noIcon btn-default">設為預設</button>
+                                <a href="./back-seeker-edit-resume-edit.html" class="btn-border-onlyIcon"><img src="../public/img/pencil-blue.svg" alt=""></a>
+                                <a href="../seeker-detail.html" class="btn-border-onlyIcon"><img src="../public/img/view.svg" alt=""></a>
+                                <a class="btn-border-onlyIcon"><img src="../public/img/download.svg" alt=""></a>
+                                <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="seeker-resume_my_item">
+                            <div class="d-flex align-items-center seeker-resume_my_text">
+                                <h3 class="seeker-resume_my_title">履歷名稱</h3>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                                <button class="btn-border-blue-noIcon btn-default">設為預設</button>
+                                <a href="./back-seeker-edit-resume-edit.html" class="btn-border-onlyIcon"><img src="../public/img/pencil-blue.svg" alt=""></a>
+                                <a href="../seeker-detail.html" class="btn-border-onlyIcon"><img src="../public/img/view.svg" alt=""></a>
+                                <a class="btn-border-onlyIcon"><img src="../public/img/download.svg" alt=""></a>
+                                <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./back-seeker-edit-resume-edit.html" class="btn-bg-blue">
+                        <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
+                        </svg>
+                        <span class="btn-bg-blue_text">新增</span>
+                    </a>
+                </div>
+                <div class="seeker-resume_setting">
+                    <h2 class="title-bgBlue m-0">履歷設定</h2>
+                    <div class="seeker-resume_setting_content">
+                        <div class="seeker-resume_setting_item align-items-center">
+                            <label for="">履歷開啟</label>
+                            <div class="seeker-resume_setting_item_content">
+                                <select name="" id="" class="select">
+                                    <option value="">開啟</option>
+                                    <option value="">關閉</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seeker-resume_setting_item">
+                            <label for="">產業隱藏</label>
+                            <div class="seeker-resume_setting_item_content d-flex flex-wrap">
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="../public/img/check.svg" alt=""></div>
+                                    <span>保險產業</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="../public/img/check.svg" alt=""></div>
+                                    <span>傳銷產業</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="../public/img/check.svg" alt=""></div>
+                                    <span>殯葬產業</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="../public/img/check.svg" alt=""></div>
+                                    <span>派遣產業</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="../public/img/check.svg" alt=""></div>
+                                    <span>傳播媒體經濟業</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seeker-resume_setting_item">
+                            <label for="">公司隱藏</label>
+                            <div class="seeker-resume_setting_item_content">
+                                <p class="seeker-resume_setting_remark">上限6筆</p>
+                                <div class="seeker-resume_setting_hide">
+                                    <div class="seeker-resume_setting_hide_item">
+                                        <input type="text" class="input">
+                                        <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                                    </div>
+                                    <div class="seeker-resume_setting_hide_item">
+                                        <input type="text" class="input">
+                                        <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <button class="btn-bg-blue">
+                                    <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
+                                    </svg>
+                                    <span class="btn-bg-blue_text">新增</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/common.js"></script>
+
+</body>
+</html>

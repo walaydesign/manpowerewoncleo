@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body class="bg-blue">
+    
+    <div class="back">
+        <header class="back_header">
+            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
+            <div class="detail-content_nav back_header_nav">
+                <div class="detail-content_nav_inner back_header_nav_inner">
+                    <ul class="detail-content_nav_list">
+                        <li class="active"><a href="./back-seeker.html">求職者管理</a></li>
+                        <li><a href="./back-company.html">企業管理</a></li>
+                        <li><a href="./back-job.html">求職管理</a></li>
+                        <li><a href="./back-recruit.html">徵才管理</a></li>
+                        <li><a href="./back-other-about.html">其他管理</a></li>
+                        <li><a>登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_menu d-lg-none">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+        </header>
+        <div class="back_content">
+            <div class="back_title">
+                <h1>求職者姓名</h1>
+                <div class="btn-border-blue btn-back m-0">
+                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
+                    <span class="btn-border-blue_text">上一頁</span>
+                </div>
+            </div>
+            <ul class="overview_tab tab-wrap">
+                <a href="./back-seeker-edit-info.html" class="tab_item">個人資料</a>
+                <a href="./back-seeker-edit-resume.html" class="tab_item">履歷管理</a>
+                <a href="./back-seeker-edit-apply.html" class="tab_item">應徵紀錄</a>
+                <a href="./back-seeker-edit-invited.html" class="tab_item">受邀紀錄</a>
+                <a href="./back-seeker-edit-reccomend.html" class="tab_item active">推薦信設定</a>
+                <a href="./back-seeker-edit-savedJob.html" class="tab_item">收藏職缺</a>
+                <a href="./back-seeker-edit-savedCompany.html" class="tab_item">收藏企業</a>
+            </ul>
+            <div class="back-seeker_reccommend">
+                <div class="seeker-resume_my_list">
+                    <div class="seeker-resume_my_item">
+                        <div class="d-flex align-items-center seeker-resume_my_text">
+                            <div class="tag">預設</div>
+                            <h3 class="seeker-resume_my_title">推薦信名稱</h3>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                            <button class="btn-border-onlyIcon btn-popup" data-popup="#edit-recommend"><img src="../public/img/pencil-blue.svg" alt=""></button>
+                            <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="seeker-resume_my_item">
+                        <div class="d-flex align-items-center seeker-resume_my_text">
+                            <h3 class="seeker-resume_my_title">推薦信名稱</h3>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                            <button class="btn-border-blue-noIcon btn-default">設為預設</button>
+                            <button class="btn-border-onlyIcon btn-popup" data-popup="#edit-recommend"><img src="../public/img/pencil-blue.svg" alt=""></button>
+                            <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="seeker-resume_my_item">
+                        <div class="d-flex align-items-center seeker-resume_my_text">
+                            <h3 class="seeker-resume_my_title">推薦信名稱</h3>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end seeker-resume_my_icon">
+                            <button class="btn-border-blue-noIcon btn-default">設為預設</button>
+                            <button class="btn-border-onlyIcon btn-popup" data-popup="#edit-recommend"><img src="../public/img/pencil-blue.svg" alt=""></button>
+                            <button class="btn-border-onlyIcon-gray"><img src="../public/img/trash-bin.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#add-recommend">
+                    <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
+                    </svg>
+                    <span class="btn-bg-blue_text">新增</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="edit-recommend">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_applyJob">
+            <h3 class="popup_title">編輯推薦信</h3>
+            <div class="popup_inner">
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+                <div class="popup_applyJob_item">
+                    <label for="" class="mb-2">推薦信</label>
+                    <input type="text" class="input w-100 mb-2">
+                    <textarea class="textarea w-100" name="" id="" cols="30" rows="10"></textarea>
+                    <p class="recommend-num"><span class="used">79</span>/200</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button class="btn-border-blue-noIcon mx-2">取消</button>
+                    <button class="btn-bg-blue-noIcon mx-2">儲存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="add-recommend">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_applyJob">
+            <h3 class="popup_title">新增推薦信</h3>
+            <div class="popup_inner">
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+                <div class="popup_applyJob_item">
+                    <label for="" class="mb-2">推薦信</label>
+                    <input type="text" class="input w-100 mb-2">
+                    <textarea class="textarea w-100" name="" id="" cols="30" rows="10"></textarea>
+                    <p class="recommend-num"><span class="used">79</span>/200</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button class="btn-border-blue-noIcon mx-2">取消</button>
+                    <button class="btn-bg-blue-noIcon mx-2">儲存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/common.js"></script>
+
+</body>
+</html>

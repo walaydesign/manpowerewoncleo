@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body class="bg-blue">
+    
+    <div class="back">
+        <header class="back_header">
+            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
+            <div class="detail-content_nav back_header_nav">
+                <div class="detail-content_nav_inner back_header_nav_inner">
+                    <ul class="detail-content_nav_list">
+                        <li class="active"><a href="./back-seeker.html">求職者管理</a></li>
+                        <li><a href="./back-company.html">企業管理</a></li>
+                        <li><a href="./back-job.html">求職管理</a></li>
+                        <li><a href="./back-recruit.html">徵才管理</a></li>
+                        <li><a href="./back-other-about.html">其他管理</a></li>
+                        <li><a>登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_menu d-lg-none">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+        </header>
+        <div class="back_content">
+            <div class="back_title">
+                <h1>求職者姓名</h1>
+                <div class="btn-border-blue btn-back m-0">
+                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
+                    <span class="btn-border-blue_text">上一頁</span>
+                </div>
+            </div>
+            <ul class="overview_tab tab-wrap">
+                <a href="./back-seeker-edit-info.html" class="tab_item active">個人資料</a>
+                <a href="./back-seeker-edit-resume.html" class="tab_item">履歷管理</a>
+                <a href="./back-seeker-edit-apply.html" class="tab_item">應徵紀錄</a>
+                <a href="./back-seeker-edit-invited.html" class="tab_item">受邀紀錄</a>
+                <a href="./back-seeker-edit-reccomend.html" class="tab_item">推薦信設定</a>
+                <a href="./back-seeker-edit-savedJob.html" class="tab_item">收藏職缺</a>
+                <a href="./back-seeker-edit-savedCompany.html" class="tab_item">收藏企業</a>
+            </ul>
+            <div class="back-seeker_info">
+                <div class="form-item d-block">
+                    <label for="">大頭貼</label>
+                    <div class="upload-pic">
+                        <div class="upload-pic_pic"><img class="upload-pic_main" src="../public/img/brand-6.png" alt=""></div>
+                        <div class="upload-pic_text">
+                            <div class="upload-pic_btn btn-border-blue">
+                                <img class="btn-border-blue_icon" src="../public/img/upload-pic.svg" alt="">
+                                <span class="btn-border-blue_text">上傳</span>
+                                <input class="upload-pic_btn_input" type="file">
+                            </div>
+                            <p class="upload-pic_remark">
+                                建議尺寸：400 x 400 (px) / 容量限制：5MB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">姓名</label>
+                            <input type="text" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">性別</label>
+                            <select name="" id="" class="select form-item_main">
+                                <option value="">男</option>
+                                <option value="">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">生日</label>
+                            <input type="date" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">信箱</label>
+                            <input type="email" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">手機</label>
+                            <input type="phone" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">電話</label>
+                            <input type="phone" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">疫苗</label>
+                            <select name="" id="" class="select form-item_main">
+                                <option value="">尚未施打</option>
+                                <option value="">施打第一劑</option>
+                                <option value="">施打第二劑</option>
+                                <option value="">施打第三劑</option>
+                                <option value="">施打第四劑</option>
+                                <option value="">施打第五劑</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">聯絡<br>時間</label>
+                            <div class="form-item_main contact-time">
+                                <input type="text" class="input"><span>~</span><input type="text" class="input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-item form-item-address">
+                            <label for="">地址</label>
+                            <div class="form-item_main">
+                                <select name="" id="" class="select">
+                                    <option value="">台北市</option>
+                                </select>
+                                <select name="" id="" class="select">
+                                    <option value="">中正區</option>
+                                </select>
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-item">
+                            <label for="">身份</label>
+                            <div class="form-item_main form-item_check">
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>二度就業</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>身心障礙者</span>
+                                </div>
+                                <div class="check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>研發替代役</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-item form-item-textarea">
+                            <label for="">簡介</label>
+                            <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">密碼</label>
+                            <input class="form-item_main input" type="password">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label for="">確認<br>密碼</label>
+                            <input class="form-item_main input" type="password">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn-border-blue-noIcon">取消</button>
+                    <button class="btn-bg-blue-noIcon ms-4">變更</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/common.js"></script>
+
+</body>
+</html>

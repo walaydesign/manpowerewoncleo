@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body class="bg-blue">
+    
+    <div class="back">
+        <header class="back_header">
+            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
+            <div class="detail-content_nav back_header_nav">
+                <div class="detail-content_nav_inner back_header_nav_inner">
+                    <ul class="detail-content_nav_list">
+                        <li><a href="./back-seeker.html">求職者管理</a></li>
+                        <li class="active"><a href="./back-company.html">企業管理</a></li>
+                        <li><a href="./back-job.html">求職管理</a></li>
+                        <li><a href="./back-recruit.html">徵才管理</a></li>
+                        <li><a href="./back-other-about.html">其他管理</a></li>
+                        <li><a>登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_menu d-lg-none">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+        </header>
+        <div class="back_content">
+            <div class="back_title">
+                <h1>企業名稱</h1>
+                <div class="btn-border-blue btn-back m-0">
+                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
+                    <span class="btn-border-blue_text">上一頁</span>
+                </div>
+            </div>
+            <ul class="overview_tab tab-wrap">
+                <a href="./back-company-edit-info.html" class="tab_item">公司資料</a>
+                <a href="./back-company-edit-job.html" class="tab_item active">職缺管理</a>
+                <a href="./back-company-edit-invite.html" class="tab_item">邀請紀錄</a>
+                <a href="./back-company-edit-recruitRecord.html" class="tab_item">應徵紀錄</a>
+                <a href="./back-company-edit-recruitSetting.html" class="tab_item">應徵文設定</a>
+                <a href="./back-company-edit-save.html" class="tab_item">儲存人才</a>
+            </ul>
+            <div class="back-company_job detail-job">
+                <div class="detail-content_intro_item">
+                    <h2 class="title-bgBlue">工作內容</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-item">
+                                <label for="">職缺名稱</label>
+                                <input type="text" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-textarea">
+                                <label for="">工作內容</label>
+                                <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10" placeholder="請輸入"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-textarea">
+                                <label for="">職務類別</label>
+                                <div class="form-item_main">
+                                    <ul class="addTag_content">
+                                        <li class="tag-border-gray">
+                                            <span>美容師</span>
+                                            <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                        </li>
+                                        <li class="tag-border-gray">
+                                            <span>休閒娛樂服務人員</span>
+                                            <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                        </li>
+                                        <li class="tag-border-gray">
+                                            <span>客戶服務人員</span>
+                                            <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <button class="btn-bg-blue btn-popup" data-popup="#filter-job">
+                                            <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
+                                            </svg>
+                                            <span class="btn-bg-blue_text">新增</span>
+                                        </button>
+                                        <button class="btn-border-gray ms-3">清除重選</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">工作性質</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">全職</option>
+                                    <option value="">兼職</option>
+                                    <option value="">打工</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">需求人數</label>
+                                <input type="number" class="form-item_main input">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-salary">
+                                <label for="">薪資待遇</label>
+                                <div class="form-item_main">
+                                    <div class="form-item_main">
+                                        <select name="" id="" class="select">
+                                            <option value="">面議</option>
+                                            <option value="">依公司規定</option>
+                                            <option value="">月薪</option>
+                                            <option value="">時薪</option>
+                                            <option value="">日薪</option>
+                                            <option value="">週薪</option>
+                                            <option value="">年薪</option>
+                                        </select>
+                                        <div class="salary-range">
+                                            <div class="salary-range_input input">
+                                                <input type="text">
+                                                <span>元</span>
+                                            </div>
+                                            <span>~</span>
+                                            <div class="salary-range_input input">
+                                                <input type="text">
+                                                <span>元</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">支薪方式</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">匯款</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">發薪資日</label>
+                                <input type="number" class="form-item_main input" placeholder="例：每月5日">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-companyAddress">
+                                <label for="">上班地點</label>
+                                <div class="form-item_main">
+                                    <select name="" id="" class="select">
+                                        <option value="">台北市</option>
+                                    </select>
+                                    <select name="" id="" class="select">
+                                        <option value="">中正區</option>
+                                    </select>
+                                    <input type="text" class="input">
+                                    <button class="btn-border-gray">同公司地址</button>
+                                    <input type="text" class="input remark" placeholder="備註">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-select jobTime">
+                                <label for="">上班時段</label>
+                                <div class="form-item_main">
+                                    <div class="select-wrap select-multi">
+                                        <div class="select-item companyRule">依公司規定</div>
+                                        <div class="select-item">日班</div>
+                                        <div class="select-item">晚班</div>
+                                        <div class="select-item">大夜班</div>
+                                        <div class="select-item">假日班</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-select">
+                                <label for="">接受身份</label>
+                                <div class="form-item_main">
+                                    <div class="select-wrap select-multi">
+                                        <div class="select-item">二度就業</div>
+                                        <div class="select-item">中高齡(45~65歲)</div>
+                                        <div class="select-item">身心障礙者</div>
+                                        <div class="select-item">研發替代役</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">是否出差</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">是</option>
+                                    <option value="">否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">可上班日</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">不限</option>
+                                    <option value="">錄取後一週</option>
+                                    <option value="">錄取後二週</option>
+                                    <option value="">錄取後三週</option>
+                                    <option value="">錄取後一個月</option>
+                                    <option value="">錄取後二個月</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">休假制度</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">週休二日</option>
+                                    <option value="">隔週休</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">排班制度</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">排班制</option>
+                                    <option value="">輪班</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">員工制服</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">公司提供</option>
+                                    <option value="">不用</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">管理責任</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">是</option>
+                                    <option value="">否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-select">
+                                <label for="">職缺特色</label>
+                                <div class="form-item_main">
+                                    <div class="select-wrap select-grid">
+                                        <div class="select-grid_item">
+                                            <div class="select-item">交通津貼</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">伙食津貼</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">週休二日</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">無需輪班</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">高年終獎金</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">年薪70萬以上</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">年薪14個月以上</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">獎金分紅機制</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">定期加薪</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">國外駐點工作</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">外派機會多</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">彈性上下班</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">準時上下班</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">免經驗可</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content_intro_item">
+                    <h2 class="title-bgBlue">職缺條件</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">工作經驗</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">無經驗可</option>
+                                    <option value="">1年以下</option>
+                                    <option value="">1-3年</option>
+                                    <option value="">3-5年</option>
+                                    <option value="">5-10年</option>
+                                    <option value="">10年以上</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">學歷要求</label>
+                                <select name="" id="" class="form-item_main select">
+                                    <option value="">不拘</option>
+                                    <option value="">國中</option>
+                                    <option value="">高中職</option>
+                                    <option value="">大學</option>
+                                    <option value="">專科</option>
+                                    <option value="">碩士</option>
+                                    <option value="">博士</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-select">
+                                <label for="">具備駕照</label>
+                                <div class="form-item_main">
+                                    <div class="select-wrap select-multi">
+                                        <div class="select-item">輕型機車</div>
+                                        <div class="select-item">普通重機車</div>
+                                        <div class="select-item">大型重機車</div>
+                                        <div class="select-item">普通小型車</div>
+                                        <div class="select-item">普通大貨車</div>
+                                        <div class="select-item">普通大客車</div>
+                                        <div class="select-item">普通聯結車</div>
+                                        <div class="select-item">職業小型車</div>
+                                        <div class="select-item">職業大貨車</div>
+                                        <div class="select-item">職業大客車</div>
+                                        <div class="select-item">職業聯結車</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-select">
+                                <label for="">科系限制</label>
+                                <div class="form-item_main">
+                                    <div class="select-wrap select-grid">
+                                        <div class="select-grid_item">
+                                            <div class="select-item">語文/人文</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">商業/管理</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">生物科學</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">自然科學</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">醫藥衛生</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">運輸通信</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">觀光服務</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">數學/電算機科學</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">建築/都市規劃</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">工業技藝/機械</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">經濟社會/心理</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">家政相關</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">大眾傳播</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">農林漁牧</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">法律</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">藝術</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">教育</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">工程</div>
+                                        </div>
+                                        <div class="select-grid_item">
+                                            <div class="select-item">其他</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-lang">
+                                <label for="">語言條件</label>
+                                <div class="form-item_main">
+                                    <div class="form-item-lang_item">
+                                        <select name="" id="" class="select form-item-lang_title">
+                                            <option value="">英文</option>
+                                            <option value="">泰文</option>
+                                            <option value="">葡萄牙文</option>
+                                            <option value="">日文</option>
+                                            <option value="">馬來文</option>
+                                            <option value="">阿拉伯文</option>
+                                            <option value="">法文</option>
+                                            <option value="">印尼文</option>
+                                            <option value="">德文</option>
+                                            <option value="">俄文</option>
+                                            <option value="">西班牙文</option>
+                                            <option value="">義大利文</option>
+                                            <option value="">台語</option>
+                                            <option value="">越文</option>
+                                            <option value="">粵語</option>
+                                            <option value="">客語</option>
+                                            <option value="">上海話</option>
+                                            <option value="">韓文</option>
+                                            <option value="">菲律賓語</option>
+                                        </select>
+                                        <div class="form-item-lang_level select">
+                                            <span>聽</span>
+                                            <select name="" id="">
+                                                <option value="">初階</option>
+                                                <option value="">中等</option>
+                                                <option value="">精通</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-item-lang_level select">
+                                            <span>說</span>
+                                            <select name="" id="">
+                                                <option value="">初階</option>
+                                                <option value="">中等</option>
+                                                <option value="">精通</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-item-lang_level select">
+                                            <span>讀</span>
+                                            <select name="" id="">
+                                                <option value="">初階</option>
+                                                <option value="">中等</option>
+                                                <option value="">精通</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-item-lang_level select">
+                                            <span>寫</span>
+                                            <select name="" id="">
+                                                <option value="">初階</option>
+                                                <option value="">中等</option>
+                                                <option value="">精通</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-item-lang_item">
+                                        <select name="" id="" class="select form-item-lang_title">
+                                            <option value="">請選擇</option>
+                                            <option value="">英文</option>
+                                            <option value="">泰文</option>
+                                            <option value="">葡萄牙文</option>
+                                            <option value="">日文</option>
+                                            <option value="">馬來文</option>
+                                            <option value="">阿拉伯文</option>
+                                            <option value="">法文</option>
+                                            <option value="">印尼文</option>
+                                            <option value="">德文</option>
+                                            <option value="">俄文</option>
+                                            <option value="">西班牙文</option>
+                                            <option value="">義大利文</option>
+                                            <option value="">台語</option>
+                                            <option value="">越文</option>
+                                            <option value="">粵語</option>
+                                            <option value="">客語</option>
+                                            <option value="">上海話</option>
+                                            <option value="">韓文</option>
+                                            <option value="">菲律賓語</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-tag">
+                                <label for="">擅長工具</label>
+                                <div class="form-item_main">
+                                    <div class="addTag">
+                                        <ul class="addTag_content">
+                                            <li class="tag-border-gray">
+                                                <span>Illustrator</span>
+                                                <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                            </li>
+                                            <li class="tag-border-gray">
+                                                <span>Adobe InDesign</span>
+                                                <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                            </li>
+                                            <li class="tag-border-gray">
+                                                <span>Adobe Photoshop</span>
+                                                <img class="tag-border-gray_x" src="./public/img/x.svg" alt="">
+                                            </li>
+                                        </ul>
+                                        <div class="addTag_form">
+                                            <input type="text" class="input">
+                                            <button class="btn-bg-blue-noIcon addTag_btn me-3">新增</button>
+                                            <button class="btn-border-gray">清除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-textarea">
+                                <label for="">工作技能</label>
+                                <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10" placeholder="請輸入"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-textarea">
+                                <label for="">所需證照</label>
+                                <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10" placeholder="請輸入"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item form-item-textarea">
+                                <label for="">其他條件</label>
+                                <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10" placeholder="請輸入"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content_intro_item">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="title-bgBlue m-0">應徵方式</h2>
+                        <button class="btn-border-gray text-sm">同公司資料</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">聯絡人</label>
+                                <input type="text" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">聯絡信箱</label>
+                                <input type="email" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">電洽</label>
+                                <input type="phone" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-item">
+                                <label for="">親洽</label>
+                                <input type="address" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-item">
+                                <label for="">其他</label>
+                                <input type="text" class="form-item_main input" placeholder="請輸入">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/common.js"></script>
+
+</body>
+</html>
