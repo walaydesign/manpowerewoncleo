@@ -1,0 +1,54 @@
+.otherPage {
+    padding: 50px 0 150px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: $primary-600;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.about {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    &_text {
+        padding-left: 60px;
+        margin: 0;
+        text-align: justify;
+    }
+    @media screen and (max-width: 991px) {
+        &_text {
+            padding: 50px 0 0;
+        }
+    }
+}
+
+.privacy {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    &_item {
+        margin-bottom: 35px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &_title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: $primary-700;
+    }
+    &_content {
+        text-align: justify;
+        margin: 0;
+        line-height: 1.6;
+    }
+}

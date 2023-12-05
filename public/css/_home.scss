@@ -1,0 +1,171 @@
+.home-head {
+    position: relative;
+    margin-bottom: 90px;
+    .searchjob {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width: 767px) {
+        .searchjob {
+            position: static;
+            transform: none;
+            margin: 0 auto;
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 34%;
+    &_main {
+        @include coverPic;
+    }
+    &_style {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1%;
+    }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 60%;
+    }
+}
+
+.home-title {
+    color: $primary-600;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+    @media screen and (max-width: 991px) {
+        font-size: 32px;
+    }
+}
+
+.hot-company {
+    padding: 60px 0 100px;
+    background-color: #FFF0DA;
+    position: relative;
+    // margin-top: -1px;
+    // background-image: url(../img/block-style-blue.svg);
+    // background-size: 100%;
+    // background-position: 0 bottom;
+    // background-repeat: no-repeat;
+    &_bg {
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+        left: 0;
+    }
+    .home-title {
+        padding-left: 20px;
+    }
+    &_content {
+        position: relative;
+    }
+    &_item {
+        padding: 30px 15px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        display: block;
+        transition: $transition;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &_pic {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin: 0 auto 15px;
+        >img {
+            @include containPic;
+        }
+    }
+    &_name {
+        text-align: center;
+        color: $gray-800;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    &_salary {
+        font-size: 14px;
+        text-align: center;
+        color: $primary-600;
+        margin: 0;
+    }
+    &_swiper {
+        overflow: hidden;
+        padding: 20px;
+        &_prev, &_next{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            svg {
+                width: 45px;
+                height: 45px;
+                path {
+                    fill: $primary-400;
+                    transition: $transition;
+                }
+                &:hover {
+                    path {
+                        fill: $primary-600;
+                    }
+                }
+            }
+            &.swiper-button-disabled {
+                svg {
+                    path {
+                        fill: $gray-500;
+                    }
+                }
+            }
+        }
+        &_prev {
+            left: -70px;
+        }
+        &_next {
+            right: -70px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        >.container {
+            max-width: inherit;
+            padding: 0 100px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        >.container {
+            padding-left: 20px;
+            padding-right: 0;
+        }
+        &_swiper {
+            &_prev, &_next{
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        >.container {
+            padding-left: 10px;
+        }
+    }
+}
+
+.recommend-job {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    background-image: url(../img/home-bg.png);
+    background-size: 100%;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    >.container {
+        max-width: 950px;
+    }
+}

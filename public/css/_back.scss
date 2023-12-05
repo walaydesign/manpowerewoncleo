@@ -1,0 +1,354 @@
+.back {
+    padding: 0 40px 100px;
+    display: flex;
+    justify-content: flex-end;
+    &_header {
+        padding-top: 20px;
+        width: 280px;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 40px;
+        z-index: 10;
+        overflow-y: auto;
+        overflow-x: visible;
+        padding: 0 15px 40px;
+        &_logo {
+            width: 130px;
+            margin-bottom: 30px;
+        }
+        .recruit_search-wrap {
+            width: 100%;
+            // margin-top: 20px;
+            .recruit_search_advanced_age {
+                input {
+                    width: calc((100% - 40px) / 2);
+                }
+                &_btn {
+                    width: 100%;
+                    margin: 15px 0 0;
+                }
+            }
+        }
+        .recruit_search_advanced_salary {
+            input {
+                width: calc((100% - 45px) / 2);
+            }
+            button {
+                width: 100%;
+                margin: 15px 0 0;
+            }
+        } 
+        .recruit_search_advanced_input {
+            .input {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            button {
+                width: calc(100% - 36px);
+                margin: 0;
+            }
+        } 
+    }
+    &_content {
+        width: calc(100% - 280px);
+        padding-left: 35px;
+        .tab-wrap {
+            margin-bottom: 30px;
+        }
+    }
+    &_title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        h1 {
+            padding: 15px 25px;
+            background-color: $third-300;
+            border-radius: 0 0 30px 30px;
+            color: $primary-700;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        &_header {
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 0;
+            padding: 0 20px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.15);
+            &_nav {
+                position: fixed;
+                box-shadow: none;
+                top: 70px;
+                // right: 0;
+                border-radius: 0;
+                height: calc(100vh - 70px);
+                z-index: 20;
+                background-color: #fff;
+                width: 250px;
+                right: -250px;
+                transition: $transition;
+                &_inner {
+                    position: static;
+                    box-shadow: none;
+                    padding: 0 15px;
+                }
+                &.active {
+                    right: 0;
+                }
+            }
+            &_logo {
+                margin: 0;
+            }
+        }
+        &_content {
+            width: 100%;
+            padding: 70px 0 0 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &_header {
+            .detail-content_nav_list {
+                display: block;
+            }
+        }
+        &_title {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.back-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_content {
+        max-width: 570px;
+        width: calc(100% - 40px);
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 30px;
+        padding: 53px;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 5px;
+            background-color: $primary-500;
+            top: 0;
+            left: 0;
+        }
+    }
+    &_logo {
+        width: 200px;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    h1 {
+        color: $gray-800;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    button {
+        display: block;
+        width: 155px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 575px) {
+        &_logo {
+            width: 150px;
+        }
+        &_content {
+            padding: 53px 20px;
+        }
+    }
+}
+
+.back-seeker {
+    &_list {
+        margin-bottom: 40px;
+        &_item {
+            display: flex;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid $third-400;
+            &:last-child {
+                border: 0;
+            }
+        }
+        &_info {
+            width: calc(100% - 140px);
+            display: flex;
+            align-items: center;
+        }
+        &_btn {
+            display: flex;
+            justify-content: flex-end;
+            width: 140px;
+            &_item {
+                margin-left: 15px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        &_pic {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            >img {
+                @include coverPic;
+            }
+        }
+        &_text {
+            width: calc(100% - 80px);
+            padding-left: 15px;
+        }
+    }
+    &_info {
+        .form-item {
+            margin: 10px 0;
+        }
+    }
+    &_resume {
+        .detail-content_intro_form {
+            padding-right: 40px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &_list {
+            &_item {
+                display: block;
+            }
+            &_info {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            &_btn {
+                width: 100%;
+                justify-content: flex-end;
+            }
+            &_pic {
+                width: 60px;
+                height: 60px;
+                border-radius: 5px;
+            }
+            &_text {
+                width: calc(100% - 60px);
+                padding-left: 10px;
+            }
+        }
+        &_resume {
+            .detail-content_intro_form {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.back-company {
+    &_info {
+        .form-item {
+            margin: 10px 0;
+        }
+    }
+    &_job {
+        .detail-content_intro_item {
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            padding-bottom: 35px;
+            border-bottom: 1px solid $gray-500;
+        }
+    }
+}
+
+.back-job {
+    width: 100%;
+    .searchjob {
+        width: 100%;
+        background-color: transparent;
+        padding: 0 0 30px 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $third-400;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: inherit;
+    }
+    .job_item {
+        padding: 0;
+        margin-bottom: 20px;
+        &_link {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            // width: calc(100% - 85px);
+            // padding-right: 15px;
+        }
+        &_inform {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            >li {
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &_detail {
+            width: 100%;
+        }
+    }
+    &_info {
+        width: calc(100% - 85px);
+        padding-right: 15px;
+    }
+    &_btn {
+        width: 85px;
+    }
+    @media screen and (max-width: 575px) {
+        &_info {
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $gray-400;
+        }
+        &_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 15px;
+        }
+    }
+}
+
+.editor {
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
