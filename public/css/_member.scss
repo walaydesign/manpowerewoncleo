@@ -30,10 +30,15 @@
     .form-item {
         margin-top: 0;
         label {
-            font-weight: 500;
+            font-weight: 300;
         }
         input, textarea {
             color: $gray-800;
+        }
+        &-address {
+            .input {
+                // width: calc(100% - 95px);
+            }
         }
     }
     &-company {

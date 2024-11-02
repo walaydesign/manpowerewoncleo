@@ -416,10 +416,12 @@ body.bg {
     flex-wrap: wrap;
     margin: 25px 0;
     label {
-        width: 50px;
+        width: 85px;
+        text-align: center;
+        padding-right: 15px;
     }
     &_main {
-        width: calc(100% - 50px);
+        width: calc(100% - 85px);
         &.contact-time {
             display: flex;
             align-items: center;
@@ -431,11 +433,6 @@ body.bg {
                 width: 35px;
                 text-align: center;
                 display: block;
-            }
-        }
-        &.address {
-            @media screen and (max-width: 767px) {
-                
             }
         }
     }
@@ -469,6 +466,9 @@ body.bg {
             .input {
                 width: calc(100% - (165px + 20px) * 2);
             }
+        }
+        &_main {
+            width: calc(100% - 95px);
         }
         @media screen and (max-width: 767px) {
             align-items: flex-start;

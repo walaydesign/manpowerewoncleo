@@ -470,11 +470,13 @@ body.bg-signup {
 }
 
 .form-item label {
-  width: 50px;
+  width: 85px;
+  text-align: center;
+  padding-right: 15px;
 }
 
 .form-item_main {
-  width: calc(100% - 50px);
+  width: calc(100% - 85px);
 }
 
 .form-item_main.contact-time {
@@ -548,6 +550,10 @@ body.bg-signup {
 
 .form-item-address .form-item_main .input {
   width: calc(100% - (165px + 20px) * 2);
+}
+
+.form-item-address_main {
+  width: calc(100% - 95px);
 }
 
 @media screen and (max-width: 767px) {
@@ -5151,7 +5157,7 @@ body.bg-signup {
 }
 
 .signup .form-item label {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .signup .form-item input, .signup .form-item textarea {

@@ -202,40 +202,39 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-item">
+                            <label for="">公司名稱</label>
+                            <input type="number" class="input form-item_main">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
                             <label for="">公司統編</label>
                             <input type="number" class="input form-item_main">
                         </div>
                     </div>
-                    <div class="col-md-6"></div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
-                            <label for="">公司名稱</label>
-                            <p class="form-item_main">西雅圖極品咖啡</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">行業別</label>
-                            <p class="form-item_main">專業設計</p>
+                            <select name="" id="" class="input form-item_main"></select>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">負責人</label>
-                            <p class="form-item_main">田馥甄</p>
+                            <input type="text" class="input form-item_main">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">員工數</label>
-                            <p class="form-item_main">100人</p>
+                            <input type="number" class="input form-item_main">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">資本額</label>
                             <div class="form-item_main d-flex align-items-center justify-content-between">
-                                <p class="m-0">300萬</p>
+                                <input type="number" class="input form-item_main">
                                 <div class="check-item">
                                     <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
                                     <span>不顯示</span>
@@ -244,16 +243,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
-                            <label for="">聯絡人</label>
-                            <p class="form-item_main">田馥甄</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">公司電話</label>
                             <div class="form-item_main d-flex align-items-center justify-content-between">
-                                <p class="m-0">02-12345678</p>
+                                <input type="number" class="input form-item_main">
                                 <div class="check-item">
                                     <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
                                     <span>不顯示</span>
@@ -262,10 +255,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">公司傳真</label>
                             <div class="form-item_main d-flex align-items-center justify-content-between">
-                                <p class="m-0">02-12345678</p>
+                                <input type="number" class="input form-item_main">
                                 <div class="check-item">
                                     <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
                                     <span>不顯示</span>
@@ -274,280 +267,29 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="form-item mb-3 align-items-start">
+                        <div class="form-item form-item-address">
                             <label for="">公司地址</label>
                             <div class="form-item_main d-md-flex align-items-center justify-content-between">
-                                <p class="m-md-0 mb-2">台北市內湖區環山路一段28巷15號1樓</p>
+                                <div class="d-flex form-item-address_main justify-content-between">
+                                    <select name="" id="" class="select">
+                                        <option value="">台北市</option>
+                                    </select>
+                                    <select name="" id="" class="select">
+                                        <option value="">中正區</option>
+                                    </select>
+                                    <input type="text" class="input">
+                                </div>
                                 <div class="check-item">
                                     <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>不顯示詳細地址</span>
+                                    <span>不顯示<br>詳細地址</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="form-item mb-3">
+                        <div class="form-item">
                             <label for="">公司網站</label>
                             <input class="form-item_main input" type="text" value="http://www.yuanchuang.com.tw/">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-textarea">
-                            <label for="">公司簡介</label>
-                            <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-textarea">
-                            <label for="">公司服務</label>
-                            <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-select">
-                            <label for="">公司特色</label>
-                            <div class="form-item_main">
-                                <div class="select-wrap select-grid">
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工旅遊</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">上市櫃公司</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">外語工作環境</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">外商企業</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工認股/配股</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">旅遊補助</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">優於勞基法之休假</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工購物優惠</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">定期聚會/生日會</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">產業培訓/教育訓練</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工分紅</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">進修補助</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">子女教育獎學金</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">交通方便/供交通車</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-select">
-                            <label for="">法定項目</label>
-                            <div class="form-item_main">
-                                <div class="select-wrap select-grid">
-                                    <div class="select-grid_item">
-                                        <div class="select-item">勞保</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">健保</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">加班費</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">週休二日</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工陪產假</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">育嬰假</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">生理假</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">特別休假</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">員工體檢</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">勞退提撥金</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">職災保險</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">育嬰室</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">哺乳室</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">公司附設托兒中心</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">有合作托兒中心</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">就業保險</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-select">
-                            <label for="">防疫項目</label>
-                            <div class="form-item_main">
-                                <div class="select-wrap select-grid">
-                                    <div class="select-grid_item">
-                                        <div class="select-item">提供口罩</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">提供酒精</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">防護面罩或眼鏡</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">定期環境消毒</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">遠端面試</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">居家辦公</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">採分流上班</div>
-                                    </div>
-                                    <div class="select-grid_item">
-                                        <div class="select-item">防疫補助金</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-welfare">
-                            <label for="">員工福利</label>
-                            <div class="form-item_main welfare">
-                                <div class="d-flex align-items-center mb-4">
-                                    <button class="btn-bg-blue me-3 btn-popup" data-popup="#popup-welfare">
-                                        <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
-                                        </svg>
-                                        <span class="btn-bg-blue_text">新增</span>
-                                    </button>
-                                    <button class="btn-border-gray-noIcon">清除重選</button>
-                                </div>
-                                <div class="welfare_content">
-                                    <div class="welfare_content_item">
-                                        <h3 class="welfare_content_title">獎金類</h3>
-                                        <ul class="welfare_content_list">
-                                            <li>
-                                                <span>年終獎金</span>
-                                                <img src="./public/img/x.svg" alt="">
-                                            </li>
-                                            <li>
-                                                <span>激勵獎金</span>
-                                                <img src="./public/img/x.svg" alt="">
-                                            </li>
-                                            <li>
-                                                <span>績效獎金</span>
-                                                <img src="./public/img/x.svg" alt="">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="welfare_content_item">
-                                        <h3 class="welfare_content_title">津貼類</h3>
-                                        <ul class="welfare_content_list">
-                                            <li>
-                                                <span>員工結婚補助</span>
-                                                <img src="./public/img/x.svg" alt="">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-textarea">
-                            <label for="">其他說明</label>
-                            <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item column">
-                            <label for="">公司環境照</label>
-                            <div class="form-item_main">
-                                <div class="multiPic row">
-                                    <div class="col-md-3 col-sm-4 col-6">
-                                        <div class="multiPic_item">
-                                            <img class="multiPic_main" src="./public/img/young-asian-person-portrait 1.png" alt="">
-                                            <div class="multiPic_delete"><img src="./public/img/x-deep.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-6">
-                                        <div class="multiPic_item">
-                                            <img class="multiPic_main" src="./public/img/young-asian-person-portrait 1.png" alt="">
-                                            <div class="multiPic_delete"><img src="./public/img/x-deep.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-6">
-                                        <div class="multiPic_item">
-                                            <img class="multiPic_main" src="./public/img/young-asian-person-portrait 1.png" alt="">
-                                            <div class="multiPic_delete"><img src="./public/img/x-deep.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-6">
-                                        <div class="multiPic_item">
-                                            <img class="multiPic_main" src="./public/img/young-asian-person-portrait 1.png" alt="">
-                                            <div class="multiPic_delete"><img src="./public/img/x-deep.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-6">
-                                        <div class="multiPic_item multiPic_upload">
-                                            <img src="./public/img/gallery.svg" alt="">
-                                            <span>上傳</span>
-                                            <input type="file" class="multiPic_upload_btn">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item column company-banner">
-                            <div class="w-100 d-flex align-items-center justify-content-between">
-                                <span>公司banner</span>
-                                <div class="upload-pic_btn btn-border-blue">
-                                    <img class="btn-border-blue_icon" src="./public/img/upload-pic.svg" alt="">
-                                    <span class="btn-border-blue_text">上傳</span>
-                                    <input class="upload-pic_btn_input" type="file">
-                                </div>
-                            </div>
-                            <div class="form-item_main">
-                                <div class="company-banner_pic"><img class="company-banner_main" src="./public/img/banner.png" alt=""></div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
