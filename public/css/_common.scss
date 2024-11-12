@@ -484,6 +484,11 @@ body.bg {
                     width: 100%;
                 }
             }
+            &_main {
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+            }
         }
     }
     &-companyAddress {

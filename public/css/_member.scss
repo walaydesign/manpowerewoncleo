@@ -59,6 +59,31 @@
             }
         }
     }
+    @media screen and (max-width: 400px) {
+        .form-item {
+            display: block;
+            // margin-bottom: 12px;
+            label {
+                margin-bottom: 5px;
+                text-align: left;
+            }
+            &-address {
+                .check-item {
+                    margin-left: 0;
+                }
+            }
+        }
+        .form-item_main {
+            width: 100%;
+        }
+        .check-item {
+            margin-left: 10px;
+            .checkbox {
+                margin-right: 5px;
+            }
+        }
+        
+    }
 }
 
 .upload-pic {

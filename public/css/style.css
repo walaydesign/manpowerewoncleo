@@ -572,6 +572,12 @@ body.bg-signup {
   .form-item-address .form-item_main .input {
     width: 100%;
   }
+  .form-item-address_main {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
 }
 
 .form-item-companyAddress {
@@ -5176,6 +5182,28 @@ body.bg-signup {
 
 .signup-company .check-item span {
   font-size: 14px;
+}
+
+@media screen and (max-width: 400px) {
+  .signup .form-item {
+    display: block;
+  }
+  .signup .form-item label {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .signup .form-item-address .check-item {
+    margin-left: 0;
+  }
+  .signup .form-item_main {
+    width: 100%;
+  }
+  .signup .check-item {
+    margin-left: 10px;
+  }
+  .signup .check-item .checkbox {
+    margin-right: 5px;
+  }
 }
 
 .upload-pic {
