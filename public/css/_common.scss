@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 $primary-100: #E8F7FF;
 $primary-200: #CFEEFF;
@@ -44,6 +45,7 @@ $dark: #444444;
 $bg-orange: #FFFCF8;
 $transition: 0.3s;
 $shadow-main: 0 4px 15px rgba(0,0,0,0.1);
+$font-fugaz: "Fugaz One", sans-serif;
 
 @mixin coverPic {
     position: absolute;
@@ -119,6 +121,13 @@ body.bg {
     &-signup {
         background-color: $third-100;
         background-image: url(../img/signup-bg.png);
+        background-size: 100%;
+        background-position: 0 bottom;
+        background-repeat: no-repeat;
+    }
+    &-write {
+        background-color: $third-100;
+        background-image: url(../img/bg-2.png);
         background-size: 100%;
         background-position: 0 bottom;
         background-repeat: no-repeat;
@@ -1432,6 +1441,10 @@ body.bg {
     right: 75px;
     bottom: 120px;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
     button {
         width: 50px;
         height: 50px;
@@ -1439,13 +1452,39 @@ body.bg {
         background-color: $secondary-600;
         padding: 0;
         display: block;
-        margin: 25px 0;
+        // margin: 12px 0;
         transition: $transition;
         img {
             width: 50%;
         }
         &:hover {
             transform: scale(1.1);
+        }
+        &.has-text {
+            width: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 100px;
+            gap: 10px;
+            padding: 0 20px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            span {
+                color: #fff;
+            }
+        }
+        &.sideBtn_dog {
+            padding: 0;
+            a {
+                display: block;
+                width: 100%;
+                height: 100px;
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
     &.bg {

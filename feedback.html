@@ -8,64 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
-<body class="bg-blue">
-    <header class="header">
+<body class="bg-yellow">
+    <header class="header header-company">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
             <nav class="header_nav d-flex align-items-center">
                 <div class="header_link">
-                    <ul class="header_find d-flex align-items-center">
+                    <ul class="header_find d-lg-flex align-items-center">
                         <li><a href="./hunt-job.html">找工作</a></li>
+                        <li><a href="./recruit.html">找人才</a></li>
                     </ul>
                     <ul class="header_memberNav d-lg-none">
-                        <li><a href="./seeker-overview.html">總覽</a></li>
-                        <li><a href="./seeker-inform.html">個人資料</a></li>
-                        <li><a href="./seeker-resume.html">履歷管理</a></li>
-                        <li><a href="./seeker-apply.html">應徵紀錄</a></li>
-                        <li><a href="./seeker-invited.html">受邀紀錄</a></li>
-                        <li><a href="./seeker-recommend.html">推薦信設定</a></li>
-                        <li><a href="./seeker-save.html">我的收藏</a></li>
-                        <li><a href="./seeker-feedback.html">反饋紀錄</a></li>
-                        <li><a href="">智能配對</a></li>
-                        <li><a href="">我的文章</a></li>
-                        <li class="active"><a href="./seeker-password.html">更改密碼</a></li>
+                        <li><a href="./company-overview.html">總覽</a></li>
+                        <li class="active"><a href="./company-inform.html">公司資料</a></li>
+                        <li><a href="./company-job.html">職缺管理</a></li>
+                        <li><a href="./company-invite.html">邀請紀錄</a></li>
+                        <li><a href="./company-invite-record.html">應徵紀錄</a></li>
+                        <li><a href="./company-invite-setting.html">應徵文設定</a></li>
+                        <li><a href="./company-save.html">儲存人才</a></li>
+                        <li><a href="./company-password.html">更改密碼</a></li>
                         <li><a>登出</a></li>
                     </ul>
                 </div>
                 <ul class="header_member d-flex align-items-center">
                     <li>
-                        <a href="./seeker-overview.html" class="btn-bg-yellow header_member_btn login">
-                            <div class="header_member_btn_pic"><img src="./public/img/woman1.png" alt=""></div>
-                            <span class="btn-bg-yellow_text header_member_btn_text">求職者名稱</span>
+                        <a class="btn-bg-yellow header_member_btn btn-popup" data-popup="#seeker-login">
+                            <svg class="btn-bg-yellow_icon header_member_btn_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00009 8.56846C11.0369 8.56846 12.694 6.91134 12.694 4.87453C12.694 2.83828 11.0369 1.18115 9.00009 1.18115C6.96328 1.18115 5.30615 2.83828 5.30615 4.87509C5.30615 6.9119 6.96328 8.56846 9.00009 8.56846ZM9.00009 2.19365C10.4789 2.19365 11.6815 3.39628 11.6815 4.87509C11.6815 6.3539 10.4789 7.55653 9.00009 7.55653C7.52128 7.55653 6.31865 6.35334 6.31865 4.87509C6.31865 3.39684 7.52128 2.19365 9.00009 2.19365Z" fill="white"/>
+                                <path d="M13.9692 11.1036C12.6462 10.0973 10.881 9.54321 8.99723 9.54321C7.11398 9.54321 5.34998 10.0967 4.02923 11.1025C3.20742 11.728 2.71692 12.7461 2.71692 13.8267V15.2875C2.71692 16.1318 3.40429 16.8186 4.24861 16.8186H13.752C14.5964 16.8186 15.2837 16.1335 15.2837 15.2908V13.8283C15.2832 12.7483 14.7921 11.7302 13.9692 11.1036ZM14.2701 15.2908C14.2701 15.5749 14.0378 15.8067 13.7515 15.8067H4.24861C3.96229 15.8067 3.72998 15.5738 3.72998 15.288V13.8272C3.72998 13.0611 4.07086 12.3439 4.64236 11.9085C5.78761 11.0367 7.33448 10.5563 8.99723 10.5563C10.6605 10.5563 12.2085 11.0372 13.356 11.9102C13.9287 12.3456 14.2701 13.0633 14.2701 13.8289V15.2908Z" fill="white"/>
+                            </svg>
+                            <span class="btn-bg-yellow_text header_member_btn_text">求職會員</span>
                         </a>
                     </li>
                     <li>
-                        <a class="btn-bg-blue header_member_btn btn-popup" data-popup="#company-login">
-                            <svg class="btn-bg-blue_icon header_member_btn_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_558)">
-                                <path d="M17.4726 16.9453H16.9101V7.98069C16.9101 7.75369 16.7648 7.55221 16.5495 7.48042L10.5821 5.49128V3.69174C10.5821 3.47191 10.4457 3.27514 10.2399 3.19797L1.8026 0.0339753C1.45821 -0.0951536 1.09009 0.159835 1.09009 0.527745V16.9454H0.527588C0.236354 16.9454 0.000244141 17.1815 0.000244141 17.4727C0.000244141 17.7639 0.236354 18 0.527588 18C0.646029 18 17.244 18 17.4726 18C17.7638 18 17.9999 17.7639 17.9999 17.4727C17.9999 17.1815 17.7638 16.9453 17.4726 16.9453ZM5.30873 16.9453H4.25408V14.836H5.30873V16.9453ZM7.41807 16.9453H6.36342V14.836H7.41807V16.9453ZM9.52741 5.87135V16.9453H8.47276V14.3087C8.47276 14.0174 8.23665 13.7813 7.94542 13.7813H3.72674C3.4355 13.7813 3.19939 14.0174 3.19939 14.3087V16.9453H2.14474V1.28867L9.52741 4.05715V5.87135ZM13.7461 16.9453H12.6914V14.836H13.7461V16.9453ZM15.8554 16.9453H14.8007V14.3087C14.8007 14.0174 14.5646 13.7813 14.2734 13.7813H12.1641C11.8728 13.7813 11.6367 14.0174 11.6367 14.3087V16.9453H10.5821V6.60299L15.8554 8.36077V16.9453Z" fill="white"/>
-                                <path d="M4.78134 11.6719H3.72668C3.43545 11.6719 3.19934 11.908 3.19934 12.1992C3.19934 12.4905 3.43542 12.7266 3.72668 12.7266H4.78134C5.07257 12.7266 5.30868 12.4905 5.30868 12.1992C5.30868 11.908 5.07257 11.6719 4.78134 11.6719Z" fill="white"/>
-                                <path d="M7.9454 11.6719H6.89075C6.59951 11.6719 6.3634 11.908 6.3634 12.1992C6.3634 12.4905 6.59948 12.7266 6.89075 12.7266H7.9454C8.23663 12.7266 8.47274 12.4905 8.47274 12.1992C8.47274 11.908 8.23663 11.6719 7.9454 11.6719Z" fill="white"/>
-                                <path d="M4.78134 9.56274H3.72668C3.43545 9.56274 3.19934 9.79885 3.19934 10.0901C3.19934 10.3813 3.43542 10.6174 3.72668 10.6174H4.78134C5.07257 10.6174 5.30868 10.3813 5.30868 10.0901C5.30868 9.79885 5.07257 9.56274 4.78134 9.56274Z" fill="white"/>
-                                <path d="M7.9454 9.56274H6.89075C6.59951 9.56274 6.3634 9.79885 6.3634 10.0901C6.3634 10.3813 6.59948 10.6174 6.89075 10.6174H7.9454C8.23663 10.6174 8.47274 10.3813 8.47274 10.0901C8.47274 9.79885 8.23663 9.56274 7.9454 9.56274Z" fill="white"/>
-                                <path d="M14.2733 11.6719H12.1639C11.8727 11.6719 11.6366 11.908 11.6366 12.1992C11.6366 12.4905 11.8727 12.7266 12.1639 12.7266H14.2733C14.5645 12.7266 14.8006 12.4905 14.8006 12.1992C14.8006 11.908 14.5645 11.6719 14.2733 11.6719Z" fill="white"/>
-                                <path d="M14.2733 9.56274H12.1639C11.8727 9.56274 11.6366 9.79885 11.6366 10.0901C11.6366 10.3813 11.8727 10.6174 12.1639 10.6174H14.2733C14.5645 10.6174 14.8006 10.3813 14.8006 10.0901C14.8006 9.79885 14.5645 9.56274 14.2733 9.56274Z" fill="white"/>
-                                <path d="M4.78134 7.45337H3.72668C3.43545 7.45337 3.19934 7.68948 3.19934 7.98071C3.19934 8.27195 3.43542 8.50806 3.72668 8.50806H4.78134C5.07257 8.50806 5.30868 8.27195 5.30868 7.98071C5.30865 7.68948 5.07257 7.45337 4.78134 7.45337Z" fill="white"/>
-                                <path d="M7.9454 7.45337H6.89075C6.59951 7.45337 6.3634 7.68948 6.3634 7.98071C6.3634 8.27195 6.59948 8.50806 6.89075 8.50806H7.9454C8.23663 8.50806 8.47274 8.27195 8.47274 7.98071C8.47274 7.68948 8.23663 7.45337 7.9454 7.45337Z" fill="white"/>
-                                <path d="M4.78134 5.34399H3.72668C3.43545 5.34399 3.19934 5.5801 3.19934 5.87134C3.19934 6.16257 3.43542 6.39868 3.72668 6.39868H4.78134C5.07257 6.39868 5.30868 6.16257 5.30868 5.87134C5.30865 5.5801 5.07257 5.34399 4.78134 5.34399Z" fill="white"/>
-                                <path d="M7.9454 5.34399H6.89075C6.59951 5.34399 6.3634 5.5801 6.3634 5.87134C6.3634 6.16257 6.59948 6.39868 6.89075 6.39868H7.9454C8.23663 6.39868 8.47274 6.16257 8.47274 5.87134C8.47274 5.5801 8.23663 5.34399 7.9454 5.34399Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_558">
-                                <rect width="18" height="18" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="btn-bg-blue_text header_member_btn_text">企業會員</span>
+                        <a href="./company-overview.html" class="btn-bg-blue header_member_btn login">
+                            <div class="header_member_btn_pic"><img src="./public/img/louisa.png" alt=""></div>
+                            <span class="btn-bg-blue_text header_member_btn_text">企業名稱</span>
                         </a>
                     </li>
                 </ul>
@@ -78,13 +61,13 @@
         </div>
     </header>
 
-    <div class="popup" id="company-login">
+    <div class="popup" id="seeker-login">
         <div class="popup_bg"></div>
-        <div class="popup_main popup_member company">
+        <div class="popup_main popup_member seeker">
             <div class="popup_inner">
                 <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
-                    <p class="popup_member_title_text">企業登入</p>
+                    <img class="popup_member_title_logo" src="./public/img/logo-yellow.svg" alt="">
+                    <p class="popup_member_title_text">求職者登入</p>
                 </div>
                 <div class="popup_member_content">
                     <form action="">
@@ -96,10 +79,10 @@
                             <label for="">密碼</label>
                             <input type="text" class="input form-item_main">
                         </div>
-                        <button class="btn-bgFill-blue">登入</button>
+                        <button class="btn-bgFill-yellow">登入</button>
                         <div class="popup_member_link d-flex align-items-center justify-content-center">
-                            <a href="./company-signup.html">註冊會員</a>
-                            <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
+                            <a href="./seeker-signup.html">註冊會員</a>
+                            <a class="btn-popup" data-popup="#seeker-foregt">忘記密碼</a>
                         </div>
                     </form>
                 </div>
@@ -110,12 +93,12 @@
         </div>
     </div>
 
-    <div class="popup" id="company-foregt">
+    <div class="popup" id="seeker-foregt">
         <div class="popup_bg"></div>
-        <div class="popup_main popup_member company">
+        <div class="popup_main popup_member seeker">
             <div class="popup_inner">
                 <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
+                    <img class="popup_member_title_logo" src="./public/img/logo-yellow.svg" alt="">
                     <p class="popup_member_title_text">忘記密碼</p>
                 </div>
                 <div class="popup_member_content">
@@ -124,7 +107,7 @@
                             <label for="">請輸入信箱或手機</label>
                             <input type="text" class="input form-item_main">
                         </div>
-                        <button class="btn-bgFill-blue">送出</button>
+                        <button class="btn-bgFill-yellow">送出</button>
                     </form>
                 </div>
                 <div class="popup_close">
@@ -135,45 +118,302 @@
     </div>
 
     <main class="main">
-        <div class="member seeker-password">
-            <div class="container d-flex flex-wrap">
-                <div class="detail-content_nav d-lg-block d-none">
-                    <div class="detail-content_nav_inner">
-                        <ul class="detail-content_nav_list">
-                            <li><a href="./seeker-overview.html"></a>總覽</li>
-                            <li><a href="./seeker-inform.html">個人資料</a></li>
-                            <li><a href="./seeker-resume.html">履歷管理</a></li>
-                            <li><a href="./seeker-apply.html">應徵紀錄</a></li>
-                            <li><a href="./seeker-invited.html">受邀紀錄</a></li>
-                            <li><a href="./seeker-recommend.html">推薦信設定</a></li>
-                            <li><a href="./seeker-save.html">我的收藏</a></li>
-                            <li><a href="./seeker-feedback.html">反饋紀錄</a></li>
-                            <li><a href="">智能配對</a></li>
-                            <li><a href="">我的文章</a></li>
-                            <li class="active"><a href="./seeker-password.html">更改密碼</a></li>
-                            <li><a>登出</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="member_content">
-                    <div class="member_content_inner">
-                        <h1 class="member_title">更改密碼</h1>
-                        <div class="seeker-password_form">
-                            <div class="form-item">
-                                <label for="">新密碼</label>
-                                <input type="password" class="form-item_main input">
+        <div class="feedback">
+            <div class="container">
+                <div class="feedback_top">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="feedback_top_item gold">
+                                <div class="feedback_top_num">
+                                    <img src="./public/img/crown.svg" alt="">
+                                    <h2>Bug King</h2>
+                                </div>
+                                <div class="feedback_top_head">
+                                    <div class="feedback_name">
+                                        <div class="feedback_user">
+                                            <img src="./public/img/louisa.png" alt="">
+                                        </div>
+                                        <p>名稱名稱名稱</p>
+                                    </div>
+                                    <div class="feedback_more">
+                                        <button>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 4.44448C11.2273 4.44448 12.2222 3.44955 12.2222 2.22224C12.2222 0.994931 11.2273 0 10 0C8.77269 0 7.77776 0.994931 7.77776 2.22224C7.77776 3.44955 8.77269 4.44448 10 4.44448Z" fill="white"/>
+                                                <path d="M10 12.2218C11.2273 12.2218 12.2222 11.2269 12.2222 9.99958C12.2222 8.77227 11.2273 7.77734 10 7.77734C8.77269 7.77734 7.77776 8.77227 7.77776 9.99958C7.77776 11.2269 8.77269 12.2218 10 12.2218Z" fill="white"/>
+                                                <path d="M10 19.9992C11.2273 19.9992 12.2222 19.0042 12.2222 17.7769C12.2222 16.5496 11.2273 15.5547 10 15.5547C8.77269 15.5547 7.77776 16.5496 7.77776 17.7769C7.77776 19.0042 8.77269 19.9992 10 19.9992Z" fill="white"/>
+                                            </svg>
+                                        </button>
+                                        <ul>
+                                            <li>檢舉</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="feedback_content">
+                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="feedback_date">2025/03/03</p>
+                                    <button class="feedback_like">
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1631_8088)">
+                                            <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1631_8088">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>20</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="form-item">
-                                <label for="">確認密碼</label>
-                                <input type="password" class="form-item_main input">
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="feedback_top_item silver">
+                                <div class="feedback_top_num">
+                                    <h2>2</h2>
+                                </div>
+                                <div class="feedback_top_head">
+                                    <div class="feedback_name">
+                                        <div class="feedback_user">
+                                            <img src="./public/img/louisa.png" alt="">
+                                        </div>
+                                        <p>名稱名稱名稱</p>
+                                    </div>
+                                    <div class="feedback_more">
+                                        <button>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 4.44448C11.2273 4.44448 12.2222 3.44955 12.2222 2.22224C12.2222 0.994931 11.2273 0 10 0C8.77269 0 7.77776 0.994931 7.77776 2.22224C7.77776 3.44955 8.77269 4.44448 10 4.44448Z" fill="white"/>
+                                                <path d="M10 12.2218C11.2273 12.2218 12.2222 11.2269 12.2222 9.99958C12.2222 8.77227 11.2273 7.77734 10 7.77734C8.77269 7.77734 7.77776 8.77227 7.77776 9.99958C7.77776 11.2269 8.77269 12.2218 10 12.2218Z" fill="white"/>
+                                                <path d="M10 19.9992C11.2273 19.9992 12.2222 19.0042 12.2222 17.7769C12.2222 16.5496 11.2273 15.5547 10 15.5547C8.77269 15.5547 7.77776 16.5496 7.77776 17.7769C7.77776 19.0042 8.77269 19.9992 10 19.9992Z" fill="white"/>
+                                            </svg>
+                                        </button>
+                                        <ul>
+                                            <li>檢舉</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="feedback_content">
+                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="feedback_date">2025/03/03</p>
+                                    <button class="feedback_like">
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1631_8088)">
+                                            <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1631_8088">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>20</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-end">
-                                <button class="btn-border-blue-noIcon">取消</button>
-                                <button class="btn-bg-blue-noIcon ms-3">變更</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="feedback_top_item bronze">
+                                <div class="feedback_top_num">
+                                    <h2>3</h2>
+                                </div>
+                                <div class="feedback_top_head">
+                                    <div class="feedback_name">
+                                        <div class="feedback_user">
+                                            <img src="./public/img/louisa.png" alt="">
+                                        </div>
+                                        <p>名稱名稱名稱</p>
+                                    </div>
+                                    <div class="feedback_more">
+                                        <button>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 4.44448C11.2273 4.44448 12.2222 3.44955 12.2222 2.22224C12.2222 0.994931 11.2273 0 10 0C8.77269 0 7.77776 0.994931 7.77776 2.22224C7.77776 3.44955 8.77269 4.44448 10 4.44448Z" fill="white"/>
+                                                <path d="M10 12.2218C11.2273 12.2218 12.2222 11.2269 12.2222 9.99958C12.2222 8.77227 11.2273 7.77734 10 7.77734C8.77269 7.77734 7.77776 8.77227 7.77776 9.99958C7.77776 11.2269 8.77269 12.2218 10 12.2218Z" fill="white"/>
+                                                <path d="M10 19.9992C11.2273 19.9992 12.2222 19.0042 12.2222 17.7769C12.2222 16.5496 11.2273 15.5547 10 15.5547C8.77269 15.5547 7.77776 16.5496 7.77776 17.7769C7.77776 19.0042 8.77269 19.9992 10 19.9992Z" fill="white"/>
+                                            </svg>
+                                        </button>
+                                        <ul>
+                                            <li>檢舉</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="feedback_content">
+                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="feedback_date">2025/03/03</p>
+                                    <button class="feedback_like">
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1631_8088)">
+                                            <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1631_8088">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>20</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                <div>
+                    <div class="feedback_item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feedback_name">
+                                <div class="feedback_user">
+                                    <img src="./public/img/louisa.png" alt="">
+                                </div>
+                                <p>名稱名稱名稱</p>
+                            </div>
+                            <p class="feedback_catagory">新功能提議</p>
+                        </div>
+                        <p class="feedback_content">
+                            它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="feedback_date">2025/03/03</p>
+                            <button class="feedback_like">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1631_8088)">
+                                    <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1631_8088">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>20</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feedback_item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feedback_name">
+                                <div class="feedback_user">
+                                    <img src="./public/img/louisa.png" alt="">
+                                </div>
+                                <p>名稱名稱名稱</p>
+                            </div>
+                            <p class="feedback_catagory">新功能提議</p>
+                        </div>
+                        <p class="feedback_content">
+                            它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="feedback_date">2025/03/03</p>
+                            <button class="feedback_like">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1631_8088)">
+                                    <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1631_8088">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>20</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feedback_item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feedback_name">
+                                <div class="feedback_user">
+                                    <img src="./public/img/louisa.png" alt="">
+                                </div>
+                                <p>名稱名稱名稱</p>
+                            </div>
+                            <p class="feedback_catagory">新功能提議</p>
+                        </div>
+                        <p class="feedback_content">
+                            它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="feedback_date">2025/03/03</p>
+                            <button class="feedback_like">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1631_8088)">
+                                    <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1631_8088">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>20</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feedback_item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feedback_name">
+                                <div class="feedback_user">
+                                    <img src="./public/img/louisa.png" alt="">
+                                </div>
+                                <p>名稱名稱名稱</p>
+                            </div>
+                            <p class="feedback_catagory">新功能提議</p>
+                        </div>
+                        <p class="feedback_content">
+                            它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="feedback_date">2025/03/03</p>
+                            <button class="feedback_like">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1631_8088)">
+                                    <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1631_8088">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>20</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feedback_item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feedback_name">
+                                <div class="feedback_user">
+                                    <img src="./public/img/louisa.png" alt="">
+                                </div>
+                                <p>名稱名稱名稱</p>
+                            </div>
+                            <p class="feedback_catagory">新功能提議</p>
+                        </div>
+                        <p class="feedback_content">
+                            它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="feedback_date">2025/03/03</p>
+                            <button class="feedback_like">
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1631_8088)">
+                                    <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1631_8088">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>20</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,12 +430,19 @@
         </div>
     </footer>
 
-    <div class="sideBtn bg-yellow">
+    <div class="sideBtn bg-blue">
+        <button class="has-text">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
+            </svg>
+            <span>發布反饋</span>
+        </button>
         <button class="sideBtn_chat"><img src="./public/img/chat.svg" alt=""></button>
         <button class="sideBtn_top"><img src="./public/img/arrow-up.svg" alt=""></button>
     </div>
 
-    <div class="chat bg-yellow">
+    <div class="chat bg-blue">
         <div class="chat_head d-flex align-items-center justify-content-between">
             <div class="chat_head_title align-items-center">
                 <h5>聊聊</h5>
@@ -207,7 +454,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#22A9E7"/>
                     </svg>
                 </div>
-                <h6>路易莎職人咖啡股份有限公司</h6>
+                <h6>求職者名稱</h6>
             </div>
             <div class="chat_head_close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,9 +479,9 @@
                 <ul class="chat_main_list">
                     <li class="chat_main_list_item notread" data-chat="#chat-1">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                     <div class="chat_num"><span>3</span></div>
@@ -244,9 +491,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-2">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -255,9 +502,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-3">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -266,9 +513,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-4">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -277,9 +524,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-5">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -288,9 +535,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-6">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -299,9 +546,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-7">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -310,9 +557,9 @@
                     </li>
                     <li class="chat_main_list_item" data-chat="#chat-8">
                         <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
+                            <div class="chat_main_list_pic"><img src="./public/img/woman1.png" alt=""></div>
                             <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
+                                <h6>求職者名稱</h6>
                                 <div class="d-flex align-items-center">
                                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                                 </div>
@@ -322,13 +569,13 @@
                 </ul>
             </div>
             <div class="chat_main_right">
-                <div class="chat_main_right_inner init">
+                <div class="chat_main_right_inner init active">
                     <div class="d-flex">
                         <img src="./public/img/chat-colorful.svg" alt="">
                         <p>歡迎使用聊聊</p>
                     </div>
                 </div>
-                <div class="chat_main_right_inner active" id="chat-1">
+                <div class="chat_main_right_inner" id="chat-1">
                     <div class="chat_main_title">
                         <div class="job-title d-flex align-items-center p-3 m-0">
                             <div class="chat_main_title_text">
@@ -352,24 +599,6 @@
                         </div>
                     </div>
                     <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
                         <p class="chat_main_content_date">2023/06/17(六)</p>
                         <div class="chat_main_content_opposite chat_main_content_item">
                             <div class="chat_main_content_frame">
@@ -856,6 +1085,325 @@
             </div>
         </div>
     </div>
+
+    <div class="popup popup-welfare" id="popup-welfare">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_select">
+            <h3 class="popup_title">福利制度</h3>
+            <div class="popup_inner">
+                <div class="popup_select_head">
+                    <div class="popup_select_clear">清除</div>
+                    <div class="popup_close">
+                        <img src="./public/img/x.svg" alt="">
+                    </div>
+                </div>
+                <div class="popup_select_content row m-0">
+                    <div class="col-sm-6 col-12 p-0">
+                        <ul class="popup_select_firstLayer">
+                            <li class="popup_select_firstLayer_list active" data-secondLayer="#secondLayer-prize" id="firstLayer-prize">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">禮金獎品</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup_select_firstLayer_list" data-secondLayer="#secondLayer-holiday" id="firstLayer-holiday">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">休假福利</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup_select_firstLayer_list" data-secondLayer="#secondLayer-allowance" id="firstLayer-allowance">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">津貼補助</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup_select_firstLayer_list" data-secondLayer="#secondLayer-leisure" id="firstLayer-leisure">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">生活娛樂</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup_select_firstLayer_list" data-secondLayer="#secondLayer-secure" id="firstLayer-secure">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">保險撫卹</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="popup_select_firstLayer_list" data-secondLayer="#secondLayer-traffic" id="firstLayer-traffic">
+                                <div class="popup_select_firstLayer_item">
+                                    <span class="popup_select_firstLayer_text">居住交通</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="popup_select_firstLayer_selectNum"><span>0</span></div>
+                                        <img class="popup_select_firstLayer_arrow" src="./public/img/chevron-right.svg" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-12 p-0 popup_select_secondLayer-wrap">
+                        <div class="popup_select_secondLayer">
+                            <ul class="popup_select_secondLayer_list active" id="secondLayer-prize" data-firstLayer="#firstLayer-prize">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>禮金獎品</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>禮品</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>激勵獎金</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>績效獎金</span>
+                                </li>
+                            </ul>
+                            <ul class="popup_select_secondLayer_list" id="secondLayer-holiday" data-firstLayer="#firstLayer-holiday">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>休假福利</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>生日假</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>旅遊假</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>防疫照顧假</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>防疫隔離假</span>
+                                </li>
+                            </ul>
+                            <ul class="popup_select_secondLayer_list" id="secondLayer-allowance" data-firstLayer="#firstLayer-allowance">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>津貼補助</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>午餐費</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>伙食津貼</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>免費供餐</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>晚餐費</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工結婚補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>生育補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工手機配發或補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工自備電腦補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工退休金/退休後福利</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工及眷屬葬喪補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工低利貸款</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>治裝費或兌換券</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>社團補助</span>
+                                </li>
+                            </ul>
+                            <ul class="popup_select_secondLayer_list" id="secondLayer-leisure" data-firstLayer="#firstLayer-leisure">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>生活娛樂</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工健身房</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工休息寢室</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工餐廳</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>按摩室</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>圖書館</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>活動室/遊戲室</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>免費零食櫃</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工電影</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工定期聚餐</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>慶生會</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>尾牙</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工餐廳</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>春酒</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>寵物日</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>下午茶</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>家庭日</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工運動會</span>
+                                </li>
+                            </ul>
+                            <ul class="popup_select_secondLayer_list" id="secondLayer-secure" data-firstLayer="#firstLayer-secure">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>保險撫卹</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>意外險</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>壽險</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工/眷屬團保</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工撫恤金</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工供出特別保險</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工/眷屬住院慰問金</span>
+                                </li>
+                            </ul>
+                            <ul class="popup_select_secondLayer_list" id="secondLayer-traffic" data-firstLayer="#firstLayer-traffic">
+                                <li class="popup_select_secondLayer_head">
+                                    <img src="./public/img/chevron-left.svg" alt="">
+                                    <h3>居住交通</h3>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工宿舍</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工購屋低利貸款</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工(調職)搬家安家費</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>租屋補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>通勤車資補助</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工購車低利貸款</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工停車位</span>
+                                </li>
+                                <li class="popup_select_secondLayer_item check-item">
+                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
+                                    <span>員工停車費補助</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
     
@@ -864,6 +1412,24 @@
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/common.js"></script>
+
+    <script>
+
+        $(".feedback_more button").click(function() {
+            $(this).parents(".feedback_more").find("ul").slideToggle(300);
+        })
+
+        $(".feedback_like").click(function() {
+            $(this).toggleClass("like");
+            let num = parseInt($(this).find("span").text());
+            if($(this).hasClass("like")) {
+                num++;
+            }else {
+                num--;
+            }
+            $(this).find("span").text(num);
+        })
+    </script>
 
 </body>
 </html>
