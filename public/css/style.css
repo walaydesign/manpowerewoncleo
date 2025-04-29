@@ -1770,7 +1770,7 @@ body.bg-write {
   gap: 25px;
 }
 
-.sideBtn button {
+.sideBtn button, .sideBtn a {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1781,16 +1781,16 @@ body.bg-write {
   transition: 0.3s;
 }
 
-.sideBtn button img {
+.sideBtn button img, .sideBtn a img {
   width: 50%;
 }
 
-.sideBtn button:hover {
+.sideBtn button:hover, .sideBtn a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.sideBtn button.has-text {
+.sideBtn button.has-text, .sideBtn a.has-text {
   width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1803,34 +1803,34 @@ body.bg-write {
   padding: 0 20px;
 }
 
-.sideBtn button.has-text svg {
+.sideBtn button.has-text svg, .sideBtn a.has-text svg {
   width: 20px;
   height: 20px;
 }
 
-.sideBtn button.has-text span {
+.sideBtn button.has-text span, .sideBtn a.has-text span {
   color: #fff;
 }
 
-.sideBtn button.sideBtn_dog {
+.sideBtn button.sideBtn_dog, .sideBtn a.sideBtn_dog {
   padding: 0;
 }
 
-.sideBtn button.sideBtn_dog a {
+.sideBtn button.sideBtn_dog a, .sideBtn a.sideBtn_dog a {
   display: block;
   width: 100%;
   height: 100px;
 }
 
-.sideBtn button.sideBtn_dog a img {
+.sideBtn button.sideBtn_dog a img, .sideBtn a.sideBtn_dog a img {
   width: 100%;
 }
 
-.sideBtn.bg-blue button {
+.sideBtn.bg-blue button, .sideBtn.bg-blue a {
   background-color: #6BBEED;
 }
 
-.sideBtn.bg-yellow button {
+.sideBtn.bg-yellow button, .sideBtn.bg-yellow a {
   background-color: #FFA857;
 }
 
@@ -1839,7 +1839,7 @@ body.bg-write {
     right: 0;
     bottom: 50px;
   }
-  .sideBtn button {
+  .sideBtn button, .sideBtn a {
     border-radius: 10px 0 0 10px;
   }
 }
