@@ -1819,7 +1819,7 @@ body.bg-write {
 .sideBtn button.sideBtn_dog a, .sideBtn a.sideBtn_dog a {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
 
 .sideBtn button.sideBtn_dog a img, .sideBtn a.sideBtn_dog a img {

@@ -12,24 +12,32 @@
     <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
-<body class="bg-signup">
+<body class="bg-write">
     <header class="header">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
             <nav class="header_nav d-flex align-items-center">
                 <div class="header_link">
-                    <ul class="header_find d-lg-flex align-items-center">
+                    <ul class="header_find d-flex align-items-center">
                         <li><a href="./hunt-job.html">找工作</a></li>
+                    </ul>
+                    <ul class="header_memberNav d-lg-none">
+                        <li><a href="./seeker-overview.html">總覽</a></li>
+                        <li><a href="./seeker-inform.html">個人資料</a></li>
+                        <li><a href="./seeker-resume.html">履歷管理</a></li>
+                        <li><a href="./seeker-apply.html">應徵紀錄</a></li>
+                        <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+                        <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+                        <li><a href="./seeker-save.html">我的收藏</a></li>
+                        <li><a href="./seeker-password.html">更改密碼</a></li>
+                        <li><a>登出</a></li>
                     </ul>
                 </div>
                 <ul class="header_member d-flex align-items-center">
                     <li>
-                        <a class="btn-bg-yellow header_member_btn btn-popup" data-popup="#seeker-login">
-                            <svg class="btn-bg-yellow_icon header_member_btn_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.00009 8.56846C11.0369 8.56846 12.694 6.91134 12.694 4.87453C12.694 2.83828 11.0369 1.18115 9.00009 1.18115C6.96328 1.18115 5.30615 2.83828 5.30615 4.87509C5.30615 6.9119 6.96328 8.56846 9.00009 8.56846ZM9.00009 2.19365C10.4789 2.19365 11.6815 3.39628 11.6815 4.87509C11.6815 6.3539 10.4789 7.55653 9.00009 7.55653C7.52128 7.55653 6.31865 6.35334 6.31865 4.87509C6.31865 3.39684 7.52128 2.19365 9.00009 2.19365Z" fill="white"/>
-                                <path d="M13.9692 11.1036C12.6462 10.0973 10.881 9.54321 8.99723 9.54321C7.11398 9.54321 5.34998 10.0967 4.02923 11.1025C3.20742 11.728 2.71692 12.7461 2.71692 13.8267V15.2875C2.71692 16.1318 3.40429 16.8186 4.24861 16.8186H13.752C14.5964 16.8186 15.2837 16.1335 15.2837 15.2908V13.8283C15.2832 12.7483 14.7921 11.7302 13.9692 11.1036ZM14.2701 15.2908C14.2701 15.5749 14.0378 15.8067 13.7515 15.8067H4.24861C3.96229 15.8067 3.72998 15.5738 3.72998 15.288V13.8272C3.72998 13.0611 4.07086 12.3439 4.64236 11.9085C5.78761 11.0367 7.33448 10.5563 8.99723 10.5563C10.6605 10.5563 12.2085 11.0372 13.356 11.9102C13.9287 12.3456 14.2701 13.0633 14.2701 13.8289V15.2908Z" fill="white"/>
-                            </svg>
-                            <span class="btn-bg-yellow_text header_member_btn_text">求職會員</span>
+                        <a href="./seeker-overview.html" class="btn-bg-yellow header_member_btn login">
+                            <div class="header_member_btn_pic"><img src="./public/img/woman1.png" alt=""></div>
+                            <span class="btn-bg-yellow_text header_member_btn_text">求職者名稱</span>
                         </a>
                     </li>
                     <li>
@@ -181,158 +189,29 @@
 
     <main class="main">
         <div class="signup">
+            <div class="btn-border-gray btn-back">
+                <img class="btn-border-gray_icon" src="./public/img/chevron-left-gray.svg" alt="">
+                <span class="btn-border-gray_text">上一頁</span>
+            </div>
             <div class="signup_inner">
-                <h1 class="signup_title">求職者註冊</h1>
-                <div class="form-item d-block">
-                    <label for="">大頭貼</label>
-                    <div class="upload-pic">
-                        <div class="upload-pic_pic"><img class="upload-pic_main" src="./public/img/brand-6.png" alt=""></div>
-                        <div class="upload-pic_text">
-                            <div class="upload-pic_btn btn-border-blue">
-                                <img class="btn-border-blue_icon" src="./public/img/upload-pic.svg" alt="">
-                                <span class="btn-border-blue_text">上傳</span>
-                                <input class="upload-pic_btn_input" type="file">
-                            </div>
-                            <p class="upload-pic_remark">
-                                建議尺寸：400 x 400 (px) / 容量限制：5MB
-                            </p>
-                        </div>
+                <h1 class="signup_title">狗都不吃</h1>
+                <div>
+                    <div class="form-item">
+                        <label for="">類型</label>
+                        <select name="" id="" class="select form-item_main">
+                            <option value="">新功能提議</option>
+                            <option value="">Bug通報</option>
+                            <option value="">意見回覆</option>
+                        </select>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">姓名</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">性別</label>
-                            <select name="" id="" class="select form-item_main">
-                                <option value="">男</option>
-                                <option value="">女</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">生日</label>
-                            <input type="date" class="input form-item_main">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">身分證號</label>
-                            <input type="email" class="input form-item_main">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">信箱</label>
-                            <input type="email" class="input form-item_main">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">手機</label>
-                            <div class="form-item_main d-flex align-items-center justify-content-between">
-                                <input type="number" class="input form-item_main">
-                                <div class="check-item">
-                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>不顯示</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">電話</label>
-                            <div class="form-item_main d-flex align-items-center justify-content-between">
-                                <input type="number" class="input form-item_main">
-                                <div class="check-item">
-                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>不顯示</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">疫苗</label>
-                            <select name="" id="" class="select form-item_main">
-                                <option value="">尚未施打</option>
-                                <option value="">施打第一劑</option>
-                                <option value="">施打第二劑</option>
-                                <option value="">施打第三劑</option>
-                                <option value="">施打第四劑</option>
-                                <option value="">施打第五劑</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item">
-                            <label for="">聯絡時間</label>
-                            <div class="form-item_main contact-time">
-                                <input type="text" class="input"><span>~</span><input type="text" class="input">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-address">
-                            <label for="">地址</label>
-                            <div class="form-item_main">
-                                <select name="" id="" class="select">
-                                    <option value="">台北市</option>
-                                </select>
-                                <select name="" id="" class="select">
-                                    <option value="">中正區</option>
-                                </select>
-                                <input type="text" class="input">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item">
-                            <label for="">身份</label>
-                            <div class="form-item_main form-item_check">
-                                <div class="check-item">
-                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>二度就業</span>
-                                </div>
-                                <div class="check-item">
-                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>身心障礙者</span>
-                                </div>
-                                <div class="check-item">
-                                    <div class="checkbox"><img src="./public/img/check.svg" alt=""></div>
-                                    <span>研發替代役</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-item form-item-textarea">
-                            <label for="">簡介</label>
-                            <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">密碼</label>
-                            <input class="form-item_main input" type="password">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-item">
-                            <label for="">確認密碼</label>
-                            <input class="form-item_main input" type="password">
-                        </div>
+                    <div class="form-item form-item-textarea">
+                        <label for="">內容</label>
+                        <textarea class="form-item_main textarea" name="" id="" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-end">
                     <button class="btn-border-blue-noIcon">取消</button>
-                    <button class="btn-bg-blue-noIcon ms-4">註冊</button>
+                    <button class="btn-bg-blue-noIcon ms-4">發表</button>
                 </div>
             </div>
         </div>
@@ -343,14 +222,13 @@
             <ul class="d-flex align-items-center justify-content-sm-start justify-content-center mb-sm-0 mb-3">
                 <li><a href="./about.html">關於我們</a></li>
                 <li><a href="./privacy.html">隱私權政策</a></li>
-                <li><a href="./feedback-seeker.html">狗都不吃</a></li>
+                <li><a href="./feedback.html">狗都不吃</a></li>
             </ul>
             <p class="copyright">© 2023 by xxx股份有限公司</p>
         </div>
     </footer>
 
     <div class="sideBtn bg-yellow">
-        <button class="sideBtn_dog"><a href="./feedback.html"><img src="./public/img/dog.png" alt=""></a></button>
         <button class="sideBtn_top"><img src="./public/img/arrow-up.svg" alt=""></button>
     </div>
 
