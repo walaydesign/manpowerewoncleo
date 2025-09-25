@@ -1,0 +1,162 @@
+.article {
+    &-item {
+        display: block;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        &_head {
+            padding: 15px 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        &_catagory {
+            padding: 4px 8px;
+            background-color: $secondary-600;
+            color: #fff;
+            border-radius: 7px;
+            font-size: 12px;
+            margin: 0;
+        }
+        &_date {
+            font-size: 12px;
+            color: $gray-600;
+            margin: 0;
+        }
+        &_title {
+            padding: 12px 15px;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin: 0;
+            line-height: 1.5;
+            height: 70px;
+        }
+        &_pic {
+            position: relative;
+            width: 100%;
+            padding-bottom: 60%;
+            >img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+        &_tag {
+            padding: 12px 15px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            li {
+                padding: 4px 10px;
+                font-size: 12px;
+                color: $gray-800;
+                border-radius: 100px;
+                border: 1px solid #D1D1D1;
+            }
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &-list {
+        max-width: 1320px;
+        padding-top: 0;
+        // margin-top: -40px;
+        z-index: 10;
+        .row {
+            margin-left: -17px;
+            margin-right: -17px;
+            >div {
+                padding-left: 17px;
+                padding-right: 17px;
+                margin-bottom: 35px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            .detail-content_nav {
+                position: static;
+                order: 1;
+                width: 100%;
+                margin-bottom: 40px;
+                &_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    column-gap: 8px;
+                    row-gap: 12px;
+                    margin-bottom: 16px;
+                    li {
+                        border: 0;
+                        padding: 0;
+                        &::before {
+                            display: none;
+                        }
+                        a {
+
+                                display: block;
+                        }
+                        &.active {
+                            a {
+                                background-color: $secondary-600;
+                                border-color: $secondary-600;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    a {
+                        padding: 8px 16px;
+                        border-radius: 100px;
+                        border: 1px solid $gray-300;
+                    }
+                }
+            }  
+            .detail-content_intro {
+                order: 2;
+            } 
+        }
+    }
+    &-head {
+        padding: 40px 0;
+        position: relative;
+        background-image: $third-100;
+        h1 {
+            color: $primary-900;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        &_search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 290px);
+            border-radius: 100px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 10px;
+            height: 56px;
+            input {
+                width: calc(100% - 85px);
+            }
+        }
+        @media screen and (max-width: 1399px) {
+            .container {
+                max-width: inherit;
+            }
+        }
+         @media screen and (max-width: 767px) {
+            &_search {
+                width: 100%;
+            }
+         }
+    }
+}

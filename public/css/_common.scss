@@ -820,8 +820,42 @@ body.bg {
 
 .main {
     padding-top: 80px;
+    &-article-list {
+        position: relative;
+        z-index: 0;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 264px;
+            background: linear-gradient(10deg, #DBEFFF 0%, #D4F0EC 100%);
+            top: 80px;
+            left: 0;
+            z-index: -1;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 112px;
+            border-radius: 0 60px 0 0;
+            background-color: $third-100;
+            left: 0;
+            top: calc(80px + 264px - 112px);
+            z-index: -1;
+
+        }
+    }
     @media screen and (max-width: 767px) {
         padding-top: 70px;
+        &-article-list {
+            &::before {
+                top: 70px;
+            }
+            &::after {
+                top: calc(70px + 264px - 112px);
+            }
+        }
     }
 }
 
