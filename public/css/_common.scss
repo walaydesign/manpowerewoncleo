@@ -282,6 +282,9 @@ body.bg {
             }
             &:hover {
                 background-color: $primary-100;
+                .btn-border-blue_text {
+                    color: $primary-800;
+                }
             }
             &-noIcon {
                 padding: 8px 25px;
@@ -397,6 +400,52 @@ body.bg {
             }
             &.text-sm {
                 font-size: 12px;
+            }
+        }
+        &-yellow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px;
+            border-radius: 100px;
+            background-color: #fff;
+            color: $secondary-700;
+            transition: $transition;
+            border: 1px solid $secondary-700;
+            width: fit-content;
+            &_icon {
+                width: 18px;
+                height: 18px;
+                position: relative;
+                margin-right: 7px;
+                >img {
+                    @include containPic();
+                }
+                path {
+                    transition: $transition;
+                    fill: $secondary-700;
+                }
+            }
+            &_text {
+                font-size: 14px;
+                transition: $transition;
+            }
+            &:hover {
+                background-color: $secondary-700;
+                .btn-border-yellow_text {
+                    color: #fff;
+                }
+            }
+            &-noIcon {
+                padding: 8px 25px;
+                border: 1px solid $secondary-700;
+                border-radius: 100px;
+                color: $secondary-700;
+                transition: $transition;
+                &:hover {
+                    color: $secondary-900;
+                    border-color: $secondary-900;
+                }
             }
         }
     }

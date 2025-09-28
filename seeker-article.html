@@ -16,67 +16,112 @@
     <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body class="bg-blue">
-    <header class="header header-company">
+    <header class="header">
       <div class="container d-flex align-items-center justify-content-between">
         <a href="./index.html" class="header_logo"
           ><img src="./public/img/logo.svg" alt=""
         /></a>
         <nav class="header_nav d-flex align-items-center">
           <div class="header_link">
-            <ul class="header_find d-lg-flex align-items-center">
+            <ul class="header_find d-flex align-items-center">
               <li><a href="./hunt-job.html">找工作</a></li>
-              <li><a href="./recruit.html">找人才</a></li>
             </ul>
             <ul class="header_memberNav d-lg-none">
-              <li><a href="./company-overview.html">總覽</a></li>
-              <li><a href="./company-inform.html">公司資料</a></li>
-              <li><a href="./company-job.html">職缺管理</a></li>
-              <li><a href="./company-invite.html">邀請紀錄</a></li>
-              <li><a href="./company-invite-record.html">應徵紀錄</a></li>
-              <li><a href="./company-invite-setting.html">應徵文設定</a></li>
-              <li><a href="./company-save.html">儲存人才</a></li>
-              <li><a href="./company-password.html">更改密碼</a></li>
+              <li><a href="./seeker-overview.html">總覽</a></li>
+              <li><a href="./seeker-inform.html">個人資料</a></li>
+              <li><a href="./seeker-resume.html">履歷管理</a></li>
+              <li class="active"><a href="./seeker-apply.html">應徵紀錄</a></li>
+              <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+              <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+              <li><a href="./seeker-save.html">我的收藏</a></li>
+              <li><a href="./seeker-feedback.html">意見回覆</a></li>
+              <li><a href="">智能配對</a></li>
+              <li><a href="">我的文章</a></li>
+              <li><a href="./seeker-password.html">更改密碼</a></li>
               <li><a>登出</a></li>
             </ul>
           </div>
           <ul class="header_member d-flex align-items-center">
             <li>
               <a
-                class="btn-bg-yellow header_member_btn btn-popup"
-                data-popup="#seeker-login"
+                href="./seeker-overview.html"
+                class="btn-bg-yellow header_member_btn login"
+              >
+                <div class="header_member_btn_pic">
+                  <img src="./public/img/woman1.png" alt="" />
+                </div>
+                <span class="btn-bg-yellow_text header_member_btn_text"
+                  >求職者名稱</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-bg-blue header_member_btn btn-popup"
+                data-popup="#company-login"
               >
                 <svg
-                  class="btn-bg-yellow_icon header_member_btn_icon"
+                  class="btn-bg-blue_icon header_member_btn_icon"
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M9.00009 8.56846C11.0369 8.56846 12.694 6.91134 12.694 4.87453C12.694 2.83828 11.0369 1.18115 9.00009 1.18115C6.96328 1.18115 5.30615 2.83828 5.30615 4.87509C5.30615 6.9119 6.96328 8.56846 9.00009 8.56846ZM9.00009 2.19365C10.4789 2.19365 11.6815 3.39628 11.6815 4.87509C11.6815 6.3539 10.4789 7.55653 9.00009 7.55653C7.52128 7.55653 6.31865 6.35334 6.31865 4.87509C6.31865 3.39684 7.52128 2.19365 9.00009 2.19365Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M13.9692 11.1036C12.6462 10.0973 10.881 9.54321 8.99723 9.54321C7.11398 9.54321 5.34998 10.0967 4.02923 11.1025C3.20742 11.728 2.71692 12.7461 2.71692 13.8267V15.2875C2.71692 16.1318 3.40429 16.8186 4.24861 16.8186H13.752C14.5964 16.8186 15.2837 16.1335 15.2837 15.2908V13.8283C15.2832 12.7483 14.7921 11.7302 13.9692 11.1036ZM14.2701 15.2908C14.2701 15.5749 14.0378 15.8067 13.7515 15.8067H4.24861C3.96229 15.8067 3.72998 15.5738 3.72998 15.288V13.8272C3.72998 13.0611 4.07086 12.3439 4.64236 11.9085C5.78761 11.0367 7.33448 10.5563 8.99723 10.5563C10.6605 10.5563 12.2085 11.0372 13.356 11.9102C13.9287 12.3456 14.2701 13.0633 14.2701 13.8289V15.2908Z"
-                    fill="white"
-                  />
+                  <g clip-path="url(#clip0_568_558)">
+                    <path
+                      d="M17.4726 16.9453H16.9101V7.98069C16.9101 7.75369 16.7648 7.55221 16.5495 7.48042L10.5821 5.49128V3.69174C10.5821 3.47191 10.4457 3.27514 10.2399 3.19797L1.8026 0.0339753C1.45821 -0.0951536 1.09009 0.159835 1.09009 0.527745V16.9454H0.527588C0.236354 16.9454 0.000244141 17.1815 0.000244141 17.4727C0.000244141 17.7639 0.236354 18 0.527588 18C0.646029 18 17.244 18 17.4726 18C17.7638 18 17.9999 17.7639 17.9999 17.4727C17.9999 17.1815 17.7638 16.9453 17.4726 16.9453ZM5.30873 16.9453H4.25408V14.836H5.30873V16.9453ZM7.41807 16.9453H6.36342V14.836H7.41807V16.9453ZM9.52741 5.87135V16.9453H8.47276V14.3087C8.47276 14.0174 8.23665 13.7813 7.94542 13.7813H3.72674C3.4355 13.7813 3.19939 14.0174 3.19939 14.3087V16.9453H2.14474V1.28867L9.52741 4.05715V5.87135ZM13.7461 16.9453H12.6914V14.836H13.7461V16.9453ZM15.8554 16.9453H14.8007V14.3087C14.8007 14.0174 14.5646 13.7813 14.2734 13.7813H12.1641C11.8728 13.7813 11.6367 14.0174 11.6367 14.3087V16.9453H10.5821V6.60299L15.8554 8.36077V16.9453Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 11.6719H3.72668C3.43545 11.6719 3.19934 11.908 3.19934 12.1992C3.19934 12.4905 3.43542 12.7266 3.72668 12.7266H4.78134C5.07257 12.7266 5.30868 12.4905 5.30868 12.1992C5.30868 11.908 5.07257 11.6719 4.78134 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 11.6719H6.89075C6.59951 11.6719 6.3634 11.908 6.3634 12.1992C6.3634 12.4905 6.59948 12.7266 6.89075 12.7266H7.9454C8.23663 12.7266 8.47274 12.4905 8.47274 12.1992C8.47274 11.908 8.23663 11.6719 7.9454 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 9.56274H3.72668C3.43545 9.56274 3.19934 9.79885 3.19934 10.0901C3.19934 10.3813 3.43542 10.6174 3.72668 10.6174H4.78134C5.07257 10.6174 5.30868 10.3813 5.30868 10.0901C5.30868 9.79885 5.07257 9.56274 4.78134 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 9.56274H6.89075C6.59951 9.56274 6.3634 9.79885 6.3634 10.0901C6.3634 10.3813 6.59948 10.6174 6.89075 10.6174H7.9454C8.23663 10.6174 8.47274 10.3813 8.47274 10.0901C8.47274 9.79885 8.23663 9.56274 7.9454 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.2733 11.6719H12.1639C11.8727 11.6719 11.6366 11.908 11.6366 12.1992C11.6366 12.4905 11.8727 12.7266 12.1639 12.7266H14.2733C14.5645 12.7266 14.8006 12.4905 14.8006 12.1992C14.8006 11.908 14.5645 11.6719 14.2733 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.2733 9.56274H12.1639C11.8727 9.56274 11.6366 9.79885 11.6366 10.0901C11.6366 10.3813 11.8727 10.6174 12.1639 10.6174H14.2733C14.5645 10.6174 14.8006 10.3813 14.8006 10.0901C14.8006 9.79885 14.5645 9.56274 14.2733 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 7.45337H3.72668C3.43545 7.45337 3.19934 7.68948 3.19934 7.98071C3.19934 8.27195 3.43542 8.50806 3.72668 8.50806H4.78134C5.07257 8.50806 5.30868 8.27195 5.30868 7.98071C5.30865 7.68948 5.07257 7.45337 4.78134 7.45337Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 7.45337H6.89075C6.59951 7.45337 6.3634 7.68948 6.3634 7.98071C6.3634 8.27195 6.59948 8.50806 6.89075 8.50806H7.9454C8.23663 8.50806 8.47274 8.27195 8.47274 7.98071C8.47274 7.68948 8.23663 7.45337 7.9454 7.45337Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 5.34399H3.72668C3.43545 5.34399 3.19934 5.5801 3.19934 5.87134C3.19934 6.16257 3.43542 6.39868 3.72668 6.39868H4.78134C5.07257 6.39868 5.30868 6.16257 5.30868 5.87134C5.30865 5.5801 5.07257 5.34399 4.78134 5.34399Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 5.34399H6.89075C6.59951 5.34399 6.3634 5.5801 6.3634 5.87134C6.3634 6.16257 6.59948 6.39868 6.89075 6.39868H7.9454C8.23663 6.39868 8.47274 6.16257 8.47274 5.87134C8.47274 5.5801 8.23663 5.34399 7.9454 5.34399Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_558">
+                      <rect width="18" height="18" fill="white" />
+                    </clipPath>
+                  </defs>
                 </svg>
-                <span class="btn-bg-yellow_text header_member_btn_text"
-                  >求職會員</span
-                >
-              </a>
-            </li>
-            <li>
-              <a
-                href="./company-overview.html"
-                class="btn-bg-blue header_member_btn login"
-              >
-                <div class="header_member_btn_pic">
-                  <img src="./public/img/louisa.png" alt="" />
-                </div>
                 <span class="btn-bg-blue_text header_member_btn_text"
-                  >企業名稱</span
+                  >企業會員</span
                 >
               </a>
             </li>
@@ -90,17 +135,17 @@
       </div>
     </header>
 
-    <div class="popup" id="seeker-login">
+    <div class="popup" id="company-login">
       <div class="popup_bg"></div>
-      <div class="popup_main popup_member seeker">
+      <div class="popup_main popup_member company">
         <div class="popup_inner">
           <div class="popup_member_title">
             <img
               class="popup_member_title_logo"
-              src="./public/img/logo-yellow.svg"
+              src="./public/img/logo-blue.svg"
               alt=""
             />
-            <p class="popup_member_title_text">求職者登入</p>
+            <p class="popup_member_title_text">企業登入</p>
           </div>
           <div class="popup_member_content">
             <form action="">
@@ -112,12 +157,12 @@
                 <label for="">密碼</label>
                 <input type="text" class="input form-item_main" />
               </div>
-              <button class="btn-bgFill-yellow">登入</button>
+              <button class="btn-bgFill-blue">登入</button>
               <div
                 class="popup_member_link d-flex align-items-center justify-content-center"
               >
-                <a href="./seeker-signup.html">註冊會員</a>
-                <a class="btn-popup" data-popup="#seeker-foregt">忘記密碼</a>
+                <a href="./company-signup.html">註冊會員</a>
+                <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
               </div>
             </form>
           </div>
@@ -128,14 +173,14 @@
       </div>
     </div>
 
-    <div class="popup" id="seeker-foregt">
+    <div class="popup" id="company-foregt">
       <div class="popup_bg"></div>
-      <div class="popup_main popup_member seeker">
+      <div class="popup_main popup_member company">
         <div class="popup_inner">
           <div class="popup_member_title">
             <img
               class="popup_member_title_logo"
-              src="./public/img/logo-yellow.svg"
+              src="./public/img/logo-blue.svg"
               alt=""
             />
             <p class="popup_member_title_text">忘記密碼</p>
@@ -146,7 +191,7 @@
                 <label for="">請輸入信箱或手機</label>
                 <input type="text" class="input form-item_main" />
               </div>
-              <button class="btn-bgFill-yellow">送出</button>
+              <button class="btn-bgFill-blue">送出</button>
             </form>
           </div>
           <div class="popup_close">
@@ -156,249 +201,657 @@
       </div>
     </div>
 
-    <main class="main main-article-list">
-        <div class="article-head">
-            <div class="container">
-            <h1>全部分類</h1>
-                <form action="" class="article-head_search">
-                    <input type="text">
-                    <button class="btn-bg-blue">
-                        <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z" fill="#22A9E7"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z" fill="#22A9E7"/>
-</svg>
-<span class="btn-bg-blue_text">搜尋</span>
-                    </button>
-                </form>
-            </div>
-
-        </div>
-      <div class="detail-content article-list">
-        <div class="detail-content_intro">
-          <div class="row">
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-lg-6">
-              <a href="" class="article-item">
-                <div class="article-item_head">
-                  <p class="article-catagory">求職信</p>
-                  <p class="article-date">2024.05.06</p>
-                </div>
-                <h3 class="article-item_title">
-                  【自介範例】吸引人的面試自我介紹怎麼說？3 步驟打造完美自我介紹
-                </h3>
-                <div class="article-item_pic">
-                  <img src="./public/img/article-pic.png" alt="" />
-                </div>
-                <ul class="article-tag">
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                  <li>標籤1</li>
-                </ul>
-              </a>
+    <main class="main">
+      <div class="member seeker-apply">
+        <div class="container d-flex flex-wrap">
+          <div class="detail-content_nav d-lg-block d-none">
+            <div class="detail-content_nav_inner">
+              <ul class="detail-content_nav_list">
+                <li><a href="./seeker-overview.html">總覽</a></li>
+                <li><a href="./seeker-inform.html">個人資料</a></li>
+                <li><a href="./seeker-resume.html">履歷管理</a></li>
+                <li><a href="./seeker-apply.html">應徵紀錄</a></li>
+                <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+                <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+                <li><a href="./seeker-save.html">我的收藏</a></li>
+                <li><a href="./seeker-feedback.html">意見回覆</a></li>
+                <li><a href="">智能配對</a></li>
+                <li class="active">
+                  <a href="./seeker-article.html">我的文章</a>
+                </li>
+                <li><a href="./seeker-password.html">更改密碼</a></li>
+                <li><a>登出</a></li>
+              </ul>
             </div>
           </div>
-          <div
-            class="pagination d-flex align-items-center justify-content-center"
-          >
-            <a href="" class="pagination_arrow">
-              <svg
-                width="45"
-                height="45"
-                viewBox="0 0 45 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z"
-                  fill="#D1D1D1"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z"
-                  fill="#D1D1D1"
-                />
-              </svg>
-            </a>
-            <ul class="d-flex align-items-center">
-              <li><a href="" class="active">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-              <li><a href="">4</a></li>
-              <li><a href="">5</a></li>
-            </ul>
-            <a href="" class="pagination_arrow">
-              <svg
-                width="45"
-                height="45"
-                viewBox="0 0 45 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z"
-                  fill="#B4CECE"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z"
-                  fill="#B4CECE"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="detail-content_nav">
-          <div class="detail-content_nav_inner">
-            <ul class="detail-content_nav_list">
-              <li class="active"><a href="">全部分類</a></li>
-              <li><a href="">分類一</a></li>
-              <li><a href="">分類二</a></li>
-              <li><a href="">分類三</a></li>
-              <li><a href="">分類四</a></li>
-            </ul>
-            <a href="" class="btn-bg-blue w-100">
-              <svg
-                class="btn-bg-blue_icon"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_794_8953)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
-                    fill="#22A9E7"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
-                    fill="#22A9E7"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_794_8953">
-                    <rect width="18" height="18" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <span class="btn-bg-blue_text">撰寫文章</span>
-            </a>
+          <div class="member_content">
+            <div class="member_content_inner">
+              <h1 class="member_title">我的文章</h1>
+              <div class="member-article">
+                <div class="member-article_head">
+                  <ul class="member-article_tab tab-wrap">
+                    <li class="tab_item active" data-tab="#article-pass">
+                      審核通過
+                    </li>
+                    <li class="tab_item" data-tab="#article-notpass">
+                      尚未審核
+                    </li>
+                    <li class="tab_item" data-tab="#article-draft">草稿</li>
+                  </ul>
+                  <div class="member-article_head_btn">
+                    <a href="" class="btn-border-blue"
+                      ><span class="btn-border-blue_text">獎勵說明</span></a
+                    >
+                    <a href="" class="btn-bg-blue">
+                      <svg
+                        class="btn-bg-blue_icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_794_8953)">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                            fill="#22A9E7"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                            fill="#22A9E7"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_794_8953">
+                            <rect width="18" height="18" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span class="btn-bg-blue_text">撰寫文章</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-content_item active" id="article-pass">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="pagination d-flex align-items-center justify-content-center"
+                    >
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z"
+                            fill="#D1D1D1"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z"
+                            fill="#D1D1D1"
+                          />
+                        </svg>
+                      </a>
+                      <ul class="d-flex align-items-center">
+                        <li><a href="" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                      </ul>
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z"
+                            fill="#B4CECE"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z"
+                            fill="#B4CECE"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tab-content_item" id="article-notpass">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="pagination d-flex align-items-center justify-content-center"
+                    >
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z"
+                            fill="#D1D1D1"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z"
+                            fill="#D1D1D1"
+                          />
+                        </svg>
+                      </a>
+                      <ul class="d-flex align-items-center">
+                        <li><a href="" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                      </ul>
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z"
+                            fill="#B4CECE"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z"
+                            fill="#B4CECE"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tab-content_item" id="article-draft">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a href="" class="article-item">
+                          <div class="article-item_head">
+                            <p class="article-catagory">求職信</p>
+                            <p class="article-date">2024.05.06</p>
+                          </div>
+                          <h3 class="article-item_title">
+                            【自介範例】吸引人的面試自我介紹怎麼說？3
+                            步驟打造完美自我介紹
+                          </h3>
+                          <div class="article-item_pic">
+                            <img src="./public/img/article-pic.png" alt="" />
+                          </div>
+                          <ul class="article-tag">
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                            <li>標籤1</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="pagination d-flex align-items-center justify-content-center"
+                    >
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z"
+                            fill="#D1D1D1"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z"
+                            fill="#D1D1D1"
+                          />
+                        </svg>
+                      </a>
+                      <ul class="d-flex align-items-center">
+                        <li><a href="" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                      </ul>
+                      <a href="" class="pagination_arrow">
+                        <svg
+                          width="45"
+                          height="45"
+                          viewBox="0 0 45 45"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z"
+                            fill="#B4CECE"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z"
+                            fill="#B4CECE"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -419,7 +872,7 @@
       </div>
     </footer>
 
-    <div class="sideBtn bg-blue">
+    <div class="sideBtn bg-yellow">
       <button class="sideBtn_dog">
         <a href="./feedback-seeker.html"
           ><img src="./public/img/dog.png" alt=""
@@ -433,7 +886,7 @@
       </button>
     </div>
 
-    <div class="chat bg-blue">
+    <div class="chat bg-yellow">
       <div class="chat_head d-flex align-items-center justify-content-between">
         <div class="chat_head_title align-items-center">
           <h5>聊聊</h5>
@@ -456,7 +909,7 @@
               />
             </svg>
           </div>
-          <h6>求職者名稱</h6>
+          <h6>路易莎職人咖啡股份有限公司</h6>
         </div>
         <div class="chat_head_close">
           <svg
@@ -514,10 +967,10 @@
             <li class="chat_main_list_item notread" data-chat="#chat-1">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                     <div class="chat_num"><span>3</span></div>
@@ -528,10 +981,10 @@
             <li class="chat_main_list_item" data-chat="#chat-2">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -541,10 +994,10 @@
             <li class="chat_main_list_item" data-chat="#chat-3">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -554,10 +1007,10 @@
             <li class="chat_main_list_item" data-chat="#chat-4">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -567,10 +1020,10 @@
             <li class="chat_main_list_item" data-chat="#chat-5">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -580,10 +1033,10 @@
             <li class="chat_main_list_item" data-chat="#chat-6">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -593,10 +1046,10 @@
             <li class="chat_main_list_item" data-chat="#chat-7">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -606,10 +1059,10 @@
             <li class="chat_main_list_item" data-chat="#chat-8">
               <div class="chat_main_list_item_inner">
                 <div class="chat_main_list_pic">
-                  <img src="./public/img/woman1.png" alt="" />
+                  <img src="./public/img/brand-3.png" alt="" />
                 </div>
                 <div class="chat_main_list_text">
-                  <h6>求職者名稱</h6>
+                  <h6>路易莎職人咖啡股份有限公司</h6>
                   <div class="d-flex align-items-center">
                     <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
                   </div>
@@ -619,13 +1072,13 @@
           </ul>
         </div>
         <div class="chat_main_right">
-          <div class="chat_main_right_inner init active">
+          <div class="chat_main_right_inner init">
             <div class="d-flex">
               <img src="./public/img/chat-colorful.svg" alt="" />
               <p>歡迎使用聊聊</p>
             </div>
           </div>
-          <div class="chat_main_right_inner" id="chat-1">
+          <div class="chat_main_right_inner active" id="chat-1">
             <div class="chat_main_title">
               <div class="job-title d-flex align-items-center p-3 m-0">
                 <div class="chat_main_title_text">
@@ -664,6 +1117,24 @@
               </div>
             </div>
             <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
               <p class="chat_main_content_date">2023/06/17(六)</p>
               <div class="chat_main_content_opposite chat_main_content_item">
                 <div class="chat_main_content_frame">
@@ -1347,62 +1818,6 @@
                 </svg>
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="popup" id="apply-job">
-      <div class="popup_bg"></div>
-      <div class="popup_main popup_applyJob">
-        <h3 class="popup_title">應徵</h3>
-        <div class="popup_inner">
-          <div class="popup_close">
-            <img src="./public/img/x.svg" alt="" />
-          </div>
-          <div class="job-title">
-            <p class="job-title_company">路易莎職人咖啡股份有限公司</p>
-            <h4 class="job-title_name">儲備幹部、正兼職人員</h4>
-          </div>
-          <div class="popup_applyJob_item">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <label for="">選擇履歷</label>
-              <a href="./preview-resume.html" target="_blank">預覽</a>
-            </div>
-            <select name="" id="" class="select w-100">
-              <option value="">履歷名稱1</option>
-              <option value="">履歷名稱2</option>
-              <option value="">履歷名稱3</option>
-              <option value="">履歷名稱4</option>
-            </select>
-          </div>
-          <div class="popup_applyJob_item">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <label for="">推薦信</label>
-              <a href="./seeker-recommend.html" target="_blank">設定範本</a>
-            </div>
-            <select name="" id="" class="select w-100 mb-2">
-              <option value="">推薦信名稱1</option>
-              <option value="">推薦信名稱2</option>
-              <option value="">推薦信名稱3</option>
-              <option value="">推薦信名稱4</option>
-            </select>
-            <textarea
-              class="textarea w-100"
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-            <p class="recommend-num"><span class="used">79</span>/200</p>
-          </div>
-          <div class="popup_applyJob_save">
-            <input type="text" class="input" placeholder="儲存範本" />
-            <button class="btn-border-blue-noIcon">儲存</button>
-          </div>
-          <div class="d-flex align-items-center justify-content-center">
-            <button class="btn-border-blue-noIcon mx-2">取消</button>
-            <button class="btn-bg-blue-noIcon mx-2">送出</button>
           </div>
         </div>
       </div>
