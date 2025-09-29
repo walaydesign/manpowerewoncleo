@@ -200,14 +200,14 @@ $(".recruit_search_advanced_title").click(function(){
 })
 
 // 選取
-$(".select-item").click(function(){
-    if($(this).parents(".select-wrap").hasClass("select-multi")) {
-        $(this).toggleClass("active");
-    }else {
-        $(this).toggleClass("active");
-        $(this).siblings(".select-item").removeClass("active");
+$(document).on("click", ".select-item", function () {
+    if ($(this).parents(".select-wrap").hasClass("select-multi")) {
+      $(this).toggleClass("active");
+    } else {
+      $(this).toggleClass("active");
+      $(this).siblings(".select-item").removeClass("active");
     }
-})
+});
 
 // 儲存
 $(".hot-job_item .btn-save").click(function(){

@@ -1,982 +1,1418 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人力銀行</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-</head>
-<body class="bg-blue">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body class="bg-blue">
     <header class="header">
-        <div class="container d-flex align-items-center justify-content-between">
-            <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
-            <nav class="header_nav d-flex align-items-center">
-                <div class="header_link">
-                    <ul class="header_find d-flex align-items-center">
-                        <li><a href="./hunt-job.html">找工作</a></li>
-                    </ul>
-                    <ul class="header_memberNav d-lg-none">
-                        <li><a href="./seeker-overview.html">總覽</a></li>
-                        <li><a href="./seeker-inform.html">個人資料</a></li>
-                        <li><a href="./seeker-resume.html">履歷管理</a></li>
-                        <li><a href="./seeker-apply.html">應徵紀錄</a></li>
-                        <li><a href="./seeker-invited.html">受邀紀錄</a></li>
-                        <li><a href="./seeker-recommend.html">推薦信設定</a></li>
-                        <li><a href="./seeker-save.html">我的收藏</a></li>
-                        <li class="active"><a href="./seeker-feedback.html">意見回覆</a></li>
-                        <li><a href="">智能配對</a></li>
-                        <li><a href="">我的文章</a></li>
-                        <li><a href="./seeker-password.html">更改密碼</a></li>
-                        <li><a>登出</a></li>
-                    </ul>
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="./index.html" class="header_logo"
+          ><img src="./public/img/logo.svg" alt=""
+        /></a>
+        <nav class="header_nav d-flex align-items-center">
+          <div class="header_link">
+            <ul class="header_find d-flex align-items-center">
+              <li><a href="./hunt-job.html">找工作</a></li>
+            </ul>
+            <ul class="header_memberNav d-lg-none">
+              <li><a href="./seeker-overview.html">總覽</a></li>
+              <li><a href="./seeker-inform.html">個人資料</a></li>
+              <li><a href="./seeker-resume.html">履歷管理</a></li>
+              <li><a href="./seeker-apply.html">應徵紀錄</a></li>
+              <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+              <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+              <li><a href="./seeker-save.html">我的收藏</a></li>
+              <li class="active">
+                <a href="./seeker-feedback.html">意見回覆</a>
+              </li>
+              <li><a href="">智能配對</a></li>
+              <li><a href="">我的文章</a></li>
+              <li><a href="./seeker-password.html">更改密碼</a></li>
+              <li><a>登出</a></li>
+            </ul>
+          </div>
+          <ul class="header_member d-flex align-items-center">
+            <li>
+              <a
+                href="./seeker-overview.html"
+                class="btn-bg-yellow header_member_btn login"
+              >
+                <div class="header_member_btn_pic">
+                  <img src="./public/img/woman1.png" alt="" />
                 </div>
-                <ul class="header_member d-flex align-items-center">
-                    <li>
-                        <a href="./seeker-overview.html" class="btn-bg-yellow header_member_btn login">
-                            <div class="header_member_btn_pic"><img src="./public/img/woman1.png" alt=""></div>
-                            <span class="btn-bg-yellow_text header_member_btn_text">求職者名稱</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="btn-bg-blue header_member_btn btn-popup" data-popup="#company-login">
-                            <svg class="btn-bg-blue_icon header_member_btn_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_558)">
-                                <path d="M17.4726 16.9453H16.9101V7.98069C16.9101 7.75369 16.7648 7.55221 16.5495 7.48042L10.5821 5.49128V3.69174C10.5821 3.47191 10.4457 3.27514 10.2399 3.19797L1.8026 0.0339753C1.45821 -0.0951536 1.09009 0.159835 1.09009 0.527745V16.9454H0.527588C0.236354 16.9454 0.000244141 17.1815 0.000244141 17.4727C0.000244141 17.7639 0.236354 18 0.527588 18C0.646029 18 17.244 18 17.4726 18C17.7638 18 17.9999 17.7639 17.9999 17.4727C17.9999 17.1815 17.7638 16.9453 17.4726 16.9453ZM5.30873 16.9453H4.25408V14.836H5.30873V16.9453ZM7.41807 16.9453H6.36342V14.836H7.41807V16.9453ZM9.52741 5.87135V16.9453H8.47276V14.3087C8.47276 14.0174 8.23665 13.7813 7.94542 13.7813H3.72674C3.4355 13.7813 3.19939 14.0174 3.19939 14.3087V16.9453H2.14474V1.28867L9.52741 4.05715V5.87135ZM13.7461 16.9453H12.6914V14.836H13.7461V16.9453ZM15.8554 16.9453H14.8007V14.3087C14.8007 14.0174 14.5646 13.7813 14.2734 13.7813H12.1641C11.8728 13.7813 11.6367 14.0174 11.6367 14.3087V16.9453H10.5821V6.60299L15.8554 8.36077V16.9453Z" fill="white"/>
-                                <path d="M4.78134 11.6719H3.72668C3.43545 11.6719 3.19934 11.908 3.19934 12.1992C3.19934 12.4905 3.43542 12.7266 3.72668 12.7266H4.78134C5.07257 12.7266 5.30868 12.4905 5.30868 12.1992C5.30868 11.908 5.07257 11.6719 4.78134 11.6719Z" fill="white"/>
-                                <path d="M7.9454 11.6719H6.89075C6.59951 11.6719 6.3634 11.908 6.3634 12.1992C6.3634 12.4905 6.59948 12.7266 6.89075 12.7266H7.9454C8.23663 12.7266 8.47274 12.4905 8.47274 12.1992C8.47274 11.908 8.23663 11.6719 7.9454 11.6719Z" fill="white"/>
-                                <path d="M4.78134 9.56274H3.72668C3.43545 9.56274 3.19934 9.79885 3.19934 10.0901C3.19934 10.3813 3.43542 10.6174 3.72668 10.6174H4.78134C5.07257 10.6174 5.30868 10.3813 5.30868 10.0901C5.30868 9.79885 5.07257 9.56274 4.78134 9.56274Z" fill="white"/>
-                                <path d="M7.9454 9.56274H6.89075C6.59951 9.56274 6.3634 9.79885 6.3634 10.0901C6.3634 10.3813 6.59948 10.6174 6.89075 10.6174H7.9454C8.23663 10.6174 8.47274 10.3813 8.47274 10.0901C8.47274 9.79885 8.23663 9.56274 7.9454 9.56274Z" fill="white"/>
-                                <path d="M14.2733 11.6719H12.1639C11.8727 11.6719 11.6366 11.908 11.6366 12.1992C11.6366 12.4905 11.8727 12.7266 12.1639 12.7266H14.2733C14.5645 12.7266 14.8006 12.4905 14.8006 12.1992C14.8006 11.908 14.5645 11.6719 14.2733 11.6719Z" fill="white"/>
-                                <path d="M14.2733 9.56274H12.1639C11.8727 9.56274 11.6366 9.79885 11.6366 10.0901C11.6366 10.3813 11.8727 10.6174 12.1639 10.6174H14.2733C14.5645 10.6174 14.8006 10.3813 14.8006 10.0901C14.8006 9.79885 14.5645 9.56274 14.2733 9.56274Z" fill="white"/>
-                                <path d="M4.78134 7.45337H3.72668C3.43545 7.45337 3.19934 7.68948 3.19934 7.98071C3.19934 8.27195 3.43542 8.50806 3.72668 8.50806H4.78134C5.07257 8.50806 5.30868 8.27195 5.30868 7.98071C5.30865 7.68948 5.07257 7.45337 4.78134 7.45337Z" fill="white"/>
-                                <path d="M7.9454 7.45337H6.89075C6.59951 7.45337 6.3634 7.68948 6.3634 7.98071C6.3634 8.27195 6.59948 8.50806 6.89075 8.50806H7.9454C8.23663 8.50806 8.47274 8.27195 8.47274 7.98071C8.47274 7.68948 8.23663 7.45337 7.9454 7.45337Z" fill="white"/>
-                                <path d="M4.78134 5.34399H3.72668C3.43545 5.34399 3.19934 5.5801 3.19934 5.87134C3.19934 6.16257 3.43542 6.39868 3.72668 6.39868H4.78134C5.07257 6.39868 5.30868 6.16257 5.30868 5.87134C5.30865 5.5801 5.07257 5.34399 4.78134 5.34399Z" fill="white"/>
-                                <path d="M7.9454 5.34399H6.89075C6.59951 5.34399 6.3634 5.5801 6.3634 5.87134C6.3634 6.16257 6.59948 6.39868 6.89075 6.39868H7.9454C8.23663 6.39868 8.47274 6.16257 8.47274 5.87134C8.47274 5.5801 8.23663 5.34399 7.9454 5.34399Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_558">
-                                <rect width="18" height="18" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="btn-bg-blue_text header_member_btn_text">企業會員</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="header_menu d-lg-none">
-                    <div class="bar top"></div>
-                    <div class="bar middle"></div>
-                    <div class="bar bottom"></div>
-                </div>
-            </nav>
-        </div>
+                <span class="btn-bg-yellow_text header_member_btn_text"
+                  >求職者名稱</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn-bg-blue header_member_btn btn-popup"
+                data-popup="#company-login"
+              >
+                <svg
+                  class="btn-bg-blue_icon header_member_btn_icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_558)">
+                    <path
+                      d="M17.4726 16.9453H16.9101V7.98069C16.9101 7.75369 16.7648 7.55221 16.5495 7.48042L10.5821 5.49128V3.69174C10.5821 3.47191 10.4457 3.27514 10.2399 3.19797L1.8026 0.0339753C1.45821 -0.0951536 1.09009 0.159835 1.09009 0.527745V16.9454H0.527588C0.236354 16.9454 0.000244141 17.1815 0.000244141 17.4727C0.000244141 17.7639 0.236354 18 0.527588 18C0.646029 18 17.244 18 17.4726 18C17.7638 18 17.9999 17.7639 17.9999 17.4727C17.9999 17.1815 17.7638 16.9453 17.4726 16.9453ZM5.30873 16.9453H4.25408V14.836H5.30873V16.9453ZM7.41807 16.9453H6.36342V14.836H7.41807V16.9453ZM9.52741 5.87135V16.9453H8.47276V14.3087C8.47276 14.0174 8.23665 13.7813 7.94542 13.7813H3.72674C3.4355 13.7813 3.19939 14.0174 3.19939 14.3087V16.9453H2.14474V1.28867L9.52741 4.05715V5.87135ZM13.7461 16.9453H12.6914V14.836H13.7461V16.9453ZM15.8554 16.9453H14.8007V14.3087C14.8007 14.0174 14.5646 13.7813 14.2734 13.7813H12.1641C11.8728 13.7813 11.6367 14.0174 11.6367 14.3087V16.9453H10.5821V6.60299L15.8554 8.36077V16.9453Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 11.6719H3.72668C3.43545 11.6719 3.19934 11.908 3.19934 12.1992C3.19934 12.4905 3.43542 12.7266 3.72668 12.7266H4.78134C5.07257 12.7266 5.30868 12.4905 5.30868 12.1992C5.30868 11.908 5.07257 11.6719 4.78134 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 11.6719H6.89075C6.59951 11.6719 6.3634 11.908 6.3634 12.1992C6.3634 12.4905 6.59948 12.7266 6.89075 12.7266H7.9454C8.23663 12.7266 8.47274 12.4905 8.47274 12.1992C8.47274 11.908 8.23663 11.6719 7.9454 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 9.56274H3.72668C3.43545 9.56274 3.19934 9.79885 3.19934 10.0901C3.19934 10.3813 3.43542 10.6174 3.72668 10.6174H4.78134C5.07257 10.6174 5.30868 10.3813 5.30868 10.0901C5.30868 9.79885 5.07257 9.56274 4.78134 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 9.56274H6.89075C6.59951 9.56274 6.3634 9.79885 6.3634 10.0901C6.3634 10.3813 6.59948 10.6174 6.89075 10.6174H7.9454C8.23663 10.6174 8.47274 10.3813 8.47274 10.0901C8.47274 9.79885 8.23663 9.56274 7.9454 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.2733 11.6719H12.1639C11.8727 11.6719 11.6366 11.908 11.6366 12.1992C11.6366 12.4905 11.8727 12.7266 12.1639 12.7266H14.2733C14.5645 12.7266 14.8006 12.4905 14.8006 12.1992C14.8006 11.908 14.5645 11.6719 14.2733 11.6719Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.2733 9.56274H12.1639C11.8727 9.56274 11.6366 9.79885 11.6366 10.0901C11.6366 10.3813 11.8727 10.6174 12.1639 10.6174H14.2733C14.5645 10.6174 14.8006 10.3813 14.8006 10.0901C14.8006 9.79885 14.5645 9.56274 14.2733 9.56274Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 7.45337H3.72668C3.43545 7.45337 3.19934 7.68948 3.19934 7.98071C3.19934 8.27195 3.43542 8.50806 3.72668 8.50806H4.78134C5.07257 8.50806 5.30868 8.27195 5.30868 7.98071C5.30865 7.68948 5.07257 7.45337 4.78134 7.45337Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 7.45337H6.89075C6.59951 7.45337 6.3634 7.68948 6.3634 7.98071C6.3634 8.27195 6.59948 8.50806 6.89075 8.50806H7.9454C8.23663 8.50806 8.47274 8.27195 8.47274 7.98071C8.47274 7.68948 8.23663 7.45337 7.9454 7.45337Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M4.78134 5.34399H3.72668C3.43545 5.34399 3.19934 5.5801 3.19934 5.87134C3.19934 6.16257 3.43542 6.39868 3.72668 6.39868H4.78134C5.07257 6.39868 5.30868 6.16257 5.30868 5.87134C5.30865 5.5801 5.07257 5.34399 4.78134 5.34399Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M7.9454 5.34399H6.89075C6.59951 5.34399 6.3634 5.5801 6.3634 5.87134C6.3634 6.16257 6.59948 6.39868 6.89075 6.39868H7.9454C8.23663 6.39868 8.47274 6.16257 8.47274 5.87134C8.47274 5.5801 8.23663 5.34399 7.9454 5.34399Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_558">
+                      <rect width="18" height="18" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="btn-bg-blue_text header_member_btn_text"
+                  >企業會員</span
+                >
+              </a>
+            </li>
+          </ul>
+          <div class="header_menu d-lg-none">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <div class="popup" id="company-login">
-        <div class="popup_bg"></div>
-        <div class="popup_main popup_member company">
-            <div class="popup_inner">
-                <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
-                    <p class="popup_member_title_text">企業登入</p>
-                </div>
-                <div class="popup_member_content">
-                    <form action="">
-                        <div class="form-item">
-                            <label for="">帳號</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <div class="form-item">
-                            <label for="">密碼</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <button class="btn-bgFill-blue">登入</button>
-                        <div class="popup_member_link d-flex align-items-center justify-content-center">
-                            <a href="./company-signup.html">註冊會員</a>
-                            <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="popup_close">
-                    <img src="./public/img/x.svg" alt="">
-                </div>
-            </div>
+      <div class="popup_bg"></div>
+      <div class="popup_main popup_member company">
+        <div class="popup_inner">
+          <div class="popup_member_title">
+            <img
+              class="popup_member_title_logo"
+              src="./public/img/logo-blue.svg"
+              alt=""
+            />
+            <p class="popup_member_title_text">企業登入</p>
+          </div>
+          <div class="popup_member_content">
+            <form action="">
+              <div class="form-item">
+                <label for="">帳號</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <div class="form-item">
+                <label for="">密碼</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <button class="btn-bgFill-blue">登入</button>
+              <div
+                class="popup_member_link d-flex align-items-center justify-content-center"
+              >
+                <a href="./company-signup.html">註冊會員</a>
+                <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
+              </div>
+            </form>
+          </div>
+          <div class="popup_close">
+            <img src="./public/img/x.svg" alt="" />
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="popup" id="company-foregt">
-        <div class="popup_bg"></div>
-        <div class="popup_main popup_member company">
-            <div class="popup_inner">
-                <div class="popup_member_title">
-                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
-                    <p class="popup_member_title_text">忘記密碼</p>
-                </div>
-                <div class="popup_member_content">
-                    <form action="">
-                        <div class="form-item column">
-                            <label for="">請輸入信箱或手機</label>
-                            <input type="text" class="input form-item_main">
-                        </div>
-                        <button class="btn-bgFill-blue">送出</button>
-                    </form>
-                </div>
-                <div class="popup_close">
-                    <img src="./public/img/x.svg" alt="">
-                </div>
-            </div>
+      <div class="popup_bg"></div>
+      <div class="popup_main popup_member company">
+        <div class="popup_inner">
+          <div class="popup_member_title">
+            <img
+              class="popup_member_title_logo"
+              src="./public/img/logo-blue.svg"
+              alt=""
+            />
+            <p class="popup_member_title_text">忘記密碼</p>
+          </div>
+          <div class="popup_member_content">
+            <form action="">
+              <div class="form-item column">
+                <label for="">請輸入信箱或手機</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <button class="btn-bgFill-blue">送出</button>
+            </form>
+          </div>
+          <div class="popup_close">
+            <img src="./public/img/x.svg" alt="" />
+          </div>
         </div>
+      </div>
     </div>
 
     <main class="main">
-        <div class="member seeker-inform">
-            <div class="container d-flex flex-wrap">
-                <div class="detail-content_nav d-lg-block d-none">
-                    <div class="detail-content_nav_inner">
-                        <ul class="detail-content_nav_list">
-                            <li><a href="./seeker-overview.html">總覽</a></li>
-                            <li><a href="./seeker-inform.html">個人資料</a></li>
-                            <li><a href="./seeker-resume.html">履歷管理</a></li>
-                            <li><a href="./seeker-apply.html">應徵紀錄</a></li>
-                            <li><a href="./seeker-invited.html">受邀紀錄</a></li>
-                            <li><a href="./seeker-recommend.html">推薦信設定</a></li>
-                            <li><a href="./seeker-save.html">我的收藏</a></li>
-                            <li class="active"><a href="./seeker-feedback.html">意見回覆</a></li>
-                            <li><a href="">智能配對</a></li>
-                            <li><a href="">我的文章</a></li>
-                            <li><a href="./seeker-password.html">更改密碼</a></li>
-                            <li><a>登出</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="member_content">
-                    <div class="member_content_inner">
-                        <h1 class="member_title">意見回覆</h1>
-                        <div>
-                            <div class="feedback_item">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <p class="feedback_catagory">新功能提議</p>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="feedback_like view">
-                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1631_8088)">
-                                                <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_1631_8088">
-                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span>20</span>
-                                        </button>
-                                        <div class="feedback_dot"></div>
-                                        <p class="feedback_date">2025/03/03</p>
-                                    </div>
-                                </div>
-                                <p class="feedback_content">
-                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
-                                </p>
-                            </div>
-                            <div class="feedback_item">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <p class="feedback_catagory">新功能提議</p>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="feedback_like view">
-                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1631_8088)">
-                                                <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_1631_8088">
-                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span>20</span>
-                                        </button>
-                                        <div class="feedback_dot"></div>
-                                        <p class="feedback_date">2025/03/03</p>
-                                    </div>
-                                </div>
-                                <p class="feedback_content">
-                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
-                                </p>
-                            </div>
-                            <div class="feedback_item">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <p class="feedback_catagory">新功能提議</p>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="feedback_like view">
-                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1631_8088)">
-                                                <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_1631_8088">
-                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span>20</span>
-                                        </button>
-                                        <div class="feedback_dot"></div>
-                                        <p class="feedback_date">2025/03/03</p>
-                                    </div>
-                                </div>
-                                <p class="feedback_content">
-                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
-                                </p>
-                            </div>
-                            <div class="feedback_item">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <p class="feedback_catagory">新功能提議</p>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="feedback_like view">
-                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1631_8088)">
-                                                <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_1631_8088">
-                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span>20</span>
-                                        </button>
-                                        <div class="feedback_dot"></div>
-                                        <p class="feedback_date">2025/03/03</p>
-                                    </div>
-                                </div>
-                                <p class="feedback_content">
-                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
-                                </p>
-                            </div>
-                            <div class="feedback_item">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <p class="feedback_catagory">新功能提議</p>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="feedback_like view">
-                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1631_8088)">
-                                                <path d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z" fill="#39B5EA"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_1631_8088">
-                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                            <span>20</span>
-                                        </button>
-                                        <div class="feedback_dot"></div>
-                                        <p class="feedback_date">2025/03/03</p>
-                                    </div>
-                                </div>
-                                <p class="feedback_content">
-                                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="member seeker-inform">
+        <div class="container d-flex flex-wrap">
+          <div class="detail-content_nav d-lg-block d-none">
+            <div class="detail-content_nav_inner">
+              <ul class="detail-content_nav_list">
+                <li><a href="./seeker-overview.html"></a>總覽</li>
+                <li><a href="./seeker-inform.html">個人資料</a></li>
+                <li><a href="./seeker-resume.html">履歷管理</a></li>
+                <li><a href="./seeker-apply.html">應徵紀錄</a></li>
+                <li><a href="./seeker-invited.html">受邀紀錄</a></li>
+                <li><a href="./seeker-recommend.html">推薦信設定</a></li>
+                <li><a href="./seeker-save.html">我的收藏</a></li>
+                <li class="active">
+                  <a href="./seeker-feedback.html">反饋紀錄</a>
+                </li>
+                <li><a href="">智能配對</a></li>
+                <li>
+                  <a href="./seeker-article.html">我的文章</a>
+                </li>
+                <li><a href="./seeker-password.html">更改密碼</a></li>
+                <li><a>登出</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="member_content">
+            <div class="member_content_inner">
+              <h1 class="member_title">意見回覆</h1>
+              <div>
+                <div class="feedback_item">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <p class="feedback_catagory">新功能提議</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="feedback_like view">
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1631_8088)">
+                            <path
+                              d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z"
+                              fill="#39B5EA"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1631_8088">
+                              <rect
+                                width="16"
+                                height="16"
+                                fill="white"
+                                transform="translate(0 0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>20</span>
+                      </button>
+                      <div class="feedback_dot"></div>
+                      <p class="feedback_date">2025/03/03</p>
+                    </div>
+                  </div>
+                  <p class="feedback_content">
+                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                  </p>
+                </div>
+                <div class="feedback_item">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <p class="feedback_catagory">新功能提議</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="feedback_like view">
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1631_8088)">
+                            <path
+                              d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z"
+                              fill="#39B5EA"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1631_8088">
+                              <rect
+                                width="16"
+                                height="16"
+                                fill="white"
+                                transform="translate(0 0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>20</span>
+                      </button>
+                      <div class="feedback_dot"></div>
+                      <p class="feedback_date">2025/03/03</p>
+                    </div>
+                  </div>
+                  <p class="feedback_content">
+                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                  </p>
+                </div>
+                <div class="feedback_item">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <p class="feedback_catagory">新功能提議</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="feedback_like view">
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1631_8088)">
+                            <path
+                              d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z"
+                              fill="#39B5EA"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1631_8088">
+                              <rect
+                                width="16"
+                                height="16"
+                                fill="white"
+                                transform="translate(0 0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>20</span>
+                      </button>
+                      <div class="feedback_dot"></div>
+                      <p class="feedback_date">2025/03/03</p>
+                    </div>
+                  </div>
+                  <p class="feedback_content">
+                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                  </p>
+                </div>
+                <div class="feedback_item">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <p class="feedback_catagory">新功能提議</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="feedback_like view">
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1631_8088)">
+                            <path
+                              d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z"
+                              fill="#39B5EA"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1631_8088">
+                              <rect
+                                width="16"
+                                height="16"
+                                fill="white"
+                                transform="translate(0 0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>20</span>
+                      </button>
+                      <div class="feedback_dot"></div>
+                      <p class="feedback_date">2025/03/03</p>
+                    </div>
+                  </div>
+                  <p class="feedback_content">
+                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                  </p>
+                </div>
+                <div class="feedback_item">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <p class="feedback_catagory">新功能提議</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="feedback_like view">
+                        <svg
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1631_8088)">
+                            <path
+                              d="M1.16667 16.5H2.83333C3.47667 16.5 4 15.9767 4 15.3333V15.0893C5.008 15.6027 7.29733 16.5 11.0207 16.5H12.0873C13.6327 16.5 14.9447 15.3947 15.2067 13.872L15.9533 9.53867C16.112 8.614 15.8567 7.674 15.254 6.958C14.652 6.24333 13.7693 5.83333 12.834 5.83333H9.81C9.99867 5.32667 10.1873 4.588 10.1873 3.66667C10.1873 1.162 8.77 0.5 8.02067 0.5C6.63667 0.5 6.52067 1.79067 6.52067 3C6.52067 4.476 4.86533 5.70267 3.99133 6.248C3.94667 5.64533 3.44733 5.16667 2.83333 5.16667H1.16667C0.523333 5.16667 0 5.69 0 6.33333V15.3333C0 15.9767 0.523333 16.5 1.16667 16.5ZM7.52067 3C7.52067 1.5 7.77467 1.5 8.02067 1.5C8.49 1.5 9.18733 2.07733 9.18733 3.66667C9.18733 5.144 8.60867 6.04933 8.60467 6.056C8.50267 6.20933 8.49267 6.40667 8.58 6.56933C8.66667 6.732 8.83667 6.83333 9.02067 6.83333H12.834C13.474 6.83333 14.0773 7.11333 14.4893 7.602C14.902 8.09133 15.0767 8.73533 14.968 9.368L14.2213 13.7013C14.042 14.7427 13.1447 15.4993 12.0873 15.4993H11.0207C6.48533 15.5 4.21333 14.0813 4 13.9407V7.40067C4.55533 7.106 7.52067 5.41933 7.52067 3ZM1 6.33333C1 6.24133 1.07467 6.16667 1.16667 6.16667H2.83333C2.92533 6.16667 3 6.24133 3 6.33333V15.3333C3 15.424 2.924 15.5 2.83333 15.5H1.16667C1.07467 15.5 1 15.4253 1 15.3333V6.33333Z"
+                              fill="#39B5EA"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1631_8088">
+                              <rect
+                                width="16"
+                                height="16"
+                                fill="white"
+                                transform="translate(0 0.5)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>20</span>
+                      </button>
+                      <div class="feedback_dot"></div>
+                      <p class="feedback_date">2025/03/03</p>
+                    </div>
+                  </div>
+                  <p class="feedback_content">
+                    它史國代我……月地間看、間數雄，我上子情是找感，一樂決作，人沒交裡親商統，它官集年立成座辦？電如學的思教細：帶無死也還稱。只所快心人公價學速玩世。離最未，竟言等了目很。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="container d-sm-flex align-items-center justify-content-between">
-            <ul class="d-flex align-items-center justify-content-sm-start justify-content-center mb-sm-0 mb-3">
-                <li><a href="./about.html">關於我們</a></li>
-                <li><a href="./privacy.html">隱私權政策</a></li>
-                <li><a href="./feedback-seeker.html">狗都不吃</a></li>
-            </ul>
-            <p class="copyright">© 2023 by xxx股份有限公司</p>
-        </div>
+      <div
+        class="container d-sm-flex align-items-center justify-content-between"
+      >
+        <ul
+          class="d-flex align-items-center justify-content-sm-start justify-content-center mb-sm-0 mb-3"
+        >
+          <li><a href="./about.html">關於我們</a></li>
+          <li><a href="./privacy.html">隱私權政策</a></li>
+          <li><a href="./feedback-seeker.html">狗都不吃</a></li>
+        </ul>
+        <p class="copyright">© 2023 by xxx股份有限公司</p>
+      </div>
     </footer>
 
     <div class="sideBtn bg-yellow">
-        <button class="sideBtn_dog"><a href="./feedback-seeker.html"><img src="./public/img/dog.png" alt=""></a></button>
-        <button class="sideBtn_chat"><img src="./public/img/chat.svg" alt=""></button>
-        <button class="sideBtn_top"><img src="./public/img/arrow-up.svg" alt=""></button>
+      <button class="sideBtn_dog">
+        <a href="./feedback-seeker.html"
+          ><img src="./public/img/dog.png" alt=""
+        /></a>
+      </button>
+      <button class="sideBtn_chat">
+        <img src="./public/img/chat.svg" alt="" />
+      </button>
+      <button class="sideBtn_top">
+        <img src="./public/img/arrow-up.svg" alt="" />
+      </button>
     </div>
 
     <div class="chat bg-yellow">
-        <div class="chat_head d-flex align-items-center justify-content-between">
-            <div class="chat_head_title align-items-center">
-                <h5>聊聊</h5>
-                <div class="chat_num"><span>3</span></div>
-            </div>
-            <div class="chat_head_title-m align-items-center">
-                <div class="chat_back">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#22A9E7"/>
-                    </svg>
-                </div>
-                <h6>路易莎職人咖啡股份有限公司</h6>
-            </div>
-            <div class="chat_head_close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6789 5.32122C19.0538 5.69612 19.0538 6.30396 18.6789 6.67886L6.67886 18.6789C6.30396 19.0538 5.69612 19.0538 5.32122 18.6789C4.94631 18.304 4.94631 17.6961 5.32122 17.3212L17.3212 5.32122C17.6961 4.94631 18.304 4.94631 18.6789 5.32122Z" fill="#BABABA"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.32122 5.32122C5.69612 4.94631 6.30396 4.94631 6.67886 5.32122L18.6789 17.3212C19.0538 17.6961 19.0538 18.304 18.6789 18.6789C18.304 19.0538 17.6961 19.0538 17.3212 18.6789L5.32122 6.67886C4.94631 6.30396 4.94631 5.69612 5.32122 5.32122Z" fill="#BABABA"/>
+      <div class="chat_head d-flex align-items-center justify-content-between">
+        <div class="chat_head_title align-items-center">
+          <h5>聊聊</h5>
+          <div class="chat_num"><span>3</span></div>
+        </div>
+        <div class="chat_head_title-m align-items-center">
+          <div class="chat_back">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                fill="#22A9E7"
+              />
+            </svg>
+          </div>
+          <h6>路易莎職人咖啡股份有限公司</h6>
+        </div>
+        <div class="chat_head_close">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.6789 5.32122C19.0538 5.69612 19.0538 6.30396 18.6789 6.67886L6.67886 18.6789C6.30396 19.0538 5.69612 19.0538 5.32122 18.6789C4.94631 18.304 4.94631 17.6961 5.32122 17.3212L17.3212 5.32122C17.6961 4.94631 18.304 4.94631 18.6789 5.32122Z"
+              fill="#BABABA"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.32122 5.32122C5.69612 4.94631 6.30396 4.94631 6.67886 5.32122L18.6789 17.3212C19.0538 17.6961 19.0538 18.304 18.6789 18.6789C18.304 19.0538 17.6961 19.0538 17.3212 18.6789L5.32122 6.67886C4.94631 6.30396 4.94631 5.69612 5.32122 5.32122Z"
+              fill="#BABABA"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="chat_main d-flex">
+        <div class="chat_main_left">
+          <div class="chat_main_search">
+            <div class="chat_main_search_inner">
+              <input type="text" />
+              <button>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z"
+                    fill="#22A9E7"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z"
+                    fill="#22A9E7"
+                  />
                 </svg>
+              </button>
             </div>
+          </div>
+          <ul class="chat_main_list">
+            <li class="chat_main_list_item notread" data-chat="#chat-1">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                    <div class="chat_num"><span>3</span></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-2">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-3">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-4">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-5">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-6">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-7">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="chat_main_list_item" data-chat="#chat-8">
+              <div class="chat_main_list_item_inner">
+                <div class="chat_main_list_pic">
+                  <img src="./public/img/brand-3.png" alt="" />
+                </div>
+                <div class="chat_main_list_text">
+                  <h6>路易莎職人咖啡股份有限公司</h6>
+                  <div class="d-flex align-items-center">
+                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="chat_main d-flex">
-            <div class="chat_main_left">
-                <div class="chat_main_search">
-                    <div class="chat_main_search_inner">
-                        <input type="text">
-                        <button>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z" fill="#22A9E7"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z" fill="#22A9E7"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <ul class="chat_main_list">
-                    <li class="chat_main_list_item notread" data-chat="#chat-1">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                    <div class="chat_num"><span>3</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-2">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-3">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-4">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-5">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-6">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-7">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="chat_main_list_item" data-chat="#chat-8">
-                        <div class="chat_main_list_item_inner">
-                            <div class="chat_main_list_pic"><img src="./public/img/brand-3.png" alt=""></div>
-                            <div class="chat_main_list_text">
-                                <h6>路易莎職人咖啡股份有限公司</h6>
-                                <div class="d-flex align-items-center">
-                                    <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+        <div class="chat_main_right">
+          <div class="chat_main_right_inner init">
+            <div class="d-flex">
+              <img src="./public/img/chat-colorful.svg" alt="" />
+              <p>歡迎使用聊聊</p>
             </div>
-            <div class="chat_main_right">
-                <div class="chat_main_right_inner init">
-                    <div class="d-flex">
-                        <img src="./public/img/chat-colorful.svg" alt="">
-                        <p>歡迎使用聊聊</p>
-                    </div>
+          </div>
+          <div class="chat_main_right_inner active" id="chat-1">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
                 </div>
-                <div class="chat_main_right_inner active" id="chat-1">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-2">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-3">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-4">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-5">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-6">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-7">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="chat_main_right_inner" id="chat-8">
-                    <div class="chat_main_title">
-                        <div class="job-title d-flex align-items-center p-3 m-0">
-                            <div class="chat_main_title_text">
-                                <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
-                                <p class="job-title_company m-0">路易莎職人咖啡股份有限公司</p>
-                            </div>
-                            <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
-                                <svg class="btn-bg-blue_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_568_15499)">
-                                    <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                    <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_568_15499">
-                                    <rect width="16" height="16" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">應徵</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chat_main_content">
-                        <p class="chat_main_content_date">2023/06/17(六)</p>
-                        <div class="chat_main_content_opposite chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                        <div class="chat_main_content_own chat_main_content_item">
-                            <div class="chat_main_content_frame">
-                                條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
-                            </div>
-                            <div class="chat_main_content_remark">
-                                <p>已讀</p>
-                                <p>17:29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat_main_input">
-                        <input type="text" placeholder="請輸入文字">
-                        <button>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_568_15499)">
-                                <path d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z" fill="white"/>
-                                <path d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_568_15499">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
             </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-2">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-3">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-4">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-5">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-6">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-7">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat_main_right_inner" id="chat-8">
+            <div class="chat_main_title">
+              <div class="job-title d-flex align-items-center p-3 m-0">
+                <div class="chat_main_title_text">
+                  <h4 class="job-title_name mb-2">儲備幹部、正兼職人員</h4>
+                  <p class="job-title_company m-0">
+                    路易莎職人咖啡股份有限公司
+                  </p>
+                </div>
+                <button class="btn-bg-blue btn-popup" data-popup="#apply-job">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_568_15499)">
+                      <path
+                        d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_568_15499">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">應徵</span>
+                </button>
+              </div>
+            </div>
+            <div class="chat_main_content">
+              <p class="chat_main_content_date">2023/06/17(六)</p>
+              <div class="chat_main_content_opposite chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>17:29</p>
+                </div>
+              </div>
+              <div class="chat_main_content_own chat_main_content_item">
+                <div class="chat_main_content_frame">
+                  條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                </div>
+                <div class="chat_main_content_remark">
+                  <p>已讀</p>
+                  <p>17:29</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat_main_input">
+              <input type="text" placeholder="請輸入文字" />
+              <button>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_568_15499)">
+                    <path
+                      d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_568_15499">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
 
-    
-    
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/common.js"></script>
-
-</body>
+  </body>
 </html>

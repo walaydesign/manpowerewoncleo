@@ -1095,6 +1095,44 @@ body.bg-write {
   white-space: nowrap;
 }
 
+.check-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.check-item input[type="checkbox"]::before, .check-item input[type="checkbox"]::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.check-item input[type="checkbox"]::before {
+  border: 1px solid #D1D1D1;
+  background-color: #fff;
+}
+
+.check-item input[type="checkbox"]::after {
+  background-color: #22A9E7;
+  background-image: url(../img/check.svg);
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.check-item input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+.check-item input[type="text"] {
+  width: 200px;
+}
+
 .checkbox {
   width: 16px;
   height: 16px;
@@ -5170,6 +5208,160 @@ body.bg-write {
 
 .seeker-autobiography {
   text-align: justify;
+}
+
+.seeker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.seeker_pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.seeker_pic > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.seeker_name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media screen and (max-width: 575px) {
+  .seeker {
+    gap: 8px;
+  }
+  .seeker_pic {
+    width: 32px;
+    height: 32px;
+  }
+  .seeker_name {
+    font-size: 16px;
+  }
+}
+
+.seeker-preview_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.seeker-preview_head a {
+  padding: 8px 25px;
+}
+
+.seeker-preview_main_item {
+  padding-bottom: 24px;
+}
+
+.seeker-preview_main_item h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #003E5A;
+}
+
+.seeker-preview_main_content.checkbox-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 28px;
+          column-gap: 28px;
+  row-gap: 20px;
+}
+
+.seeker-preview_main_content.checkbox-wrap .input {
+  height: 40px;
+  margin-left: 8px;
+}
+
+.seeker-preview_lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
+  margin-bottom: 12px;
+}
+
+.seeker-preview_lang .select {
+  width: 115px;
+}
+
+.seeker-preview_lang .select-item {
+  margin-bottom: 0;
+}
+
+.seeker-preview_lang:last-child {
+  margin-bottom: 0;
+}
+
+.seeker-preview .btn-bg-yellow {
+  margin: 20px auto 0;
+  padding: 13px 35px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 575px) {
+  .seeker-preview_lang {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #EDEDED;
+  }
+  .seeker-preview_lang .select, .seeker-preview_lang .select-wrap {
+    width: 100%;
+  }
+}
+
+.match {
+  width: 100%;
+  display: block;
+  border-radius: 25px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.match > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .match {
+    border-radius: 16px;
+  }
 }
 
 .company-detail_head {
