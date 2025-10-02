@@ -4522,7 +4522,7 @@ body.bg-write {
 
 .recruit_list {
   width: 65%;
-  padding-right: 45px;
+  padding-left: 45px;
 }
 
 @media screen and (max-width: 991px) {
@@ -5358,10 +5358,104 @@ body.bg-write {
   width: 100%;
 }
 
+.match-card {
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #D1D1D1;
+  margin-bottom: 30px;
+}
+
+.match-card .job_item_inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 0;
+  width: 100%;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.match-card_body {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #DBDBDB;
+  margin-bottom: 16px;
+}
+
+.match-card_info {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #EFF6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.match-card_info_num {
+  width: 48px;
+  text-align: center;
+  padding-right: 10px;
+  position: relative;
+}
+
+.match-card_info_num .num {
+  font-size: 18px;
+  font-weight: 700;
+  color: #005880;
+  font-weight: 700;
+  margin: 0;
+}
+
+.match-card_info_num .ch {
+  font-size: 12px;
+  color: #979797;
+  margin: 0;
+}
+
+.match-card_info_num::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #E3E3E3;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.match-card_info_text {
+  width: calc(100% - 48px);
+  padding-left: 10px;
+}
+
+.match-card_info_text p {
+  margin: 0;
+  font-size: 14px;
+  color: #71A6A6;
+}
+
 @media screen and (max-width: 575px) {
   .match {
     border-radius: 16px;
   }
+}
+
+.btn-rematch {
+  margin: 20px auto 0;
+  padding: 13px 35px;
+  font-weight: 700;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-rematch span {
+  font-size: 20px;
 }
 
 .company-detail_head {
@@ -5625,7 +5719,8 @@ body.bg-write {
   font-weight: 300;
 }
 
-.signup .form-item input, .signup .form-item textarea {
+.signup .form-item input,
+.signup .form-item textarea {
   color: #979797;
 }
 
@@ -6124,11 +6219,6 @@ body.bg-write {
   margin: 10px 0;
 }
 
-.seeker-inform .form-item label {
-  font-weight: 500;
-  color: #979797;
-}
-
 .seeker-resume_num {
   margin: 0;
   color: #979797;
@@ -6164,14 +6254,15 @@ body.bg-write {
 }
 
 .seeker-resume_my_text {
-  width: calc(100% - 335px);
+  width: calc(100% - 386px);
 }
 
 .seeker-resume_my_icon {
-  width: 335px;
+  width: 386px;
 }
 
-.seeker-resume_my_icon > a, .seeker-resume_my_icon > button {
+.seeker-resume_my_icon > a,
+.seeker-resume_my_icon > button {
   margin-left: 15px;
 }
 
@@ -6192,13 +6283,18 @@ body.bg-write {
     width: 100%;
     margin-top: 15px;
   }
-  .seeker-resume_my_icon > a, .seeker-resume_my_icon > button {
-    margin-left: 10px;
+  .seeker-resume_my_icon > a,
+  .seeker-resume_my_icon > button {
+    margin-left: 8px;
+  }
+  .seeker-resume_my_icon .btn-default {
+    padding: 8px 12px;
   }
 }
 
 @media screen and (max-width: 370px) {
-  .seeker-resume_my_icon > a:not(.btn-default), .seeker-resume_my_icon > button:not(.btn-default) {
+  .seeker-resume_my_icon > a:not(.btn-default),
+  .seeker-resume_my_icon > button:not(.btn-default) {
     width: 30px;
     height: 30px;
   }
@@ -6370,16 +6466,18 @@ body.bg-write {
 }
 
 .detail-resume .seeker-detail_head {
-  width: calc(100% - 130px);
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
 }
 
 .detail-resume .seeker-detail_head_pic {
-  width: 110px;
-  height: 110px;
+  width: 142px;
+  height: 142px;
 }
 
 .detail-resume .seeker-detail_head_text {
-  width: calc(100% - 110px);
+  width: calc(100% - 142px);
   padding-left: 20px;
 }
 
@@ -6514,6 +6612,18 @@ body.bg-write {
   width: calc(100% - 85px);
 }
 
+.detail-resume_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 @media screen and (max-width: 767px) {
   .detail-resume .detail-content_intro {
     padding-right: 0;
@@ -6533,6 +6643,33 @@ body.bg-write {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .detail-resume_head .seeker-detail_head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .detail-resume_head .seeker-detail_head_text {
+    width: 100%;
+    padding: 0;
+  }
+  .detail-resume .detail-content_nav {
+    width: calc(100% - 40px);
+  }
+  .detail-resume .detail-content_nav_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .detail-resume .form-item {
     display: block;
@@ -6545,17 +6682,8 @@ body.bg-write {
     width: 100%;
     margin-top: 10px;
   }
-}
-
-@media screen and (max-width: 370px) {
-  .detail-resume .seeker-detail_head_pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-  }
-  .detail-resume .seeker-detail_head_text {
-    width: calc(100% - 80px);
-    padding-left: 15px;
+  .detail-resume_head .seeker-detail_head_inform > div {
+    width: 50%;
   }
 }
 
@@ -6634,24 +6762,29 @@ body.bg-write {
   padding-right: 10px;
 }
 
-.form-lightBlue .input, .form-lightBlue .select {
+.form-lightBlue .input,
+.form-lightBlue .select {
   border-color: #B4CECE;
   background-color: transparent;
 }
 
-.form-lightBlue .input::-webkit-input-placeholder, .form-lightBlue .select::-webkit-input-placeholder {
+.form-lightBlue .input::-webkit-input-placeholder,
+.form-lightBlue .select::-webkit-input-placeholder {
   color: #B4CECE;
 }
 
-.form-lightBlue .input:-ms-input-placeholder, .form-lightBlue .select:-ms-input-placeholder {
+.form-lightBlue .input:-ms-input-placeholder,
+.form-lightBlue .select:-ms-input-placeholder {
   color: #B4CECE;
 }
 
-.form-lightBlue .input::-ms-input-placeholder, .form-lightBlue .select::-ms-input-placeholder {
+.form-lightBlue .input::-ms-input-placeholder,
+.form-lightBlue .select::-ms-input-placeholder {
   color: #B4CECE;
 }
 
-.form-lightBlue .input::placeholder, .form-lightBlue .select::placeholder {
+.form-lightBlue .input::placeholder,
+.form-lightBlue .select::placeholder {
   color: #B4CECE;
 }
 
@@ -6749,6 +6882,73 @@ body.bg-write {
 .company-job_item:last-child {
   border: 0;
   margin-bottom: 0;
+}
+
+.resume-complete {
+  margin-bottom: 12px;
+  border-radius: 15px;
+  background-color: #EFF6F6;
+  padding: 15px 20px;
+}
+
+.resume-complete_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume-complete_text .text {
+  color: #71A6A6;
+  margin: 0;
+  font-size: 14px;
+}
+
+.resume-complete_text .num {
+  color: #0F7EB0;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.resume-complete_bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #D4EBEB;
+  margin-top: 8px;
+}
+
+.resume-complete_bar .bar {
+  border-radius: 8px;
+  height: 100%;
+  background-color: #468989;
+}
+
+@media screen and (max-width: 575px) {
+  .resume-complete {
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
+  }
+  .resume-complete_text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .resume-complete_bar {
+    display: none;
+  }
 }
 
 .back {

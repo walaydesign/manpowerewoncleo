@@ -2,7 +2,7 @@
     padding: 50px 0 150px;
     &_list {
         width: 65%;
-        padding-right: 45px;
+        padding-left: 45px;
         @media screen and (max-width: 991px) {
             width: 100%;
             padding: 0;
@@ -653,7 +653,80 @@
     >img {
         width: 100%;
     }
+    &-card {
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid $gray-500;
+        margin-bottom: 30px;
+        .job_item_inform {
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+            border: 0;
+            width: 100%;
+            column-gap: 15px;
+        }
+        &_body {
+            padding-bottom: 16px;
+            border-bottom: 1px solid $gray-400;
+            margin-bottom: 16px;
+        }
+        &_info {
+            padding: 10px;
+            border-radius: 12px;
+            background-color: $third-200;
+            display: flex;
+            align-items: center;
+            &_num {
+                width: 48px;
+                text-align: center;
+                padding-right: 10px;
+                position: relative;
+                .num {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $primary-800;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                .ch {
+                    font-size: 12px;
+                    color: $gray-800;
+                    margin: 0;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 30px;
+                    background-color: $gray-300;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            &_text {
+                width: calc(100% - 48px);
+                padding-left: 10px;
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    color: $third-700;
+                }
+            }
+        }
+    }
      @media screen and (max-width: 575px) {
         border-radius: 16px;
      }
+}
+
+.btn-rematch {
+    margin: 20px auto 0;
+    padding: 13px 35px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    span {
+        font-size: 20px;
+    }
 }
