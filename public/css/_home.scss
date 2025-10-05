@@ -1,250 +1,313 @@
 .home-head {
-    position: relative;
-    margin-bottom: 90px;
+  position: relative;
+  margin-bottom: 90px;
+  .searchjob {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+  }
+  @media screen and (max-width: 767px) {
     .searchjob {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+      position: static;
+      transform: none;
+      margin: 0 auto;
     }
-    @media screen and (max-width: 767px) {
-        .searchjob {
-            position: static;
-            transform: none;
-            margin: 0 auto;
-        }
-    }
+  }
 }
 
 .banner {
-    position: relative;
-    width: 100%;
-    padding-bottom: 34%;
-    &_main {
+  position: relative;
+  padding-bottom: 45px;
+  overflow: hidden;
+  &_main {
+    &_item {
+      width: 100%;
+      padding-bottom: 34%;
+      > img {
         @include coverPic;
+      }
     }
-    &_style {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        bottom: -1%;
+    .swiper-button {
+        &-prev, &-next {
+            width: 45px;
+            height: 45px;
+            top: 13vw;
+            margin: 0;
+            svg {
+                width: 45px;
+                height: 45px;
+                    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.35));
+                path {
+                    fill: #fff;
+                    transition: $transition;
+                }
+            }
+            &::after {
+                display: none;
+            }
+            &:hover {
+                svg {
+                    filter: none;
+                    path {
+                        fill: $primary-500;
+                    }
+                }
+            }
+        }
     }
-    @media screen and (max-width: 767px) {
-        padding-bottom: 60%;
+    .swiper-pagination {
+        width: 140px;
+        top: 21vw;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255,255,255,0.6);
+        &-progressbar-fill {
+            background-color: $secondary-900;
+            z-index: 1;
+        }
     }
+  }
+  &_style {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1%;
+    z-index: 5;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 0;
+    &_main {
+        &_item {
+    padding-bottom: 60%;
+
+        }
+        .swiper-button {
+            &-prev, &-next {
+                top: 23vw;
+            }
+        }
+        .swiper-pagination {
+            top: inherit;
+            bottom: 10vw;
+        }
+
+    }
+  }
 }
 
 .home-title {
-    color: $primary-600;
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    letter-spacing: 0.05em;
-    @media screen and (max-width: 991px) {
-        font-size: 32px;
-    }
+  color: $primary-600;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+  }
 }
 
 .hot-company {
-    padding: 115px 0 128px;
+  padding: 115px 0 128px;
+  position: relative;
+  background-image: url(../img/company-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_bg {
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+  }
+  .home-title {
+    padding-left: 20px;
+    color: #fff;
+  }
+  &_item {
+    padding: 30px 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &_pic {
+    width: 80px;
+    height: 80px;
     position: relative;
-    background-image: url(../img/company-bg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &_bg {
-        position: absolute;
-        width: 100%;
+    margin: 0 auto 15px;
+    > img {
+      @include containPic;
+    }
+  }
+  &_name {
+    text-align: center;
+    color: $gray-800;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &_salary {
+    font-size: 14px;
+    text-align: center;
+    color: $primary-600;
+    margin: 0;
+  }
+  &_swiper {
+    padding: 20px;
+    &_prev,
+    &_next {
+      svg {
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &_mask {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    &.mask {
+      &-top {
+        top: 0;
+      }
+      &-bottom {
         bottom: -1px;
-        left: 0;
+      }
     }
-    .home-title {
-        padding-left: 20px;
-        color: #fff;
+  }
+  @media screen and (max-width: 1199px) {
+    > .container {
+      max-width: inherit;
+      padding: 0 100px;
     }
-    &_item {
-        padding: 30px 15px;
-        background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        display: block;
-        transition: $transition;
-        &:hover {
-            transform: scale(1.1);
-        }
+  }
+  @media screen and (max-width: 991px) {
+    > .container {
+      padding-left: 20px;
+      padding-right: 0;
     }
-    &_pic {
-        width: 80px;
-        height: 80px;
-        position: relative;
-        margin: 0 auto 15px;
-        >img {
-            @include containPic;
-        }
+    // &_swiper {
+    //     &_prev, &_next{
+    //         display: none;
+    //     }
+    // }
+  }
+  @media screen and (max-width: 575px) {
+    > .container {
+      padding-left: 10px;
     }
-    &_name {
-        text-align: center;
-        color: $gray-800;
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 8px;
-    }
-    &_salary {
-        font-size: 14px;
-        text-align: center;
-        color: $primary-600;
-        margin: 0;
-    }
-    &_swiper {
-        padding: 20px;
-        &_prev, &_next{
-            svg {
-                filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
-                path {
-                    fill: #fff;
-                }
-            }
-        }
-    }
-    &_mask {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        &.mask {
-            &-top {
-                top: 0;
-            }
-            &-bottom {
-                bottom: -1px;
-            }
-        }
-    }
-    @media screen and (max-width: 1199px) {
-        >.container {
-            max-width: inherit;
-            padding: 0 100px;
-        }
-    }
-    @media screen and (max-width: 991px) {
-        >.container {
-            padding-left: 20px;
-            padding-right: 0;
-        }
-        // &_swiper {
-        //     &_prev, &_next{
-        //         display: none;
-        //     }
-        // }
-    }
-    @media screen and (max-width: 575px) {
-        >.container {
-            padding-left: 10px;
-        }
-    }
+  }
 }
 
 .home-swiper {
-    position: relative;
-    .swiper-container {
-        overflow: hidden;
+  position: relative;
+  .swiper-container {
+    overflow: hidden;
+  }
+  &_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    svg {
+      width: 45px;
+      height: 45px;
+      transition: $transition;
+      path {
+        transition: $transition;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
+    &.swiper-button-disabled {
+      svg {
+        path {
+          fill: $gray-500;
+        }
+      }
+    }
+    &.prev {
+      left: -70px;
+    }
+    &.next {
+      right: -70px;
+    }
+  }
+  @media screen and (max-width: 1399px) {
     &_arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        svg {
-            width: 45px;
-            height: 45px;
-            transition: $transition;
-            path {
-                transition: $transition;
-            }
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-        &.swiper-button-disabled {
-            svg {
-                path {
-                    fill: $gray-500;
-                }
-            }
-        }
-        &.prev {
-            left: -70px;
-        }
-        &.next {
-            right: -70px;
-        }
+      &.prev {
+        left: -40px;
+      }
+      &.next {
+        right: -40px;
+      }
     }
-    @media screen and (max-width: 1399px) {
-        &_arrow {
-            &.prev {
-                left: -40px;
-            }
-            &.next {
-                right: -40px;
-            }
-        }
+  }
+  @media screen and (max-width: 991px) {
+    &_arrow {
+      display: none;
     }
-    @media screen and (max-width: 991px) {
-        &_arrow {
-            display: none;
-        }
-    }
+  }
 }
 
 .hot-article {
-    padding: 105px 0 160px;
-    &_swiper {
-        padding: 20px;
+  padding: 105px 0 160px;
+  &_swiper {
+    padding: 20px;
+  }
+  .home-swiper_arrow {
+    svg {
+      path {
+        fill: $primary-500;
+      }
     }
-    .home-swiper_arrow {
-        svg {
-            path {
-                fill: $primary-500;
-            }
-        }
+  }
+  @media screen and (max-width: 575px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
     }
-    @media screen and (max-width: 575px) {
-        .container {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .home-title {
-            padding: 0 20px;
-        }
+    .home-title {
+      padding: 0 20px;
     }
+  }
 }
 
 .recommend-job {
-    // padding-top: 100px;
-    padding-bottom: 150px;
-    background-image: url(../img/home-bg.png);
-    background-size: 100%;
-    background-position: 0 bottom;
-    background-repeat: no-repeat;
-    >.container {
-        max-width: 950px;
-    }
+  // padding-top: 100px;
+  padding-bottom: 150px;
+  background-image: url(../img/home-bg.png);
+  background-size: 100%;
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  > .container {
+    max-width: 950px;
+  }
 }
 
 .join-see-more {
-    text-align: center;
-    img {
-        width: 80px;
-        display: block;
-        margin: 0 auto 15px;
-    }
-    p {
-        font-size: 14px;
-        color: $third-900;
-        margin-bottom: 30px;
-    }
-    a {
-        width: fit-content;
-        margin: 0 auto;
-        padding: 9px 40px;
-    }
-
+  text-align: center;
+  img {
+    width: 80px;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  p {
+    font-size: 14px;
+    color: $third-900;
+    margin-bottom: 30px;
+  }
+  a {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 9px 40px;
+  }
 }
