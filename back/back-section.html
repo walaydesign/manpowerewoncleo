@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
+    <div class="back">
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li><a href="./back-seeker.html">求職者管理</a></li>
+              <li><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li class="active"><a href="./back-section.html">欄位管理</a></li>
+              <li>
+                <a href="./back-feedback.html">反饋管理</a>
+              </li>
+              <li><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>欄位管理</h1>
+        </div>
+        <div class="back-section">
+          <div class="back-section_item">
+            <h2>首頁(未登入)</h2>
+            <div class="back-section-inner">
+              <div class="back-section-inner_item show">
+                <h3>熱門職缺</h3>
+                <button class="back-section-inner_btn">隱藏</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門企業</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門文章</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+            </div>
+          </div>
+          <div class="back-section_item">
+            <h2>首頁(企業會員)</h2>
+            <div class="back-section-inner">
+              <div class="back-section-inner_item show">
+                <h3>熱門職缺</h3>
+                <button class="back-section-inner_btn">隱藏</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門企業</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門文章</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+            </div>
+          </div>
+          <div class="back-section_item">
+            <h2>首頁(求職者會員)</h2>
+            <div class="back-section-inner">
+              <div class="back-section-inner_item show">
+                <h3>熱門職缺</h3>
+                <button class="back-section-inner_btn">隱藏</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門企業</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>熱門文章</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+              <div class="back-section-inner_item hide">
+                <h3>為你推薦</h3>
+                <button class="back-section-inner_btn">顯示</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/sortable/Sortable.js"></script>
+    <script src="../public/js/common.js"></script>
+    <script>
+      $(".back-section-inner_btn").click(function () {
+        if ($(this).parents(".back-section-inner_item").hasClass("hide")) {
+          $(this)
+            .parents(".back-section-inner_item")
+            .removeClass("hide")
+            .addClass("show");
+          $(this).val("隱藏");
+        } else if (
+          $(this).parents(".back-section-inner_item").hasClass("show")
+        ) {
+          $(this)
+            .parents(".back-section-inner_item")
+            .removeClass("show")
+            .addClass("hide");
+          $(this).val("顯示");
+        }
+      });
+    </script>
+  </body>
+</html>

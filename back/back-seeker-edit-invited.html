@@ -1,242 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人力銀行</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
-</head>
-<body class="bg-blue">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
     <div class="back">
-        <header class="back_header">
-            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
-            <div class="detail-content_nav back_header_nav">
-                <div class="detail-content_nav_inner back_header_nav_inner">
-                    <ul class="detail-content_nav_list">
-                        <li class="active"><a href="./back-seeker.html">求職者管理</a></li>
-                        <li><a href="./back-company.html">企業管理</a></li>
-                        <li><a href="./back-job.html">求職管理</a></li>
-                        <li><a href="./back-recruit.html">徵才管理</a></li>
-                        <li><a href="">文章管理</a></li>
-                        <li><a href="">欄位管理</a></li>
-                        <li><a href="./back-feedback.html">意見管理</a></li>
-                        <li><a href="./back-other-about.html">其他管理</a></li>
-                        <li><a>登出</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header_menu d-lg-none">
-                <div class="bar top"></div>
-                <div class="bar middle"></div>
-                <div class="bar bottom"></div>
-            </div>
-        </header>
-        <div class="back_content">
-            <div class="back_title">
-                <h1>求職者姓名</h1>
-                <div class="btn-border-blue btn-back m-0">
-                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
-                    <span class="btn-border-blue_text">上一頁</span>
-                </div>
-            </div>
-            <ul class="overview_tab tab-wrap">
-                <a href="./back-seeker-edit-info.html" class="tab_item">個人資料</a>
-                <a href="./back-seeker-edit-resume.html" class="tab_item">履歷管理</a>
-                <a href="./back-seeker-edit-apply.html" class="tab_item">應徵紀錄</a>
-                <a href="./back-seeker-edit-invited.html" class="tab_item active">受邀紀錄</a>
-                <a href="./back-seeker-edit-reccomend.html" class="tab_item">推薦信設定</a>
-                <a href="./back-seeker-edit-savedJob.html" class="tab_item">收藏職缺</a>
-                <a href="./back-seeker-edit-savedCompany.html" class="tab_item">收藏企業</a>
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li class="active">
+                <a href="./back-seeker.html">求職者管理</a>
+              </li>
+              <li><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li><a href="./back-section.html">欄位管理</a></li>
+              <li>
+                <a href="./back-feedback.html">反饋管理</a>
+              </li>
+              <li><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
             </ul>
-            <div class="back-seeker_invited">
-                <div class="record-item" data-link="../job-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li><a href="../company-detail.html">龜丸製麵</a></li>
-                                <li>餐飲業</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <ul class="record-status">
-                            <li>2023/04/05邀請</li>
-                        </ul>
-                        <button class="btn-border-blue-noIcon">
-                            <span>刪除</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="../job-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li><a href="../company-detail.html">龜丸製麵</a></li>
-                                <li>餐飲業</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <ul class="record-status">
-                            <li>2023/04/05邀請</li>
-                            <li>2023/04/06回覆</li>
-                        </ul>
-                        <button class="btn-border-blue-noIcon">
-                            <span>刪除</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="../job-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li><a href="../company-detail.html">龜丸製麵</a></li>
-                                <li>餐飲業</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <ul class="record-status">
-                            <li>2023/04/05邀請</li>
-                        </ul>
-                        <button class="btn-border-blue-noIcon">
-                            <span>刪除</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="../job-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li><a href="../company-detail.html">龜丸製麵</a></li>
-                                <li>餐飲業</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <ul class="record-status">
-                            <li>2023/04/05邀請</li>
-                            <li>2023/04/06回覆</li>
-                        </ul>
-                        <button class="btn-border-blue-noIcon">
-                            <span>刪除</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>求職者姓名</h1>
+          <div class="btn-border-blue btn-back m-0">
+            <img
+              class="btn-border-blue_icon"
+              src="../public/img/chevron-left.svg"
+              alt=""
+            />
+            <span class="btn-border-blue_text">上一頁</span>
+          </div>
+        </div>
+        <ul class="overview_tab tab-wrap">
+          <a href="./back-seeker-edit-info.html" class="tab_item">個人資料</a>
+          <a href="./back-seeker-edit-resume.html" class="tab_item">履歷管理</a>
+          <a href="./back-seeker-edit-apply.html" class="tab_item">應徵紀錄</a>
+          <a href="./back-seeker-edit-invited.html" class="tab_item active"
+            >受邀紀錄</a
+          >
+          <a href="./back-seeker-edit-reccomend.html" class="tab_item"
+            >推薦信設定</a
+          >
+          <a href="./back-seeker-edit-savedJob.html" class="tab_item"
+            >收藏職缺</a
+          >
+          <a href="./back-seeker-edit-savedCompany.html" class="tab_item"
+            >收藏企業</a
+          >
+        </ul>
+        <div class="back-seeker_invited">
+          <div class="record-item" data-link="../job-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li><a href="../company-detail.html">龜丸製麵</a></li>
+                  <li>餐飲業</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+              <ul class="record-status">
+                <li>2023/04/05邀請</li>
+              </ul>
+              <button class="btn-border-blue-noIcon">
+                <span>刪除</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="../job-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li><a href="../company-detail.html">龜丸製麵</a></li>
+                  <li>餐飲業</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+              <ul class="record-status">
+                <li>2023/04/05邀請</li>
+                <li>2023/04/06回覆</li>
+              </ul>
+              <button class="btn-border-blue-noIcon">
+                <span>刪除</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="../job-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li><a href="../company-detail.html">龜丸製麵</a></li>
+                  <li>餐飲業</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+              <ul class="record-status">
+                <li>2023/04/05邀請</li>
+              </ul>
+              <button class="btn-border-blue-noIcon">
+                <span>刪除</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="../job-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li><a href="../company-detail.html">龜丸製麵</a></li>
+                  <li>餐飲業</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+              <ul class="record-status">
+                <li>2023/04/05邀請</li>
+                <li>2023/04/06回覆</li>
+              </ul>
+              <button class="btn-border-blue-noIcon">
+                <span>刪除</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
 
-    
-    
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/common.js"></script>
-
-</body>
+  </body>
 </html>

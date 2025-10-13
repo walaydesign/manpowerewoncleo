@@ -1,446 +1,796 @@
 .back {
-    padding: 0 40px 100px;
+  padding: 0 40px 100px;
+  display: flex;
+  justify-content: flex-end;
+  &_header {
+    padding-top: 20px;
+    width: 280px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 40px;
+    z-index: 10;
+    overflow-y: auto;
+    overflow-x: visible;
+    padding: 0 15px 40px;
+    &_logo {
+      width: 130px;
+      margin-bottom: 30px;
+      margin-top: 16px;
+    }
+    .recruit_search-wrap {
+      width: 100%;
+      // margin-top: 20px;
+      .recruit_search_advanced_age {
+        input {
+          width: calc((100% - 40px) / 2);
+        }
+        &_btn {
+          width: 100%;
+          margin: 15px 0 0;
+        }
+      }
+    }
+    .recruit_search_advanced_salary {
+      input {
+        width: calc((100% - 45px) / 2);
+      }
+      button {
+        width: 100%;
+        margin: 15px 0 0;
+      }
+    }
+    .recruit_search_advanced_input {
+      .input {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      button {
+        width: calc(100% - 36px);
+        margin: 0;
+      }
+    }
+  }
+  &_content {
+    width: calc(100% - 280px);
+    padding-left: 35px;
+    .tab-wrap {
+      margin-bottom: 30px;
+    }
+  }
+  &_title {
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    h1 {
+      padding: 15px 25px;
+      background-color: $third-300;
+      border-radius: 0 0 30px 30px;
+      color: $primary-700;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+  &.big {
+    .detail-content_nav_inner {
+        box-shadow: none;
+        li {
+            &.active, &:hover {
+                a {
+                    color: $gray-900;
+                }
+            }
+            &::before {
+                background-color: $gray-900;
+            }
+        }
+    }
+    .recruit_search {
+        box-shadow: none;
+    }
+    .recruit_filter {
+        h2 {
+            padding-bottom: 15px;
+            border-bottom: 1px solid $gray-400;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: $gray-900;
+        }
+        &_item {
+            display: flex;
+            margin-bottom: 15px;
+            label {
+                width: 75px;
+                padding-right: 10px;
+                display: block;
+                padding-top: 10px;
+                font-size: 14px;
+                color: $gray-800;
+                text-align: center;
+            }
+        }
+        &_main {
+            width: calc(100% - 75px);
+            .select {
+                width: 100%;
+                padding-right: 40px;
+                background-image: url(../img/chevron-down-gray.svg);
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .back_title {
+        h1 {
+            background-color: $gray-200;
+            color: $gray-900;
+        }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    padding-left: 20px;
+    padding-right: 20px;
     &_header {
-        padding-top: 20px;
-        width: 280px;
+      width: 100%;
+      height: 70px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      left: 0;
+      padding: 0 20px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+      &_nav {
         position: fixed;
-        height: 100vh;
-        top: 0;
-        left: 40px;
-        z-index: 10;
-        overflow-y: auto;
-        overflow-x: visible;
-        padding: 0 15px 40px;
-        &_logo {
-            width: 130px;
-            margin-bottom: 30px;
+        box-shadow: none;
+        top: 70px;
+        // right: 0;
+        border-radius: 0;
+        height: calc(100vh - 70px);
+        z-index: 20;
+        background-color: #fff;
+        width: 250px;
+        right: -250px;
+        transition: $transition;
+        &_inner {
+          position: static;
+          box-shadow: none;
+          padding: 0 15px;
         }
-        .recruit_search-wrap {
-            width: 100%;
-            // margin-top: 20px;
-            .recruit_search_advanced_age {
-                input {
-                    width: calc((100% - 40px) / 2);
-                }
-                &_btn {
-                    width: 100%;
-                    margin: 15px 0 0;
-                }
-            }
+        &.active {
+          right: 0;
         }
-        .recruit_search_advanced_salary {
-            input {
-                width: calc((100% - 45px) / 2);
-            }
-            button {
-                width: 100%;
-                margin: 15px 0 0;
-            }
-        } 
-        .recruit_search_advanced_input {
-            .input {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            button {
-                width: calc(100% - 36px);
-                margin: 0;
-            }
-        } 
+      }
+      &_logo {
+        margin: 0;
+      }
     }
     &_content {
-        width: calc(100% - 280px);
-        padding-left: 35px;
-        .tab-wrap {
-            margin-bottom: 30px;
-        }
+      width: 100%;
+      padding: 70px 0 0 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &_header {
+      .detail-content_nav_list {
+        display: block;
+      }
     }
     &_title {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 25px;
-        h1 {
-            padding: 15px 25px;
-            background-color: $third-300;
-            border-radius: 0 0 30px 30px;
-            color: $primary-700;
-            font-size: 30px;
-            font-weight: 700;
-            margin: 0;
-        }
+      h1 {
+        font-size: 24px;
+      }
     }
-    @media screen and (max-width: 991px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        &_header {
-            width: 100%;
-            height: 70px;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            left: 0;
-            padding: 0 20px;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.15);
-            &_nav {
-                position: fixed;
-                box-shadow: none;
-                top: 70px;
-                // right: 0;
-                border-radius: 0;
-                height: calc(100vh - 70px);
-                z-index: 20;
-                background-color: #fff;
-                width: 250px;
-                right: -250px;
-                transition: $transition;
-                &_inner {
-                    position: static;
-                    box-shadow: none;
-                    padding: 0 15px;
-                }
-                &.active {
-                    right: 0;
-                }
-            }
-            &_logo {
-                margin: 0;
-            }
-        }
-        &_content {
-            width: 100%;
-            padding: 70px 0 0 0;
-        }
-    }
-    @media screen and (max-width: 767px) {
-        &_header {
-            .detail-content_nav_list {
-                display: block;
-            }
-        }
-        &_title {
-            h1 {
-                font-size: 24px;
-            }
-        }
-    }
+  }
 }
 
 .back-login {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &_content {
-        max-width: 570px;
-        width: calc(100% - 40px);
-        background-color: #fff;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-radius: 30px;
-        padding: 53px;
-        position: relative;
-        overflow: hidden;
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 5px;
-            background-color: $primary-500;
-            top: 0;
-            left: 0;
-        }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_content {
+    max-width: 570px;
+    width: calc(100% - 40px);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 53px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: $primary-500;
+      top: 0;
+      left: 0;
     }
-    &_logo {
-        width: 200px;
-        display: block;
-        margin: 0 auto 15px;
-    }
-    h1 {
-        color: $gray-800;
-        text-align: center;
-        margin-bottom: 40px;
-        font-size: 20px;
-    }
-    button {
-        display: block;
-        width: 155px;
-        margin: 0 auto;
-    }
-    @media screen and (max-width: 575px) {
-        &_logo {
-            width: 150px;
-        }
+  }
+  &_logo {
+    width: 200px;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  h1 {
+    color: $gray-800;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  button {
+    display: block;
+    width: 155px;
+    margin: 0 auto;
+  }
+  &.big {
+    .back-login {
         &_content {
-            padding: 53px 20px;
+            box-shadow: none;
+            &::before {
+                display: none;
+            }
         }
     }
+  }
+  @media screen and (max-width: 575px) {
+    &_logo {
+      width: 150px;
+    }
+    &_content {
+      padding: 53px 20px;
+    }
+  }
 }
 
 .back-seeker {
-    &_list {
-        margin-bottom: 40px;
-        &_item {
-            display: flex;
-            align-items: center;
-            padding: 25px 0;
-            border-bottom: 1px solid $third-400;
-            &:last-child {
-                border: 0;
-            }
-        }
-        &_info {
-            width: calc(100% - 140px);
-            display: flex;
-            align-items: center;
-        }
-        &_btn {
-            display: flex;
-            justify-content: flex-end;
-            width: 140px;
-            &_item {
-                margin-left: 15px;
-                &:first-child {
-                    margin-left: 0;
-                }
-            }
-        }
-        &_pic {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            >img {
-                @include coverPic;
-            }
-        }
-        &_text {
-            width: calc(100% - 80px);
-            padding-left: 15px;
-        }
+  &_list {
+    margin-bottom: 40px;
+    &_item {
+      display: flex;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid $third-400;
+      &:last-child {
+        border: 0;
+      }
     }
     &_info {
-        .form-item {
-            margin: 10px 0;
+      width: calc(100% - 140px);
+      display: flex;
+      align-items: center;
+    }
+    &_btn {
+      display: flex;
+      justify-content: flex-end;
+      width: 140px;
+      &_item {
+        margin-left: 15px;
+        &:first-child {
+          margin-left: 0;
         }
+      }
+    }
+    &_pic {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      > img {
+        @include coverPic;
+      }
+    }
+    &_text {
+      width: calc(100% - 80px);
+      padding-left: 15px;
+    }
+  }
+  &_info {
+    .form-item {
+      margin: 10px 0;
+    }
+  }
+  &_resume {
+    .detail-content_intro_form {
+      padding-right: 40px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &_list {
+      &_item {
+        display: block;
+      }
+      &_info {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      &_btn {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      &_pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+      }
+      &_text {
+        width: calc(100% - 60px);
+        padding-left: 10px;
+      }
     }
     &_resume {
-        .detail-content_intro_form {
-            padding-right: 40px;
-        }
+      .detail-content_intro_form {
+        padding-right: 0;
+      }
     }
-    @media screen and (max-width: 767px) {
-        &_list {
-            &_item {
-                display: block;
-            }
-            &_info {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            &_btn {
-                width: 100%;
-                justify-content: flex-end;
-            }
-            &_pic {
-                width: 60px;
-                height: 60px;
-                border-radius: 5px;
-            }
-            &_text {
-                width: calc(100% - 60px);
-                padding-left: 10px;
-            }
-        }
-        &_resume {
-            .detail-content_intro_form {
-                padding-right: 0;
-            }
-        }
-    }
+  }
 }
 
 .back-company {
-    &_info {
-        .form-item {
-            margin: 10px 0;
-        }
+  &_info {
+    .form-item {
+      margin: 10px 0;
     }
-    &_job {
-        .detail-content_intro_item {
-            padding: 0;
-            border-radius: 0;
-            background-color: transparent;
-            box-shadow: none;
-            padding-bottom: 35px;
-            border-bottom: 1px solid $gray-500;
-        }
+  }
+  &_job {
+    .detail-content_intro_item {
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+      box-shadow: none;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $gray-500;
     }
+  }
 }
 
 .back-job {
+  width: 100%;
+  .searchjob {
     width: 100%;
-    .searchjob {
-        width: 100%;
-        background-color: transparent;
-        padding: 0 0 30px 0;
-        margin-bottom: 30px;
-        border-bottom: 1px solid $third-400;
-        box-shadow: none;
-        border-radius: 0;
-        max-width: inherit;
+    background-color: transparent;
+    padding: 0 0 30px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $third-400;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: inherit;
+  }
+  .job_item {
+    padding: 0;
+    margin-bottom: 20px;
+    &_link {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      // width: calc(100% - 85px);
+      // padding-right: 15px;
     }
-    .job_item {
-        padding: 0;
-        margin-bottom: 20px;
-        &_link {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            // width: calc(100% - 85px);
-            // padding-right: 15px;
+    &_inform {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      > li {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
         }
-        &_inform {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 0;
-            border: 0;
-            >li {
-                margin-right: 15px;
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-        &_detail {
-            width: 100%;
-        }
+      }
     }
+    &_detail {
+      width: 100%;
+    }
+  }
+  &_info {
+    width: calc(100% - 85px);
+    padding-right: 15px;
+  }
+  &_btn {
+    width: 85px;
+  }
+  @media screen and (max-width: 575px) {
     &_info {
-        width: calc(100% - 85px);
-        padding-right: 15px;
+      width: 100%;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $gray-400;
     }
     &_btn {
-        width: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-top: 15px;
     }
-    @media screen and (max-width: 575px) {
-        &_info {
-            width: 100%;
-            padding-bottom: 15px;
-            border-bottom: 1px solid $gray-400;
-        }
-        &_btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding-top: 15px;
-        }
-    }
+  }
 }
 
 .editor {
-    width: 100%;
-    height: 450px;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+  width: 100%;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .back-slider {
-    &-list {
-        &_item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 25px 0;
-            border-bottom: 1px solid $third-400;
-        }
-        &_pic {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-        &_icon {
-            width: 12px;
-        }
-        &_number {
-            width: 20px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0;
-        }
-        &_main {
-            width: 250px;
-            padding-bottom: calc(250px * 0.34);
-            position: relative;
-            >img {
-                @include coverPic();
-            }
-        }
-        &_btn {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            button {
-                position: relative;
-            }
-        }
-        &_upload {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
+  &-list {
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 0;
+      border-bottom: 1px solid $third-400;
     }
-    &-add {
+    &_pic {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    &_icon {
+      width: 12px;
+    }
+    &_number {
+      width: 20px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+    }
+    &_main {
+      width: 250px;
+      padding-bottom: calc(250px * 0.34);
+      position: relative;
+      > img {
+        @include coverPic();
+      }
+    }
+    &_btn {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      button {
         position: relative;
-        input[type="file"] {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
+      }
     }
-    @media screen and (max-width: 575px) {
-        &-list {
-            &_item {
-                flex-direction: column;
-                gap: 20px;
-            }
-            &_pic {
-                width: 100%;
-                gap: 16px;
-            }
-            &_btn {
-                width: 100%;
-                justify-content: flex-end;
-            }
-            &_main {
-                width: calc(100% - 64px);
-                padding-bottom: calc((100% - 64px) * 0.34);
-            }
-        }
+    &_upload {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
+  }
+  &-add {
+    position: relative;
+    input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-list {
+      &_item {
+        flex-direction: column;
+        gap: 20px;
+      }
+      &_pic {
+        width: 100%;
+        gap: 16px;
+      }
+      &_btn {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      &_main {
+        width: calc(100% - 64px);
+        padding-bottom: calc((100% - 64px) * 0.34);
+      }
+    }
+  }
 }
 
 .back-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .overview_tab {
+    margin: 0;
+  }
+}
+
+.back-article {
+  display: flex;
+  flex-direction: column;
+  &_item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    .overview_tab {
+    padding: 25px 0;
+    border-bottom: 1px solid $third-400;
+    &:last-child {
+      border: 0;
+    }
+  }
+  &_main {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 210px);
+    padding-right: 25px;
+  }
+  &_pic {
+    position: relative;
+    width: 180px;
+    padding-bottom: calc(180px * 0.6);
+    > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+  &_text {
+    width: calc(100% - 180px);
+    padding-left: 25px;
+    .article-item {
+      &_head {
+        padding: 0;
+      }
+      &_title {
+        padding: 12px 0 0;
+        height: auto;
+      }
+    }
+  }
+  &_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 210px;
+  }
+  &_pin {
+    font-size: 14px;
+    padding: 8px 25px;
+    &.active {
+      background-color: $primary-500;
+      color: #fff;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &_item {
+      flex-direction: column;
+      gap: 16px;
+    }
+    &_main {
+      width: 100%;
+      padding-right: 0;
+    }
+    &_btn {
+      width: 100%;
+      justify-content: flex-end;
+    }
+    &_pic {
+      width: 100px;
+      padding-bottom: calc(100px * 0.6);
+    }
+    &_text {
+      width: calc(100% - 100px);
+      padding-left: 16px;
+      .article-item_title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.back-section {
+  &_item {
+    margin-bottom: 40px;
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary-900;
+    }
+  }
+  &-inner {
+    &_item {
+      margin-bottom: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      transition: $transition;
+      h3 {
         margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.show {
+        background-color: #fff;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+      }
+      &.hide {
+        background-color: #eaf4f4;
+        .back-section-inner_btn {
+          background-color: $primary-500;
+          color: #fff;
+          &:hover {
+            background-color: $primary-400;
+            border-color: $primary-400;
+          }
+        }
+      }
+    }
+    &_btn {
+      padding: 8px 25px;
+      border: 1px solid $primary-500;
+      color: $primary-500;
+      border-radius: 100px;
+      transition: $transition;
+      &:hover {
+        background-color: $primary-100;
+      }
+    }
+  }
+}
+
+.back-chat {
+  .chat {
+    &_head {
+        background-color: $third-500;
+        display: none;
+    }
+    &_main {
+      &_left {
+        background-color: $third-200;
+      }
+      &_search {
+        &_inner {
+          border-color: $third-800;
+          button {
+            svg {
+              path {
+                fill: $third-700;
+              }
+            }
+          }
+        }
+      }
+      &_list {
+        &_item {
+            &_inner {
+                border-color: $third-300;
+            }
+        }
+      }
+      &_input {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+      }
+      &_right {
+        &_inner {
+            height: 100%;
+            position: relative;
+            padding-bottom: 45px;
+        }
+      }
+      &_content {
+        padding-top: 12px;
+        height: calc(100vh - 66px - 25px - 40px - 30px - 140px);
+      }
+    }
+    &_num {
+        background-color: $third-700;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .chat {
+        &_main {
+            &_right {
+                &_inner {
+                    height: auto;
+                }
+            }
+            &_content {
+                height: calc(100vh - 66px - 25px - 40px - 30px - 140px - 44px);
+            }
+        }
+    }
+  }
+}
+
+.bigback {
+    &-list {
+            svg {
+                width: 24px;
+                height: 24px;
+                path {
+                    transition: $transition;
+                }
+            }
+
+    }
+    &-seeker {
+        &_item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid $gray-500;
+            h3 {
+                font-size: 18px;
+                margin: 0;
+                font-weight: normal;
+                color: $dark;
+                padding: 0 12px;
+                width: calc(100% - 50px - 24px);
+            }
+            &:last-child {
+                border: 0;
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: $gray-900;
+                    }
+                }
+            }
+        }
+        &_pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            >img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    &-company {
+        .back-seeker_list_info {
+            width: calc(100% - 24px);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-company {
+            .back-seeker_list_item {
+                display: flex;
+            }
+        .back-seeker_list_info {
+            width: calc(100% - 24px);
+            margin: 0;
+        }
+    }
     }
 }

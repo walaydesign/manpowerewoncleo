@@ -238,6 +238,21 @@
                     margin-bottom: 0;
                 }
             }
+            &_btn {
+                padding-top: 15px;
+                border-top: 1px solid $gray-200;
+            }
+        }
+        &_permit {
+            &.permitted {
+                background-color: #fff;
+                svg {
+                    display: none;
+                }
+                span {
+                    color: $primary-400;
+                }
+            }
         }
         @media screen and (max-width: 991px) {
             &_head {

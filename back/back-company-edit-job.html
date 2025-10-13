@@ -1,368 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人力銀行</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
-</head>
-<body class="bg-blue">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
     <div class="back">
-        <header class="back_header">
-            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
-            <div class="detail-content_nav back_header_nav">
-                <div class="detail-content_nav_inner back_header_nav_inner">
-                    <ul class="detail-content_nav_list">
-                        <li><a href="./back-seeker.html">求職者管理</a></li>
-                        <li class="active"><a href="./back-company.html">企業管理</a></li>
-                        <li><a href="./back-job.html">求職管理</a></li>
-                        <li><a href="./back-recruit.html">徵才管理</a></li>
-                        <li><a href="">文章管理</a></li>
-                        <li><a href="">欄位管理</a></li>
-                        <li><a href="./back-feedback.html">意見管理</a></li>
-                        <li><a href="./back-other-about.html">其他管理</a></li>
-                        <li><a>登出</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header_menu d-lg-none">
-                <div class="bar top"></div>
-                <div class="bar middle"></div>
-                <div class="bar bottom"></div>
-            </div>
-        </header>
-        <div class="back_content">
-            <div class="back_title">
-                <h1>企業名稱</h1>
-                <div class="d-flex">
-                    <a href="./back-company-edit-job-edit.html" class="btn-bg-blue me-3">
-                        <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
-                        </svg>
-                        <span class="btn-bg-blue_text">新增</span>
-                    </a>
-                    <div class="btn-border-blue btn-back m-0">
-                        <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
-                        <span class="btn-border-blue_text">上一頁</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="overview_tab tab-wrap">
-                <a href="./back-company-edit-info.html" class="tab_item">公司資料</a>
-                <a href="./back-company-edit-job.html" class="tab_item active">職缺管理</a>
-                <a href="./back-company-edit-invite.html" class="tab_item">邀請紀錄</a>
-                <a href="./back-company-edit-recruitRecord.html" class="tab_item">應徵紀錄</a>
-                <a href="./back-company-edit-recruitSetting.html" class="tab_item">應徵文設定</a>
-                <a href="./back-company-edit-save.html" class="tab_item">儲存人才</a>
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li><a href="./back-seeker.html">求職者管理</a></li>
+              <li class="active"><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li><a href="./back-section.html">欄位管理</a></li>
+              <li><a href="./back-feedback.html">反饋管理</a></li>
+              <li><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
             </ul>
-            <div class="back-company_job">
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="company-job_item">
-                    <h3 class="company-job_title">電銷人員</h3>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/placeholder.svg" alt="">
-                            <span>高雄市新興區</span>
-                        </li>
-                        <li class="highlight">
-                            <img src="../public/img/money-bag.svg" alt="">
-                            <span>月薪26,400~30,000元</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>專科以上</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/group-gray.svg" alt="">
-                            <span>1-5人應徵</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05更新</li>
-                        </ul>
-                        <div class="d-flex align-items-center mt-sm-0 mt-3">
-                            <button class="btn-border-gray-noIcon me-3">關閉</button>
-                            <button class="btn-border-gray-noIcon me-3">刪除</button>
-                            <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
-                                <svg class="btn-bg-blue_icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_794_19005)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_794_19005">
-                                    <rect width="18" height="18" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                <span class="btn-bg-blue_text">編輯</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>企業名稱</h1>
+          <div class="d-flex">
+            <a
+              href="./back-company-edit-job-edit.html"
+              class="btn-bg-blue me-3"
+            >
+              <svg
+                class="btn-bg-blue_icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="btn-bg-blue_text">新增</span>
+            </a>
+            <div class="btn-border-blue btn-back m-0">
+              <img
+                class="btn-border-blue_icon"
+                src="../public/img/chevron-left.svg"
+                alt=""
+              />
+              <span class="btn-border-blue_text">上一頁</span>
+            </div>
+          </div>
+        </div>
+        <ul class="overview_tab tab-wrap">
+          <a href="./back-company-edit-info.html" class="tab_item">公司資料</a>
+          <a href="./back-company-edit-job.html" class="tab_item active"
+            >職缺管理</a
+          >
+          <a href="./back-company-edit-invite.html" class="tab_item"
+            >邀請紀錄</a
+          >
+          <a href="./back-company-edit-recruitRecord.html" class="tab_item"
+            >應徵紀錄</a
+          >
+          <a href="./back-company-edit-recruitSetting.html" class="tab_item"
+            >應徵文設定</a
+          >
+          <a href="./back-company-edit-save.html" class="tab_item">儲存人才</a>
+        </ul>
+        <div class="back-company_job">
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="company-job_item">
+            <h3 class="company-job_title">電銷人員</h3>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/placeholder.svg" alt="" />
+                <span>高雄市新興區</span>
+              </li>
+              <li class="highlight">
+                <img src="../public/img/money-bag.svg" alt="" />
+                <span>月薪26,400~30,000元</span>
+              </li>
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>專科以上</span>
+              </li>
+              <li>
+                <img src="../public/img/group-gray.svg" alt="" />
+                <span>1-5人應徵</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05更新</li>
+              </ul>
+              <div class="d-flex align-items-center mt-sm-0 mt-3">
+                <button class="btn-border-gray-noIcon me-3">關閉</button>
+                <button class="btn-border-gray-noIcon me-3">刪除</button>
+                <a href="./back-company-edit-job-edit.html" class="btn-bg-blue">
+                  <svg
+                    class="btn-bg-blue_icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_794_19005)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.4265 6.06512L6.01872 16.4729C5.79447 16.6971 5.49522 16.8329 5.17797 16.8539L2.33697 17.0436C1.95972 17.0684 1.58922 16.9296 1.32222 16.6619C1.05447 16.3941 0.914973 16.0244 0.940473 15.6464L1.12947 12.8054C1.15122 12.4881 1.28622 12.1896 1.51122 11.9646L11.919 1.55762C12.3052 1.17062 12.8302 0.953125 13.377 0.953125C13.9237 0.953125 14.4487 1.17062 14.8357 1.55762L16.4265 3.14837C16.8135 3.53537 17.0302 4.05962 17.0302 4.60712C17.0302 5.15387 16.8135 5.67812 16.4265 6.06512ZM15.6307 5.26937C15.807 5.09387 15.9052 4.85537 15.9052 4.60712C15.9052 4.35812 15.807 4.11962 15.6307 3.94412L14.04 2.35262C13.8645 2.17712 13.626 2.07812 13.377 2.07812C13.1287 2.07812 12.8902 2.17712 12.714 2.35262L2.30697 12.7604C2.27472 12.7926 2.25522 12.8354 2.25222 12.8804L2.06322 15.7214C2.05947 15.7754 2.07897 15.8286 2.11722 15.8661C2.15547 15.9044 2.20872 15.9246 2.26272 15.9209L5.10372 15.7319C5.14872 15.7289 5.19147 15.7094 5.22372 15.6771L15.6307 5.26937Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.3059 7.39098C14.5249 7.61073 14.5249 7.96698 14.3059 8.18673C14.0861 8.40574 13.7299 8.40574 13.5101 8.18673L9.79763 4.47423C9.57787 4.25448 9.57787 3.89823 9.79763 3.67848C10.0174 3.45873 10.3736 3.45873 10.5934 3.67848L14.3059 7.39098Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_794_19005">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="btn-bg-blue_text">編輯</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
 
-    
-    
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/common.js"></script>
-
-</body>
+  </body>
 </html>

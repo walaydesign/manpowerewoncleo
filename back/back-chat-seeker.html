@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
+    <div class="back">
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li><a href="./back-seeker.html">求職者管理</a></li>
+              <li><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li><a href="./back-section.html">欄位管理</a></li>
+              <li><a href="./back-feedback.html">反饋管理</a></li>
+              <li class="active"><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>聊聊</h1>
+        </div>
+        <ul class="overview_tab tab-wrap">
+          <a href="./back-chat-seeker.html" class="tab_item active">求職者</a>
+          <a href="./back-chat-company.html" class="tab_item">企業</a>
+        </ul>
+        <div class="back-chat">
+          <div class="chat_head align-items-center justify-content-between">
+            <div class="chat_head_title-m align-items-center">
+                <div class="chat_back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z" fill="#22A9E7"/>
+                    </svg>
+                </div>
+                <h6>求職者名稱</h6>
+            </div>
+        </div>
+          <div class="chat_main d-flex">
+            <div class="chat_main_left">
+              <div class="chat_main_search">
+                <div class="chat_main_search_inner">
+                  <input type="text" />
+                  <button>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4ZM2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 15.9706 15.9706 20 11 20C6.02944 20 2 15.9706 2 11Z"
+                        fill="#22A9E7"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M15.9429 15.9429C16.3334 15.5524 16.9666 15.5524 17.3571 15.9429L21.7071 20.2929C22.0977 20.6834 22.0977 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.9429 17.3571C15.5524 16.9666 15.5524 16.3334 15.9429 15.9429Z"
+                        fill="#22A9E7"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <ul class="chat_main_list">
+                <li class="chat_main_list_item notread" data-chat="#chat-1">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                        <div class="chat_num"><span>3</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-2">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-3">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-4">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-5">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-6">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-7">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="chat_main_list_item" data-chat="#chat-8">
+                  <div class="chat_main_list_item_inner">
+                    <div class="chat_main_list_pic">
+                      <img src="../public/img/woman1.png" alt="" />
+                    </div>
+                    <div class="chat_main_list_text">
+                      <h6>求職者名稱</h6>
+                      <div class="d-flex align-items-center">
+                        <p>聊天內容聊天內容聊天內容聊天內容聊天內容</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="chat_main_right">
+              <div class="chat_main_right_inner init active">
+                <div class="d-flex">
+                  <img src="../public/img/chat-colorful.svg" alt="" />
+                  <p>歡迎使用聊聊</p>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-1">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-2">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-3">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-4">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-5">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-6">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-7">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat_main_right_inner" id="chat-8">
+                <div class="chat_main_content">
+                  <p class="chat_main_content_date">2023/06/17(六)</p>
+                  <div
+                    class="chat_main_content_opposite chat_main_content_item"
+                  >
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                  <div class="chat_main_content_own chat_main_content_item">
+                    <div class="chat_main_content_frame">
+                      條三團回行列照好金角生夠傷；任我南不面，手父高評、銷次商之城起。好情回樣水代友動講細教不中同認產大山了另。就信電。
+                    </div>
+                    <div class="chat_main_content_remark">
+                      <p>已讀</p>
+                      <p>17:29</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat_main_input">
+                  <input type="text" placeholder="請輸入文字" />
+                  <button>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_568_15499)">
+                        <path
+                          d="M9.84002 15.0996C9.56461 15.0953 9.29546 15.0169 9.06084 14.8726C8.82621 14.7283 8.63479 14.5235 8.50669 14.2796L6.18669 10.0396C6.13616 9.94263 6.05703 9.8635 5.96002 9.81297L1.72002 7.5263C1.45061 7.37996 1.2303 7.15747 1.08661 6.88663C0.942915 6.6158 0.882214 6.30863 0.912087 6.0035C0.94196 5.69837 1.06108 5.4088 1.25457 5.17098C1.44806 4.93316 1.70734 4.75762 2.00002 4.6663L13.0467 0.979637C13.3257 0.880775 13.6269 0.862954 13.9156 0.928237C14.2043 0.99352 14.4685 1.13924 14.6778 1.34851C14.8871 1.55779 15.0328 1.82207 15.0981 2.11074C15.1634 2.39941 15.1455 2.70067 15.0467 2.97964L11.3334 14.033C11.24 14.3212 11.0637 14.5755 10.8266 14.7641C10.5894 14.9526 10.3019 15.067 10 15.093L9.84002 15.0996ZM13.3334 1.93297L2.28669 5.61964C2.18137 5.6535 2.08845 5.71779 2.01963 5.8044C1.95082 5.89101 1.9092 5.99606 1.90002 6.1063C1.89007 6.21523 1.91262 6.32466 1.96483 6.42077C2.01704 6.51688 2.09656 6.59536 2.19335 6.6463L6.43335 8.93297C6.70304 9.07601 6.92364 9.29662 7.06669 9.5663L9.33335 13.8063C9.38429 13.9031 9.46278 13.9826 9.55889 14.0348C9.655 14.087 9.76443 14.1096 9.87335 14.0996C9.98359 14.0905 10.0886 14.0488 10.1753 13.98C10.2619 13.9112 10.3262 13.8183 10.36 13.713L14.0667 2.6663C14.1098 2.56373 14.1215 2.45062 14.1 2.34142C14.0786 2.23221 14.0252 2.13186 13.9465 2.05318C13.8678 1.97449 13.7674 1.92103 13.6582 1.89962C13.549 1.87821 13.4359 1.88982 13.3334 1.93297Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M6.44672 10.0535C6.38086 10.055 6.31541 10.0427 6.25457 10.0175C6.19373 9.99222 6.13883 9.95454 6.09338 9.90685C6.04621 9.86089 6.00872 9.80595 5.98312 9.74526C5.95752 9.68458 5.94434 9.61938 5.94434 9.55352C5.94434 9.48766 5.95752 9.42246 5.98312 9.36178C6.00872 9.3011 6.04621 9.24615 6.09338 9.20019L13.9334 1.33352C14.0306 1.23627 14.1625 1.18164 14.3 1.18164C14.4376 1.18164 14.5695 1.23627 14.6667 1.33352C14.764 1.43076 14.8186 1.56266 14.8186 1.70019C14.8186 1.83771 14.764 1.96961 14.6667 2.06685L6.80005 9.90685C6.75389 9.95359 6.69885 9.99065 6.63818 10.0158C6.5775 10.041 6.51241 10.0538 6.44672 10.0535Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_568_15499">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../public/js/jquery/jquery.min.js"></script>
+    <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="../public/js/sortable/Sortable.js"></script>
+    <script src="../public/js/common.js"></script>
+    <script>
+      $(".chat_main_list_item").click(function() {
+        if($(window).width() < 768) {
+          $(".chat_head").show().css("display","flex");
+        }
+      })
+      $(".chat_back").click(function() {
+        if($(window).width() < 768) {
+          $(".chat_head").hide();
+        }
+      })
+    </script>
+  </body>
+</html>

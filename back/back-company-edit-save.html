@@ -1,225 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人力銀行</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
-</head>
-<body class="bg-blue">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
     <div class="back">
-        <header class="back_header">
-            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
-            <div class="detail-content_nav back_header_nav">
-                <div class="detail-content_nav_inner back_header_nav_inner">
-                    <ul class="detail-content_nav_list">
-                        <li><a href="./back-seeker.html">求職者管理</a></li>
-                        <li class="active"><a href="./back-company.html">企業管理</a></li>
-                        <li><a href="./back-job.html">求職管理</a></li>
-                        <li><a href="./back-recruit.html">徵才管理</a></li>
-                        <li><a href="">文章管理</a></li>
-                        <li><a href="">欄位管理</a></li>
-                        <li><a href="./back-feedback.html">意見管理</a></li>
-                        <li><a href="./back-other-about.html">其他管理</a></li>
-                        <li><a>登出</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header_menu d-lg-none">
-                <div class="bar top"></div>
-                <div class="bar middle"></div>
-                <div class="bar bottom"></div>
-            </div>
-        </header>
-        <div class="back_content">
-            <div class="back_title">
-                <h1>企業名稱</h1>
-                <div class="btn-border-blue btn-back m-0">
-                    <img class="btn-border-blue_icon" src="../public/img/chevron-left.svg" alt="">
-                    <span class="btn-border-blue_text">上一頁</span>
-                </div>
-            </div>
-            <ul class="overview_tab tab-wrap">
-                <a href="./back-company-edit-info.html" class="tab_item">公司資料</a>
-                <a href="./back-company-edit-job.html" class="tab_item">職缺管理</a>
-                <a href="./back-company-edit-invite.html" class="tab_item">邀請紀錄</a>
-                <a href="./back-company-edit-recruitRecord.html" class="tab_item">應徵紀錄</a>
-                <a href="./back-company-edit-recruitSetting.html" class="tab_item">應徵文設定</a>
-                <a href="./back-company-edit-save.html" class="tab_item active">儲存人才</a>
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li><a href="./back-seeker.html">求職者管理</a></li>
+              <li class="active"><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li><a href="./back-section.html">欄位管理</a></li>
+              <li><a href="./back-feedback.html">反饋管理</a></li>
+              <li><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
             </ul>
-            <div class="back-company_save">
-                <div class="record-item" data-link="./seeker-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>Alice Wang</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>曾任資深工程師 @東森購物</li>
-                                <li>就職中</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>國立臺北大學·企業管理學系</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/placeholder-gray.svg" alt="">
-                            <span>中正區、南港區、松山區</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05到訪</li>
-                        </ul>
-                        <button class="btn-border-blue btn-save-common me-3">
-                            <div class="btn-border-blue_icon">
-                                <img class="normal" src="../public/img/save.svg" alt="">
-                                <img class="hover" src="../public/img/save-active.svg" alt="">
-                            </div>
-                            <span class="btn-border-blue_text">收藏</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="./seeker-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>Alice Wang</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>曾任資深工程師 @東森購物</li>
-                                <li>就職中</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>國立臺北大學·企業管理學系</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/placeholder-gray.svg" alt="">
-                            <span>中正區、南港區、松山區</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05到訪</li>
-                        </ul>
-                        <button class="btn-border-blue btn-save-common me-3">
-                            <div class="btn-border-blue_icon">
-                                <img class="normal" src="../public/img/save.svg" alt="">
-                                <img class="hover" src="../public/img/save-active.svg" alt="">
-                            </div>
-                            <span class="btn-border-blue_text">收藏</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="./seeker-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>Alice Wang</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>曾任資深工程師 @東森購物</li>
-                                <li>就職中</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>國立臺北大學·企業管理學系</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/placeholder-gray.svg" alt="">
-                            <span>中正區、南港區、松山區</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05到訪</li>
-                        </ul>
-                        <button class="btn-border-blue btn-save-common me-3">
-                            <div class="btn-border-blue_icon">
-                                <img class="normal" src="../public/img/save.svg" alt="">
-                                <img class="hover" src="../public/img/save-active.svg" alt="">
-                            </div>
-                            <span class="btn-border-blue_text">收藏</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="record-item" data-link="./seeker-detail.html">
-                    <div class="job-head d-flex align-items-center">
-                        <div class="job-head_pic"><img src="../public/img/brand-1.png" alt=""></div>
-                        <div class="job-head_text">
-                            <h3>Alice Wang</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>曾任資深工程師 @東森購物</li>
-                                <li>就職中</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
-                        <li>
-                            <img src="../public/img/portfolio.svg" alt="">
-                            <span>2年工作經驗</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/graduation.svg" alt="">
-                            <span>國立臺北大學·企業管理學系</span>
-                        </li>
-                        <li>
-                            <img src="../public/img/placeholder-gray.svg" alt="">
-                            <span>中正區、南港區、松山區</span>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
-                        <ul class="record-status">
-                            <li>2023/04/05到訪</li>
-                        </ul>
-                        <button class="btn-border-blue btn-save-common me-3">
-                            <div class="btn-border-blue_icon">
-                                <img class="normal" src="../public/img/save.svg" alt="">
-                                <img class="hover" src="../public/img/save-active.svg" alt="">
-                            </div>
-                            <span class="btn-border-blue_text">收藏</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>企業名稱</h1>
+          <div class="btn-border-blue btn-back m-0">
+            <img
+              class="btn-border-blue_icon"
+              src="../public/img/chevron-left.svg"
+              alt=""
+            />
+            <span class="btn-border-blue_text">上一頁</span>
+          </div>
+        </div>
+        <ul class="overview_tab tab-wrap">
+          <a href="./back-company-edit-info.html" class="tab_item">公司資料</a>
+          <a href="./back-company-edit-job.html" class="tab_item">職缺管理</a>
+          <a href="./back-company-edit-invite.html" class="tab_item"
+            >邀請紀錄</a
+          >
+          <a href="./back-company-edit-recruitRecord.html" class="tab_item"
+            >應徵紀錄</a
+          >
+          <a href="./back-company-edit-recruitSetting.html" class="tab_item"
+            >應徵文設定</a
+          >
+          <a href="./back-company-edit-save.html" class="tab_item active"
+            >儲存人才</a
+          >
+        </ul>
+        <div class="back-company_save">
+          <div class="record-item" data-link="./seeker-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>Alice Wang</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>曾任資深工程師 @東森購物</li>
+                  <li>就職中</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>國立臺北大學·企業管理學系</span>
+              </li>
+              <li>
+                <img src="../public/img/placeholder-gray.svg" alt="" />
+                <span>中正區、南港區、松山區</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05到訪</li>
+              </ul>
+              <button class="btn-border-blue btn-save-common me-3">
+                <div class="btn-border-blue_icon">
+                  <img class="normal" src="../public/img/save.svg" alt="" />
+                  <img
+                    class="hover"
+                    src="../public/img/save-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="btn-border-blue_text">收藏</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="./seeker-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>Alice Wang</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>曾任資深工程師 @東森購物</li>
+                  <li>就職中</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>國立臺北大學·企業管理學系</span>
+              </li>
+              <li>
+                <img src="../public/img/placeholder-gray.svg" alt="" />
+                <span>中正區、南港區、松山區</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05到訪</li>
+              </ul>
+              <button class="btn-border-blue btn-save-common me-3">
+                <div class="btn-border-blue_icon">
+                  <img class="normal" src="../public/img/save.svg" alt="" />
+                  <img
+                    class="hover"
+                    src="../public/img/save-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="btn-border-blue_text">收藏</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="./seeker-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>Alice Wang</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>曾任資深工程師 @東森購物</li>
+                  <li>就職中</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>國立臺北大學·企業管理學系</span>
+              </li>
+              <li>
+                <img src="../public/img/placeholder-gray.svg" alt="" />
+                <span>中正區、南港區、松山區</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05到訪</li>
+              </ul>
+              <button class="btn-border-blue btn-save-common me-3">
+                <div class="btn-border-blue_icon">
+                  <img class="normal" src="../public/img/save.svg" alt="" />
+                  <img
+                    class="hover"
+                    src="../public/img/save-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="btn-border-blue_text">收藏</span>
+              </button>
+            </div>
+          </div>
+          <div class="record-item" data-link="./seeker-detail.html">
+            <div class="job-head d-flex align-items-center">
+              <div class="job-head_pic">
+                <img src="../public/img/brand-1.png" alt="" />
+              </div>
+              <div class="job-head_text">
+                <h3>Alice Wang</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>曾任資深工程師 @東森購物</li>
+                  <li>就職中</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="hot-job_inform job_item_inform d-flex flex-wrap">
+              <li>
+                <img src="../public/img/portfolio.svg" alt="" />
+                <span>2年工作經驗</span>
+              </li>
+              <li>
+                <img src="../public/img/graduation.svg" alt="" />
+                <span>國立臺北大學·企業管理學系</span>
+              </li>
+              <li>
+                <img src="../public/img/placeholder-gray.svg" alt="" />
+                <span>中正區、南港區、松山區</span>
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column"
+            >
+              <ul class="record-status">
+                <li>2023/04/05到訪</li>
+              </ul>
+              <button class="btn-border-blue btn-save-common me-3">
+                <div class="btn-border-blue_icon">
+                  <img class="normal" src="../public/img/save.svg" alt="" />
+                  <img
+                    class="hover"
+                    src="../public/img/save-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="btn-border-blue_text">收藏</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-    
-
-    
-    
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/common.js"></script>
-
-</body>
+  </body>
 </html>

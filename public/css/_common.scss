@@ -132,6 +132,9 @@ body.bg {
         background-position: 0 bottom;
         background-repeat: no-repeat;
     }
+    &-gray {
+        background-color: #F4F4F4;
+    }
 }
 
 .btn {
@@ -183,6 +186,63 @@ body.bg {
             color: #fff;
             transition: $transition;
             border: 1px solid $primary-500;
+            width: fit-content;
+            &_icon {
+                width: 18px;
+                height: 18px;
+                margin-right: 7px;
+                visibility: visible;
+                position: relative;
+                path {
+                    transition: $transition;
+                    fill: #fff;
+                }
+                >img {
+                    @include containPic();
+                }
+            }
+            &_text {
+                font-size: 14px;
+                transition: $transition;
+            }
+            &:hover {
+                background-color: #fff;
+                .btn-bg-blue {
+                    &_icon {
+                        path {
+                            fill: $primary-500;
+                        }
+                    }
+                    &_text {
+                        color: $primary-500;
+                    }
+                }
+            }
+            &-noIcon {
+                padding: 8px 25px;
+                border: 1px solid $primary-500;
+                background-color: $primary-500;
+                border-radius: 100px;
+                color: #fff;
+                transition: $transition;
+                display: block;
+                width: fit-content;
+                &:hover {
+                    background-color: $primary-700;
+                    border-color: $primary-700;
+                }
+            }
+        }
+        &-gray {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px;
+            border-radius: 100px;
+            background-color: $gray-200;
+            color: $gray-900;
+            transition: $transition;
+            border: 1px solid $gray-200;
             width: fit-content;
             &_icon {
                 width: 18px;

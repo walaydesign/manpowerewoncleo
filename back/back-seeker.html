@@ -1,255 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>人力銀行</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../public/css/style.css">
-</head>
-<body class="bg-blue">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+  </head>
+  <body class="bg-blue">
     <div class="back">
-        <header class="back_header">
-            <img class="back_header_logo" src="../public/img/logo.svg" alt="">
-            <div class="detail-content_nav back_header_nav">
-                <div class="detail-content_nav_inner back_header_nav_inner">
-                    <ul class="detail-content_nav_list">
-                        <li class="active"><a href="./back-seeker.html">求職者管理</a></li>
-                        <li><a href="./back-company.html">企業管理</a></li>
-                        <li><a href="./back-job.html">求職管理</a></li>
-                        <li><a href="./back-recruit.html">徵才管理</a></li>
-                        <li><a href="">文章管理</a></li>
-                        <li><a href="">欄位管理</a></li>
-                        <li><a href="./back-feedback.html">意見管理</a></li>
-                        <li><a href="./back-other-about.html">其他管理</a></li>
-                        <li><a>登出</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header_menu d-lg-none">
-                <div class="bar top"></div>
-                <div class="bar middle"></div>
-                <div class="bar bottom"></div>
-            </div>
-        </header>
-        <div class="back_content">
-            <div class="back_title">
-                <h1>求職者管理</h1>
-                <a href="./back-seeker-add.html" class="btn-bg-blue">
-                    <svg class="btn-bg-blue_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z" fill="white"/>
-                    </svg>
-                    <span class="btn-bg-blue_text">新增</span>
-                </a>
-            </div>
-            <div class="back-seeker_list">
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="back-seeker_list_item">
-                    <div class="back-seeker_list_info">
-                        <div class="back-seeker_list_pic">
-                            <img src="../public/img/pic-1.png" alt="">
-                        </div>
-                        <div class="job-head_text back-seeker_list_text">
-                            <h3>電銷人員</h3>
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li>待業中</li>
-                                <li>專科</li>
-                                <li>大華技術學院</li>
-                                <li>化學工程相關</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="back-seeker_list_btn">
-                        <a href="./back-seeker-edit-info.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/pencil-blue.svg" alt=""></a>
-                        <a href="../seeker-detail.html" class="btn-border-onlyIcon back-seeker_list_btn_item"><img src="../public/img/view.svg" alt=""></a>
-                        <button class="btn-border-onlyIcon-gray back-seeker_list_btn_item"><img src="../public/img/trash-bin.svg" alt=""></button>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination d-flex align-items-center justify-content-lg-end justify-content-center">
-                <a href="" class="pagination_arrow">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z" fill="#D1D1D1"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z" fill="#D1D1D1"/>
-                    </svg>
-                </a>
-                <ul class="d-flex align-items-center">
-                    <li><a href="" class="active">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                </ul>
-                <a href="" class="pagination_arrow">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z" fill="#B4CECE"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z" fill="#B4CECE"/>
-                    </svg>
-                </a>
-            </div>
+      <header class="back_header">
+        <img class="back_header_logo" src="../public/img/logo.svg" alt="" />
+        <div class="detail-content_nav back_header_nav">
+          <div class="detail-content_nav_inner back_header_nav_inner">
+            <ul class="detail-content_nav_list">
+              <li class="active">
+                <a href="./back-seeker.html">求職者管理</a>
+              </li>
+              <li><a href="./back-company.html">企業管理</a></li>
+              <li><a href="./back-job.html">求職管理</a></li>
+              <li><a href="./back-recruit.html">徵才管理</a></li>
+              <li>
+                <a href="./back-article-permit.html">文章管理</a>
+              </li>
+              <li><a href="./back-section.html">欄位管理</a></li>
+              <li>
+                <a href="./back-feedback.html">反饋管理</a>
+              </li>
+              <li><a href="./back-chat-seeker.html">聊聊</a></li>
+              <li>
+                <a href="./back-other-about.html">其他管理</a>
+              </li>
+              <li><a>登出</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="header_menu d-lg-none">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </header>
+      <div class="back_content">
+        <div class="back_title">
+          <h1>求職者管理</h1>
+          <a href="./back-seeker-add.html" class="btn-bg-blue">
+            <svg
+              class="btn-bg-blue_icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 4C12.5523 4 13 4.44772 13 5V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V5C11 4.44772 11.4477 4 12 4Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z"
+                fill="white"
+              />
+            </svg>
+            <span class="btn-bg-blue_text">新增</span>
+          </a>
+        </div>
+        <div class="back-seeker_list">
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="back-seeker_list_item">
+            <div class="back-seeker_list_info">
+              <div class="back-seeker_list_pic">
+                <img src="../public/img/pic-1.png" alt="" />
+              </div>
+              <div class="job-head_text back-seeker_list_text">
+                <h3>電銷人員</h3>
+                <ul class="d-flex flex-wrap align-items-center">
+                  <li>待業中</li>
+                  <li>專科</li>
+                  <li>大華技術學院</li>
+                  <li>化學工程相關</li>
+                </ul>
+              </div>
+            </div>
+            <div class="back-seeker_list_btn">
+              <a
+                href="./back-seeker-edit-info.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/pencil-blue.svg" alt=""
+              /></a>
+              <a
+                href="../seeker-detail.html"
+                class="btn-border-onlyIcon back-seeker_list_btn_item"
+                ><img src="../public/img/view.svg" alt=""
+              /></a>
+              <button
+                class="btn-border-onlyIcon-gray back-seeker_list_btn_item"
+              >
+                <img src="../public/img/trash-bin.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pagination d-flex align-items-center justify-content-lg-end justify-content-center"
+        >
+          <a href="" class="pagination_arrow">
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M37.5 22.5C37.5 21.4645 36.6605 20.625 35.625 20.625H9.375C8.33947 20.625 7.5 21.4645 7.5 22.5C7.5 23.5355 8.33947 24.375 9.375 24.375H35.625C36.6605 24.375 37.5 23.5355 37.5 22.5Z"
+                fill="#D1D1D1"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M23.8258 8.04917C23.0936 7.31694 21.9064 7.31694 21.1742 8.04917L8.04918 21.1742C7.31694 21.9064 7.31694 23.0936 8.04918 23.8258L21.1742 36.9508C21.9064 37.6831 23.0936 37.6831 23.8258 36.9508C24.5581 36.2186 24.5581 35.0314 23.8258 34.2992L12.0266 22.5L23.8258 10.7008C24.5581 9.96859 24.5581 8.78141 23.8258 8.04917Z"
+                fill="#D1D1D1"
+              />
+            </svg>
+          </a>
+          <ul class="d-flex align-items-center">
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+          </ul>
+          <a href="" class="pagination_arrow">
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.5 22.5C7.5 21.4645 8.33947 20.625 9.375 20.625H35.625C36.6605 20.625 37.5 21.4645 37.5 22.5C37.5 23.5355 36.6605 24.375 35.625 24.375H9.375C8.33947 24.375 7.5 23.5355 7.5 22.5Z"
+                fill="#B4CECE"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.1742 8.04917C21.9064 7.31694 23.0936 7.31694 23.8258 8.04917L36.9508 21.1742C37.6831 21.9064 37.6831 23.0936 36.9508 23.8258L23.8258 36.9508C23.0936 37.6831 21.9064 37.6831 21.1742 36.9508C20.4419 36.2186 20.4419 35.0314 21.1742 34.2992L32.9734 22.5L21.1742 10.7008C20.4419 9.96859 20.4419 8.78141 21.1742 8.04917Z"
+                fill="#B4CECE"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    
 
-    
-    
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/common.js"></script>
-
-</body>
+  </body>
 </html>
