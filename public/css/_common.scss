@@ -1027,6 +1027,12 @@ body.bg {
             &:first-child {
                 margin-left: 0;
             }
+            a {
+                &.active {
+                    color: $primary-600;
+                    font-weight: 700;
+                }
+            }
         }
     }
     &_member {
@@ -1129,13 +1135,14 @@ body.bg {
             position: fixed;
             width: 50%;
             background-color: #fff;
-            height: calc(100vh - 80px);
-            top: 80px;
+            height: calc(100vh - 70px);
+            top: 70px;
             right: 0;
             padding: 20px 0;
             display: block !important;
             transform: translateX(100%);
             transition: $transition;
+            overflow-y: auto;
             li {
                 margin: 0;
                 a {
@@ -1145,6 +1152,11 @@ body.bg {
             }
             &.active {
                 transform: none;
+            }
+        }
+        &_find {
+            li {
+                margin: 0 !important;
             }
         }
     }

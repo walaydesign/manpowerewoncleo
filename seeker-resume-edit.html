@@ -23,22 +23,21 @@
         /></a>
         <nav class="header_nav d-flex align-items-center">
           <div class="header_link">
-            <ul class="header_find d-flex align-items-center">
+            <ul class="header_find d-lg-flex align-items-center">
+              <li><a href="./article-list.html">文章</a></li>
               <li><a href="./hunt-job.html">找工作</a></li>
             </ul>
             <ul class="header_memberNav d-lg-none">
-              <li><a href="./seeker-overview.html">總覽</a></li>
+              <li><a href="./seeker-resume-overview.html">履歷預覽</a></li>
               <li><a href="./seeker-inform.html">個人資料</a></li>
               <li><a href="./seeker-resume.html">履歷管理</a></li>
               <li><a href="./seeker-apply.html">應徵紀錄</a></li>
               <li><a href="./seeker-invited.html">受邀紀錄</a></li>
-              <li class="active">
-                <a href="./seeker-recommend.html">推薦信設定</a>
-              </li>
+              <li class="active"><a href="./seeker-recommend.html">推薦信設定</a></li>
               <li><a href="./seeker-save.html">我的收藏</a></li>
               <li><a href="./seeker-feedback.html">意見回覆</a></li>
-              <li><a href="">智能配對</a></li>
-              <li><a href="">我的文章</a></li>
+              <li><a href="./seeker-match.html">智能配對</a></li>
+              <li><a href="./seeker-article.html">我的文章</a></li>
               <li><a href="./seeker-password.html">更改密碼</a></li>
               <li><a>登出</a></li>
             </ul>
@@ -137,70 +136,60 @@
       </div>
     </header>
 
-    <div class="popup" id="seeker-login">
-      <div class="popup_bg"></div>
-      <div class="popup_main popup_member seeker">
-        <div class="popup_inner">
-          <div class="popup_member_title">
-            <img
-              class="popup_member_title_logo"
-              src="./public/img/logo-yellow.svg"
-              alt=""
-            />
-            <p class="popup_member_title_text">求職者登入</p>
-          </div>
-          <div class="popup_member_content">
-            <form action="">
-              <div class="form-item">
-                <label for="">帳號</label>
-                <input type="text" class="input form-item_main" />
-              </div>
-              <div class="form-item">
-                <label for="">密碼</label>
-                <input type="text" class="input form-item_main" />
-              </div>
-              <button class="btn-bgFill-yellow">登入</button>
-              <div
-                class="popup_member_link d-flex align-items-center justify-content-center"
-              >
-                <a href="./seeker-signup.html">註冊會員</a>
-                <a class="btn-popup" data-popup="#seeker-foregt">忘記密碼</a>
-              </div>
-            </form>
-          </div>
-          <div class="popup_close">
-            <img src="./public/img/x.svg" alt="" />
-          </div>
+    <div class="popup" id="company-login">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_member company">
+            <div class="popup_inner">
+                <div class="popup_member_title">
+                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
+                    <p class="popup_member_title_text">企業登入</p>
+                </div>
+                <div class="popup_member_content">
+                    <form action="">
+                        <div class="form-item">
+                            <label for="">帳號</label>
+                            <input type="text" class="input form-item_main">
+                        </div>
+                        <div class="form-item">
+                            <label for="">密碼</label>
+                            <input type="text" class="input form-item_main">
+                        </div>
+                        <button class="btn-bgFill-blue">登入</button>
+                        <div class="popup_member_link d-flex align-items-center justify-content-center">
+                            <a href="./company-signup.html">註冊會員</a>
+                            <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="popup" id="seeker-foregt">
-      <div class="popup_bg"></div>
-      <div class="popup_main popup_member seeker">
-        <div class="popup_inner">
-          <div class="popup_member_title">
-            <img
-              class="popup_member_title_logo"
-              src="./public/img/logo-yellow.svg"
-              alt=""
-            />
-            <p class="popup_member_title_text">忘記密碼</p>
-          </div>
-          <div class="popup_member_content">
-            <form action="">
-              <div class="form-item column">
-                <label for="">請輸入信箱或手機</label>
-                <input type="text" class="input form-item_main" />
-              </div>
-              <button class="btn-bgFill-yellow">送出</button>
-            </form>
-          </div>
-          <div class="popup_close">
-            <img src="./public/img/x.svg" alt="" />
-          </div>
+    <div class="popup" id="company-foregt">
+        <div class="popup_bg"></div>
+        <div class="popup_main popup_member company">
+            <div class="popup_inner">
+                <div class="popup_member_title">
+                    <img class="popup_member_title_logo" src="./public/img/logo-blue.svg" alt="">
+                    <p class="popup_member_title_text">忘記密碼</p>
+                </div>
+                <div class="popup_member_content">
+                    <form action="">
+                        <div class="form-item column">
+                            <label for="">請輸入信箱或手機</label>
+                            <input type="text" class="input form-item_main">
+                        </div>
+                        <button class="btn-bgFill-blue">送出</button>
+                    </form>
+                </div>
+                <div class="popup_close">
+                    <img src="./public/img/x.svg" alt="">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <main class="main">
