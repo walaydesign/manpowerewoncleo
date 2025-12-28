@@ -376,4 +376,22 @@ $(".job_item").click(function(){
  })
 
 
+// 文章tag
+ $(document).on("click", ".form-tag_item_btn", function () {
+   $(this).parents(".form-tag_item").remove();
+ });
+
+ $(".form-tag_add").click(function () {
+   if ($(".form-tag_input").val() != "") {
+     let value = $(".form-tag_input").val();
+     let tagText = $("<p></p>").text(value);
+     let tagDelete = $(
+       "<button class='form-tag_item_btn'><svg viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M7.79461 2.20505C7.95733 2.36777 7.95733 2.63158 7.79461 2.7943L2.79461 7.7943C2.63189 7.95702 2.36807 7.95702 2.20535 7.7943C2.04263 7.63158 2.04263 7.36776 2.20535 7.20505L7.20535 2.20505C7.36807 2.04233 7.63189 2.04233 7.79461 2.20505Z'/><path fill-rule='evenodd' clip-rule='evenodd' d='M2.20535 2.20505C2.36807 2.04233 2.63189 2.04233 2.79461 2.20505L7.79461 7.20505C7.95733 7.36776 7.95733 7.63158 7.79461 7.7943C7.63189 7.95702 7.36807 7.95702 7.20535 7.7943L2.20535 2.7943C2.04263 2.63158 2.04263 2.36777 2.20535 2.20505Z'/></svg></button>"
+     );
+     let tag = $("<div class='form-tag_item'></div>");
+     tag.append(tagText, tagDelete);
+     $(".form-tag_content").append(tag);
+     $(".form-tag_input").val("");
+   }
+ });
 

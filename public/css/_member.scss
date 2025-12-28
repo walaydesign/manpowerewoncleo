@@ -27,6 +27,15 @@
       transform: translateY(-50%);
       border-radius: 0 7px 7px 0;
     }
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      .signup_title {
+        margin: 0;
+      }
+    }
   }
   .form-item {
     margin-top: 0;

@@ -30,6 +30,10 @@ input, select, textarea, button {
   border: 0;
 }
 
+input, select, textarea {
+  color: #444444 !important;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1009,6 +1013,81 @@ body.bg-gray {
     width: 100%;
     margin-bottom: 10px;
     margin-right: 0;
+  }
+}
+
+.form-item.form-tag .form-item_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.form-item.form-tag .form-item_main .input {
+  width: calc(100% - 20px - 36px);
+}
+
+.form-item.form-tag .form-item_main svg path {
+  fill: #22A9E7;
+}
+
+.form-item.form-tag .form-tag_content {
+  margin-top: 12px;
+  padding-left: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  row-gap: 12px;
+}
+
+.form-item.form-tag .form-tag_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #E1F5FC;
+  padding: 6px 12px;
+}
+
+.form-item.form-tag .form-tag_item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-item.form-tag .form-tag_item button {
+  padding: 0;
+  width: 12px;
+}
+
+.form-item.form-tag .form-tag_item button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.form-item.form-tag .form-tag_item button svg path {
+  fill: #005880;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form-item.form-tag .form-tag_item button:hover svg path {
+  fill: #22A9E7;
+}
+
+@media screen and (max-width: 400px) {
+  .form-item.form-tag .form-tag_content {
+    padding: 0;
   }
 }
 
@@ -5869,6 +5948,23 @@ body.bg-gray {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 0 7px 7px 0;
+}
+
+.signup_title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.signup_title-wrap .signup_title {
+  margin: 0;
 }
 
 .signup .form-item {
