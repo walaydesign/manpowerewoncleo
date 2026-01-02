@@ -324,6 +324,15 @@
       border: 1px solid $gray-500;
     }
   }
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    .member_title {
+      margin: 0;
+    }
+  }
   @media screen and (max-width: 1199px) {
     > .container {
       max-width: inherit;
