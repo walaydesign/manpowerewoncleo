@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
+$primary-50: #EDF8FC;
 $primary-100: #E8F7FF;
 $primary-200: #CFEEFF;
 $primary-300: #B0E3FF;
@@ -42,7 +43,11 @@ $gray-800: #979797;
 $gray-900: #595959;
 
 $dark: #444444;
+$navy: #1a2b4a;
+$muted: #888888;
+$border: #e8e8e8;
 $bg-orange: #FFFCF8;
+$bg-light: #f7fafc;
 $transition: 0.3s;
 $shadow-main: 0 4px 15px rgba(0,0,0,0.1);
 $font-fugaz: "Fugaz One", sans-serif;

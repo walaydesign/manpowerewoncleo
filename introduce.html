@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人力銀行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body class="body-gray">
+    <header class="header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="./index.html" class="header_logo"
+          ><img src="./public/img/logo.svg" alt=""
+        /></a>
+        <nav class="header_nav d-flex align-items-center">
+          <div class="header_link">
+            <ul class="header_find d-lg-flex align-items-center">
+              <li><a href="#feature">功能</a></li>
+              <li><a href="#pricing">方案</a></li>
+              <li><a href="#consult">顧問諮詢</a></li>
+              <li><a href="#trust">見證</a></li>
+            </ul>
+          </div>
+          <ul class="header_member d-flex align-items-center">
+            <li>
+              <a class="btn-bg-yellow header_member_btn"> 免費開始 </a>
+            </li>
+          </ul>
+          <div class="header_menu d-lg-none">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ── Hero ── -->
+      <section class="introduce-hero">
+        <div class="container">
+          <div class="hero-text">
+            <h1 class="hero-title">招募人才，<br />不該是一件麻煩事</h1>
+            <p class="hero-desc">
+              從刊登、管理到聯繫應徵者，一個後台全部搞定。為中小企業與成長中團隊打造的招募工具——上手只要
+              30 秒。
+            </p>
+            <div class="hero-ctas">
+              <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+                >免費開始刊登</a
+              >
+              <a href="#feature" class="btn-cta btn-cta-outline-primary"
+                >看功能介紹</a
+              >
+            </div>
+            <div class="hero-badges">
+              <span class="hero-badge">永久免費方案</span>
+              <span class="hero-badge">不需信用卡</span>
+              <span class="hero-badge">不綁約</span>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="./public/img/kv-img.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Feature Cards ── -->
+      <section class="introduce-cards">
+        <div class="container">
+          <ul class="nav nav-tabs row" id="myTab" role="tablist">
+            <li class="nav-item col-3" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="home-tab-pane"
+                aria-selected="true"
+              >
+                <div class="nav-link_img">
+                  <img src="./public/img/intro-1.png" alt="" />
+                </div>
+                <h3>一站式招募管理</h3>
+              </button>
+            </li>
+            <li class="nav-item col-3" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="profile-tab-pane"
+                aria-selected="false"
+              >
+                <div class="nav-link_img">
+                  <img src="./public/img/intro-2.png" alt="" />
+                </div>
+                <h3>打造雇主品牌第一門面</h3>
+              </button>
+            </li>
+            <li class="nav-item col-3" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="contact-tab-pane"
+                aria-selected="false"
+              >
+                <div class="nav-link_img">
+                  <img src="./public/img/intro-3.png" alt="" />
+                </div>
+                <h3>提高職缺曝光率</h3>
+              </button>
+            </li>
+            <li class="nav-item col-3" role="presentation">
+              <button
+                class="nav-link"
+                id="disabled-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#disabled-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="disabled-tab-pane"
+                aria-selected="false"
+              >
+                <div class="nav-link_img">
+                  <img src="./public/img/intro-4.png" alt="" />
+                </div>
+                <h3>專人顧問打破地域限制</h3>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── Feature Section ── -->
+      <section class="introduce-feature" id="feature">
+        <div class="container">
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="home-tab-pane"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+              tabindex="0"
+            >
+              <div class="feature-inner">
+                <div class="feature-text">
+                  <h2 class="feature-heading">
+                    職缺開在五個地方，<br />應徵者散在三個信箱？
+                  </h2>
+                  <div class="feature-content">
+                    <ul class="feature-list">
+                      <li class="feature-list-item">拖曳式應徵者看板</li>
+                      <li class="feature-list-item">
+                        履歷、聊聊、邀約一鍵直達
+                      </li>
+                      <li class="feature-list-item">多職缺集中管理</li>
+                    </ul>
+                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                      >免費試用後台 →</a
+                    >
+                  </div>
+                </div>
+                <div class="feature-img">
+                  <img src="./public/img/feat-inner-1.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="profile-tab-pane"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              tabindex="0"
+            >
+              <div class="feature-inner">
+                <div class="feature-text">
+                  <h2 class="feature-heading">
+                    告別制式表格<br />擁有高質感專屬招募頁面
+                  </h2>
+                  <div class="feature-content">
+                    <ul class="feature-list">
+                      <li class="feature-list-item">企業品牌專屬頁面</li>
+                      <li class="feature-list-item">職缺與品牌內容整合管理</li>
+                      <li class="feature-list-item">招募數據分析</li>
+                    </ul>
+                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                      >免費試用後台 →</a
+                    >
+                  </div>
+                </div>
+                <div class="feature-img">
+                  <img src="./public/img/feat-inner-2.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="contact-tab-pane"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+              tabindex="0"
+            >
+              <div class="feature-inner">
+                <div class="feature-text">
+                  <h2 class="feature-heading">
+                    優化搜尋排名、精準觸及人才<br />
+                    大幅提升自然搜尋點閱量。
+                  </h2>
+                  <div class="feature-content">
+                    <ul class="feature-list">
+                      <li class="feature-list-item">智慧職缺推薦</li>
+                      <li class="feature-list-item">職缺曝光追蹤</li>
+                      <li class="feature-list-item">多渠道職缺推廣</li>
+                    </ul>
+                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                      >免費試用後台 →</a
+                    >
+                  </div>
+                </div>
+                <div class="feature-img">
+                  <img src="./public/img/feat-inner-3.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="disabled-tab-pane"
+              role="tabpanel"
+              aria-labelledby="disabled-tab"
+              tabindex="0"
+            >
+              <div class="feature-inner">
+                <div class="feature-text">
+                  <h2 class="feature-heading">為您精準引進海內外關鍵人才</h2>
+                  <div class="feature-content">
+                    <ul class="feature-list">
+                      <li class="feature-list-item">專業顧問媒合服務</li>
+                      <li class="feature-list-item">全球人才庫搜尋</li>
+                      <li class="feature-list-item">線上面試與人才管理</li>
+                    </ul>
+                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                      >免費試用後台 →</a
+                    >
+                  </div>
+                </div>
+                <div class="feature-img">
+                  <img src="./public/img/feat-inner-4.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Steps ── -->
+      <section class="introduce-steps" id="steps">
+        <div class="container">
+          <h2 class="introduce-heading">原來，開始招募這麼簡單</h2>
+          <div class="step-grid row">
+            <div class="step-card col-lg-4 step-card--third">
+              <div class="step-icon">
+                <img src="./public/img/account.svg" alt="" />
+              </div>
+              <h3>30 秒建立公司帳號</h3>
+              <p>
+                填個
+                email、設定密碼，公司帳號立刻開通。不需審核等待，馬上就能用。
+              </p>
+              <div class="step-num">01</div>
+            </div>
+            <div class="step-card col-lg-4 step-card--primary">
+              <div class="step-icon">
+                <img src="./public/img/guide.svg" alt="" />
+              </div>
+              <h3>系統引導填寫職缺</h3>
+              <p>
+                跟著步驟一步步填，系統即時提示與健檢，第一次刊登也不會卡關。
+              </p>
+              <div class="step-num">02</div>
+            </div>
+            <div class="step-card col-lg-4 step-card--secondary">
+              <div class="step-icon">
+                <img src="./public/img/form.svg" alt="" />
+              </div>
+              <h3>上架，等待人才投遞</h3>
+              <p>
+                職缺自動最佳化曝光，應徵者進來即時通知，你只要專心挑對的人。
+              </p>
+              <div class="step-num">03</div>
+            </div>
+          </div>
+          <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+            >立即建立公司帳號</a
+          >
+        </div>
+      </section>
+
+      <!-- ── Trust / Testimonials ── -->
+      <section class="introduce-trust" id="trust">
+        <div class="container">
+          <h2 class="introduce-heading">
+            不只是工具，<br />是真的幫他們找到人
+          </h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="trust-benefits">
+                <div class="trust-benefit">
+                  <img
+                    class="trust-benefit-icon"
+                    src="./public/img/free.svg"
+                    alt=""
+                  />
+                  <div>
+                    <div class="trust-benefit-title">永久免費方案</div>
+                    <div class="trust-benefit-desc">
+                      基本招募功能不收費<br />不會用一用就要你掏錢。
+                    </div>
+                  </div>
+                </div>
+                <div class="trust-benefit">
+                  <img
+                    class="trust-benefit-icon"
+                    src="./public/img/lock.svg"
+                    alt=""
+                  />
+                  <div>
+                    <div class="trust-benefit-title">不綁約</div>
+                    <div class="trust-benefit-desc">
+                      隨時可升級或停用<br />沒有最低使用期限與違約金。
+                    </div>
+                  </div>
+                </div>
+                <div class="trust-benefit">
+                  <img
+                    class="trust-benefit-icon"
+                    src="./public/img/protect.svg"
+                    alt=""
+                  />
+                  <div>
+                    <div class="trust-benefit-title">資料安全</div>
+                    <div class="trust-benefit-desc">
+                      應徵者資料加密保存<br />符合個資法規範。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="trust-testimonial">
+                <div>
+                  <div class="trust-stars">
+                    <img src="./public/img/star2.svg" alt="" />
+                    <img src="./public/img/star2.svg" alt="" />
+                    <img src="./public/img/star2.svg" alt="" />
+                    <img src="./public/img/star2.svg" alt="" />
+                    <img src="./public/img/star2.svg" alt="" />
+                  </div>
+                  <p class="trust-quote">
+                    「以前用 Excel
+                    追應徵者，常常漏掉人。現在所有履歷都在同一個看板，第一週就約到了三個面試。」
+                  </p>
+                </div>
+                <div class="trust-author">
+                  <div class="trust-avatar">張</div>
+                  <div>
+                    <div class="trust-author-name">張詠晴</div>
+                    <div class="trust-author-title">
+                      新創共同創辦人 · 綠藤生機
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="founder-quote">
+            <div class="founder-avatar">
+              <img src="./public/img/founder.png" alt="" />
+            </div>
+            <div class="founder-content">
+              <img class="quote-mark" src="./public/img/quote.svg" alt="" />
+              <p class="founder-text">
+                我自己創業時，最痛的不是沒有人才，而是找人的工具又貴又難用。我們做這個平台，是希望每一家正在成長的公司，都能用最簡單的方式找到對的人，而不是花時間在工具上。
+              </p>
+              <p class="founder-sig">— ZHU 創始人</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Pricing ── -->
+      <section class="introduce-pricing" id="pricing">
+        <div class="container">
+          <p class="pricing-label">方案定價</p>
+          <h2 class="introduce-heading">從免費開始，<br />需要時再升級</h2>
+          <div class="swiper-container pricing-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="pricing-card featured">
+                  <div class="pricing-badge">最受歡迎</div>
+                  <div class="pricing-plan">免費方案</div>
+                  <div class="pricing-desc">剛起步、職缺不多的團隊</div>
+                  <div class="pricing-price">
+                    <span class="pricing-price-main">NT$0</span>
+                    <span class="pricing-price-unit">永久免費</span>
+                  </div>
+                  <ul class="pricing-features">
+                    <li>3 則同時刊登職缺</li>
+                    <li>基本應徵者管理</li>
+                    <li>專屬品牌招募頁</li>
+                    <li>聊聊即時訊息</li>
+                  </ul>
+                  <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+                    >免費開始</a
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <div class="pricing-plan">進階方案</div>
+                  <div class="pricing-desc">穩定徵才、需要更多曝光</div>
+                  <div class="pricing-price">
+                    <span class="pricing-price-main">NT$1,280</span>
+                    <span class="pricing-price-unit">／月</span>
+                  </div>
+                  <ul class="pricing-features">
+                    <li>無限職缺刊登</li>
+                    <li>應徵者進階篩選工具</li>
+                    <li>職缺優先曝光</li>
+                    <li>招募數據分析</li>
+                    <li>包含免費方案所有功能</li>
+                  </ul>
+                  <a href="#signup" class="btn-cta btn-cta-fill-primary"
+                    >升級進階</a
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <div class="pricing-plan">企業方案</div>
+                  <div class="pricing-desc">跨境招募、獵才、客製需求</div>
+                  <div class="pricing-price">
+                    <span class="pricing-price-main">客製報價</span>
+                    <span class="pricing-price-unit">聯繫我們</span>
+                  </div>
+                  <ul class="pricing-features">
+                    <li>專屬客戶成功對接</li>
+                    <li>跨境與獵才專業顧問</li>
+                    <li>顧問服務會員享 95 折</li>
+                    <li>客製化招募流程</li>
+                    <li>包含進階方案所有功能</li>
+                  </ul>
+                  <a href="#consult" class="btn-cta btn-cta-outline-primary"
+                    >聯繫報價</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Consult Band ── -->
+      <section class="introduce-consult" id="consult">
+        <div class="introduce-consult-inner">
+          <div class="container">
+            <div class="consult-inner">
+              <div class="consult-image">
+                <img src="./public/img/consultant.png" alt="" />
+              </div>
+              <div class="consult-content">
+                <div class="consult-text">
+                  <div class="consult-tag">
+                    <img src="./public/img/chat-colorful.svg" alt="" /> 跨境 ·
+                    獵才 · 客製方案
+                  </div>
+                  <h2 class="consult-title">
+                    要找的人不好找？<br />讓專人顧問陪你一起。
+                  </h2>
+                  <p class="consult-desc">
+                    從職缺定位到候選人推薦，顧問全程協助。企業會員享顧問服務 95
+                    折。
+                  </p>
+                </div>
+                <div class="consult-cta">
+                  <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+                    >預約顧問諮詢</a
+                  >
+                  <p class="consult-reply">通常 1 個工作天內回覆</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FAQ ── -->
+      <section class="introduce-faq">
+        <div class="container">
+          <h2 class="introduce-heading">還有一點點疑問？</h2>
+          <div class="faq-list">
+            <div class="faq-item open">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>免費方案有什麼限制？</span>
+                <div class="faq-chevron">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                免費方案可同時刊登 3
+                則職缺，包含基本應徵者管理與專屬品牌招募頁，沒有使用期限、也不需要信用卡。當招募需求增加，可隨時升級至進階方案。
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>可以同時刊登多個職缺嗎？</span>
+                <div class="faq-chevron">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                免費方案支援最多 3
+                則同時刊登，進階方案則提供無限職缺刊登，適合需要大量招募的企業。
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <span>如何修改或下架已刊登職缺？</span>
+                <div class="faq-chevron">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+              <div class="faq-answer">
+                登入後台後，進入「我的職缺」即可隨時編輯職缺內容或一鍵下架，操作簡單直覺，無需審核等待。
+              </div>
+            </div>
+          </div>
+          <p class="faq-contact">
+            還是找不到答案？<a href="./feedback.html">聯絡我們的團隊 →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Signup ── -->
+      <section class="introduce-signup" id="signup">
+        <div class="container">
+          <div class="signup-inner">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="signup-text">
+                  <h2>30 秒，<br />開始你的招募</h2>
+                  <p>
+                    填好下面三個欄位，公司帳號立刻開通，馬上就能刊登第一則職缺。
+                  </p>
+                  <div class="signup-perks">
+                    <span class="signup-perk">不需信用卡</span>
+                    <span class="signup-perk">永久免費方案</span>
+                    <span class="signup-perk">30 秒完成</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="signup-form">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="signup-company">公司名稱</label>
+                      <input
+                        type="text"
+                        id="signup-company"
+                        class="form-control-intro"
+                        placeholder="例：碳佐麻里餐飲集團"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="signup-email">電子信箱</label>
+                      <input
+                        type="email"
+                        id="signup-email"
+                        class="form-control-intro"
+                        placeholder="you@company.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="signup-phone">手機號碼</label>
+                      <input
+                        type="tel"
+                        id="signup-phone"
+                        class="form-control-intro"
+                        placeholder="0912345678"
+                      />
+                    </div>
+                    <button type="submit" class="btn-cta btn-cta-fill-secondary">
+                      免費建立公司帳號
+                    </button>
+                    <div class="form-note">
+                      不需信用卡，30 秒完成。點擊即表示同意<a href="">服務條款</a>。
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div
+        class="container d-sm-flex align-items-center justify-content-between"
+      >
+        <ul
+          class="d-flex align-items-center justify-content-sm-start justify-content-center mb-sm-0 mb-3"
+        >
+          <li><a href="./about.html">關於我們</a></li>
+          <li><a href="./privacy.html">隱私權政策</a></li>
+          <li><a href="./feedback.html">狗都不吃</a></li>
+        </ul>
+        <p class="copyright">© 2023 by xxx股份有限公司</p>
+      </div>
+    </footer>
+
+    <div class="sideBtn bg-yellow">
+      <button class="sideBtn_dog">
+        <a href="./feedback.html"><img src="./public/img/dog.png" alt="" /></a>
+      </button>
+      <button class="sideBtn_top">
+        <img src="./public/img/arrow-up.svg" alt="" />
+      </button>
+    </div>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script>
+      function toggleFaq(el) {
+        const item = el.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("open"));
+        if (!isOpen) item.classList.add("open");
+      }
+      var swiper = new Swiper(".pricing-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        speed: 1000,
+      });
+    </script>
+  </body>
+</html>
