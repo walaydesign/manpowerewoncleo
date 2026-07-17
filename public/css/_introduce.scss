@@ -1,7 +1,3 @@
-.body-gray {
-  background-color: $gray-100;
-}
-
 .btn-cta {
   padding: 15px 30px;
   border-radius: 100px;
@@ -52,6 +48,10 @@
   font-size: 40px;
   font-weight: 800;
   color: $primary-900;
+  @media screen and (max-width: 575px) {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
 }
 
 /* ── Hero ── */
@@ -60,6 +60,7 @@
   .container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   .hero {
     &-text {
@@ -120,6 +121,32 @@
       }
     }
   }
+  @media screen and (max-width: 991px) {
+    padding: 30px 0 52px;
+    .hero {
+      &-text {
+        width: 100%;
+        order: 2;
+        padding-top: 24px;
+        padding-right: 0;
+      }
+      &-image {
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .hero {
+      &-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      &-desc {
+        font-size: 15px;
+      }
+    }
+  }
 }
 
 /* ── Cards row ── */
@@ -142,6 +169,7 @@
       border: 1px solid #fff;
       transition: 0.3s;
       position: relative;
+      height: 100%;
       &_img {
         position: relative;
         width: 100%;
@@ -190,7 +218,7 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        top: calc(100% + 29px);
+        top: calc(100% + 30px);
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
@@ -198,6 +226,9 @@
         transition: 0.3s;
       }
     }
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
   }
 }
 
@@ -207,12 +238,16 @@
   .tab-content {
     padding: 0;
   }
+  @media screen and (max-width: 991px) {
+    padding: 0 0 52px;
+  }
 }
 
 .feature {
   &-inner {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     border-radius: 25px;
     background-color: #fff;
     padding: 50px;
@@ -271,6 +306,49 @@
     align-items: flex-end;
     justify-content: space-between;
   }
+  @media screen and (max-width: 991px) {
+    .tab-pane {
+      display: block !important;
+      opacity: 1 !important;
+      margin-bottom: 20px;
+    }
+    &-inner {
+      padding: 24px;
+    }
+    &-text {
+      padding-right: 24px;
+    }
+    &-heading {
+      font-size: 24px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    &-content {
+      display: block;
+    }
+    &-list {
+      gap: 8px;
+      margin-bottom: 20px;
+      &-item {
+        font-size: 14px;
+      }
+    }
+    .btn-cta {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-text {
+      width: 100%;
+      order: 2;
+      padding: 20px 0 0;
+    }
+    &-img {
+      width: 100%;
+      order: 1;
+    }
+  }
 }
 
 /* ── Steps ── */
@@ -286,6 +364,9 @@
   }
   .introduce-heading {
     color: #fff;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 52px 0;
   }
 }
 
@@ -369,11 +450,39 @@
       width: 48px;
     }
   }
+  @media screen and (max-width: 575px) {
+    &-grid {
+      margin-bottom: 24px;
+    }
+    &-card {
+      padding: 24px;
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    &-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
+      img {
+        width: 36px;
+      }
+    }
+    &-num {
+      font-size: 100px;
+    }
+  }
 }
 
 /* ── Trust / Testimonials ── */
 .introduce-trust {
   padding: 100px 0;
+  @media screen and (max-width: 991px) {
+    padding: 52px 0;
+  }
 }
 
 .trust {
@@ -458,6 +567,12 @@
     font-weight: 700;
     flex-shrink: 0;
   }
+  @media screen and (max-width: 991px) {
+    &-testimonial {
+      margin-top: 20px;
+      height: auto;
+    }
+  }
 }
 
 .founder {
@@ -467,6 +582,7 @@
     padding: 44px 100px;
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     margin-top: 64px;
     .quote-mark {
       width: 24px;
@@ -502,12 +618,40 @@
     font-size: 14px;
     color: $primary-100;
   }
+  @media screen and (max-width: 991px) {
+    &-quote {
+      margin-top: 32px;
+      padding: 32px;
+    }
+    &-content {
+      padding-left: 40px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-quote {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-content {
+      width: 100%;
+      margin-top: 20px;
+      padding: 0;
+    }
+    &-text {
+      font-size: 16px;
+      margin-bottom: 52px;
+    }
+  }
 }
 
 /* ── Pricing ── */
 .introduce-pricing {
   padding: 100px 0;
   background: #f9fcfc;
+  @media screen and (max-width: 991px) {
+    padding: 52px 0;
+    overflow: hidden;
+  }
 }
 
 .pricing {
@@ -629,6 +773,17 @@
     padding: 60px 100px 0;
     border-radius: 40px;
   }
+  @media screen and (max-width: 991px) {
+    &-inner {
+      padding: 32px 32px 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    padding: 0 20px;
+    &-inner {
+      border-radius: 24px;
+    }
+  }
 }
 
 .consult {
@@ -698,6 +853,67 @@
     font-size: 12px;
     color: $primary-100;
   }
+  @media screen and (max-width: 991px) {
+    &-inner {
+      gap: 24px;
+      align-items: flex-end;
+    }
+    &-image {
+      width: 40%;
+    }
+    .container {
+      padding: 0;
+    }
+    &-content {
+      display: block;
+      padding-bottom: 20px;
+    }
+    &-text {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    &-cta {
+      width: 100%;
+      padding: 0;
+      align-items: flex-start;
+    }
+    &-title {
+      font-size: 28px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    &-tag {
+      font-size: 12px;
+      padding: 6px 12px;
+      img {
+        width: 16px;
+      }
+    }
+    &-desc {
+      font-size: 16px;
+    }
+    .btn-cta {
+      padding: 12px 24px;
+      font-size: 15px;
+    }
+    &-reply {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-inner {
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+    }
+    &-image {
+      width: 50%;
+    }
+    &-title {
+      font-size: 26px;
+    }
+  }
 }
 
 /* ── FAQ ── */
@@ -706,6 +922,9 @@
 
   .container {
     max-width: 800px;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 52px 0;
   }
 }
 
@@ -803,10 +1022,10 @@
     border-radius: 25px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     .row {
       margin: 0;
-      >div {
+      > div {
         padding: 0;
       }
     }
@@ -912,56 +1131,6 @@
   text-align: center;
   margin-top: 16px;
   a {
-    color: #0F7EB0;
-  }
-}
-
-/* ── 響應式 ── */
-@media (max-width: 992px) {
-  .hero-inner,
-  .feature-inner,
-  .trust-inner,
-  .consult-inner,
-  .signup-inner {
-    flex-direction: column;
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-img {
-    width: 100%;
-  }
-
-  .founder-quote {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 576px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-nav_links {
-    display: none;
-  }
-
-  .hero-title {
-    font-size: 30px;
+    color: #0f7eb0;
   }
 }

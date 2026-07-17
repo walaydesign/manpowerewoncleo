@@ -32,7 +32,7 @@
           </div>
           <ul class="header_member d-flex align-items-center">
             <li>
-              <a class="btn-bg-yellow header_member_btn"> 免費開始 </a>
+              <a class="btn-bg-yellow header_member_btn only-text btn-popup" data-popup="#company-login"> 免費開始 </a>
             </li>
           </ul>
           <div class="header_menu d-lg-none">
@@ -43,6 +43,72 @@
         </nav>
       </div>
     </header>
+
+    <div class="popup" id="company-login">
+      <div class="popup_bg"></div>
+      <div class="popup_main popup_member company">
+        <div class="popup_inner">
+          <div class="popup_member_title">
+            <img
+              class="popup_member_title_logo"
+              src="./public/img/logo-blue.svg"
+              alt=""
+            />
+            <p class="popup_member_title_text">企業登入</p>
+          </div>
+          <div class="popup_member_content">
+            <form action="">
+              <div class="form-item">
+                <label for="">帳號</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <div class="form-item">
+                <label for="">密碼</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <button class="btn-bgFill-blue">登入</button>
+              <div
+                class="popup_member_link d-flex align-items-center justify-content-center"
+              >
+                <a href="./company-signup.html">註冊會員</a>
+                <a class="btn-popup" data-popup="#company-foregt">忘記密碼</a>
+              </div>
+            </form>
+          </div>
+          <div class="popup_close">
+            <img src="./public/img/x.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="company-foregt">
+      <div class="popup_bg"></div>
+      <div class="popup_main popup_member company">
+        <div class="popup_inner">
+          <div class="popup_member_title">
+            <img
+              class="popup_member_title_logo"
+              src="./public/img/logo-blue.svg"
+              alt=""
+            />
+            <p class="popup_member_title_text">忘記密碼</p>
+          </div>
+          <div class="popup_member_content">
+            <form action="">
+              <div class="form-item column">
+                <label for="">請輸入信箱或手機</label>
+                <input type="text" class="input form-item_main" />
+              </div>
+              <button class="btn-bgFill-blue">送出</button>
+            </form>
+          </div>
+          <div class="popup_close">
+            <img src="./public/img/x.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main class="main">
       <!-- ── Hero ── -->
@@ -55,7 +121,7 @@
               30 秒。
             </p>
             <div class="hero-ctas">
-              <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+              <a class="btn-cta btn-cta-fill-secondary btn-popup" data-popup="#company-login"
                 >免費開始刊登</a
               >
               <a href="#feature" class="btn-cta btn-cta-outline-primary"
@@ -75,7 +141,7 @@
       </section>
 
       <!-- ── Feature Cards ── -->
-      <section class="introduce-cards">
+      <section class="introduce-cards" id="feature">
         <div class="container">
           <ul class="nav nav-tabs row" id="myTab" role="tablist">
             <li class="nav-item col-3" role="presentation">
@@ -151,7 +217,7 @@
       </section>
 
       <!-- ── Feature Section ── -->
-      <section class="introduce-feature" id="feature">
+      <section class="introduce-feature feature">
         <div class="container">
           <div class="tab-content" id="myTabContent">
             <div
@@ -174,7 +240,7 @@
                       </li>
                       <li class="feature-list-item">多職缺集中管理</li>
                     </ul>
-                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                    <a class="btn-cta btn-cta-outline-secondary btn-popup" data-popup="#company-login"
                       >免費試用後台 →</a
                     >
                   </div>
@@ -202,7 +268,7 @@
                       <li class="feature-list-item">職缺與品牌內容整合管理</li>
                       <li class="feature-list-item">招募數據分析</li>
                     </ul>
-                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                    <a class="btn-cta btn-cta-outline-secondary btn-popup" data-popup="#company-login"
                       >免費試用後台 →</a
                     >
                   </div>
@@ -231,7 +297,7 @@
                       <li class="feature-list-item">職缺曝光追蹤</li>
                       <li class="feature-list-item">多渠道職缺推廣</li>
                     </ul>
-                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                    <a class="btn-cta btn-cta-outline-secondary btn-popup" data-popup="#company-login"
                       >免費試用後台 →</a
                     >
                   </div>
@@ -257,7 +323,7 @@
                       <li class="feature-list-item">全球人才庫搜尋</li>
                       <li class="feature-list-item">線上面試與人才管理</li>
                     </ul>
-                    <a href="#signup" class="btn-cta btn-cta-outline-secondary"
+                    <a class="btn-cta btn-cta-outline-secondary btn-popup" data-popup="#company-login"
                       >免費試用後台 →</a
                     >
                   </div>
@@ -274,7 +340,7 @@
       <!-- ── Steps ── -->
       <section class="introduce-steps" id="steps">
         <div class="container">
-          <h2 class="introduce-heading">原來，開始招募這麼簡單</h2>
+          <h2 class="introduce-heading">原來<br class="d-sm-none"><span class="d-sm-inline d-none">，</span>開始招募這麼簡單</h2>
           <div class="step-grid row">
             <div class="step-card col-lg-4 step-card--third">
               <div class="step-icon">
@@ -308,7 +374,7 @@
               <div class="step-num">03</div>
             </div>
           </div>
-          <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+          <a class="btn-cta btn-cta-fill-secondary btn-popup" data-popup="#company-login"
             >立即建立公司帳號</a
           >
         </div>
@@ -318,7 +384,7 @@
       <section class="introduce-trust" id="trust">
         <div class="container">
           <h2 class="introduce-heading">
-            不只是工具，<br />是真的幫他們找到人
+            不只是工具<span class="d-sm-inline d-none">，</span><br />是真的幫他們找到人
           </h2>
           <div class="row">
             <div class="col-lg-4">
@@ -410,7 +476,7 @@
       <section class="introduce-pricing" id="pricing">
         <div class="container">
           <p class="pricing-label">方案定價</p>
-          <h2 class="introduce-heading">從免費開始，<br />需要時再升級</h2>
+          <h2 class="introduce-heading">從免費開始<span class="d-sm-inline d-none">，</span><br />需要時再升級</h2>
           <div class="swiper-container pricing-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -428,7 +494,7 @@
                     <li>專屬品牌招募頁</li>
                     <li>聊聊即時訊息</li>
                   </ul>
-                  <a href="#signup" class="btn-cta btn-cta-fill-secondary"
+                  <a class="btn-cta btn-cta-fill-secondary btn-popup" data-popup="#company-login"
                     >免費開始</a
                   >
                 </div>
@@ -448,7 +514,7 @@
                     <li>招募數據分析</li>
                     <li>包含免費方案所有功能</li>
                   </ul>
-                  <a href="#signup" class="btn-cta btn-cta-fill-primary"
+                  <a class="btn-cta btn-cta-fill-primary btn-popup" data-popup="#company-login"
                     >升級進階</a
                   >
                 </div>
@@ -479,7 +545,7 @@
       </section>
 
       <!-- ── Consult Band ── -->
-      <section class="introduce-consult" id="consult">
+      <section class="introduce-consult consult" id="consult">
         <div class="introduce-consult-inner">
           <div class="container">
             <div class="consult-inner">
@@ -665,9 +731,17 @@
         if (!isOpen) item.classList.add("open");
       }
       var swiper = new Swiper(".pricing-swiper", {
-        slidesPerView: 3,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         speed: 1000,
+        breakpoints: {
+          575: {
+slidesPerView: 1.5,
+          },
+            991: {
+              slidesPerView: 3,
+            },
+	       },
       });
     </script>
   </body>
