@@ -9659,7 +9659,7 @@ body.bg-gray {
 .founder-quote {
   background: #003e5a;
   border-radius: 25px;
-  padding: 44px 100px;
+  padding: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9668,7 +9668,6 @@ body.bg-gray {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 64px;
 }
 
 .founder-quote .quote-mark {
@@ -9695,7 +9694,7 @@ body.bg-gray {
 
 .founder-content {
   width: calc(100% - 160px);
-  padding-left: 88px;
+  padding-left: 40px;
 }
 
 .founder-text {

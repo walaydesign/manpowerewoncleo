@@ -579,11 +579,10 @@
   &-quote {
     background: $primary-900;
     border-radius: 25px;
-    padding: 44px 100px;
+    padding: 60px;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 64px;
     .quote-mark {
       width: 24px;
       margin-bottom: 20px;
@@ -605,7 +604,7 @@
   }
   &-content {
     width: calc(100% - 160px);
-    padding-left: 88px;
+    padding-left: 40px;
   }
   &-text {
     font-size: 20px;
